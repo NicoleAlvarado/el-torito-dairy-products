@@ -1,0 +1,47 @@
+---
+import HeaderCarouselControl from "@/components/HeaderCarouselControl.astro";
+import { basics } from "@data";
+const { name, summary } = basics;
+---
+
+<section>
+    <div>
+        <h1>{name}</h1>
+        <p>{summary}</p>
+    </div>
+    <div>
+        <HeaderCarouselControl number="01" checked />
+        {
+            Array.from({ length: 4 }, (_, i) => (i + 2).toString().padStart(2, "0")).map((number) => (
+                <HeaderCarouselControl number={number} />
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    section {
+        width: min(100%, var(--max-width));
+        color: var(--neutral-50);
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    div:last-child {
+        align-items: center;
+    }
+
+    p {
+        font-size: 1.125rem;
+        max-width: 50ch;
+    }
+</style>

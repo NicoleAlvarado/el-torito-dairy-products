@@ -1,0 +1,146 @@
+{
+    "basics": {
+        "name": "Lácteos El Torito",
+        "logo": "logo.png",
+        "email": "lacteoseltorito@gmail.com",
+        "summary": "Lácteos El Torito es una empresa familiar que se dedica a la producción y comercialización de productos lácteos. Nuestro objetivo es ofrecer productos de calidad a precios accesibles.",
+        "address": "El Torito, Santa Cruz de Turrialba",
+        "phone": "8888-8888",
+        "socialNetworks": [
+            {
+                "network": "Whatsapp",
+                "url": "https://www.linkedin.com/in/yordicastro/"
+            },
+            {
+                "network": "Facebook",
+                "url": "https://github.com/Jordy756"
+            }
+        ],
+        "mainImages": [
+            "../assets/images/company/backgroundImage1.jpg",
+            "../assets/images/company/backgroundImage2.jpg",
+            "../assets/images/company/backgroundImage3.jpg",
+            "../assets/images/company/backgroundImage4.jpg",
+            "../assets/images/company/backgroundImage5.jpg"
+        ]
+    },
+    "awards": [
+        {
+            "title": "A nivel nacional",
+            "value": "#1"
+        },
+        {
+            "title": "Productos vendidos",
+            "value": "40K+"
+        },
+        {
+            "title": "Clientes satisfechos",
+            "value": "100%"
+        }
+    ],
+    "aboutUs": [
+        {
+            "title": "Historia",
+            "image": "../assets/images/company/backgroundImage2.jpg",
+            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
+        },
+        {
+            "title": "Misión",
+            "image": "../assets/images/company/backgroundImage3.jpg",
+            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
+        },
+        {
+            "title": "Visión",
+            "image": "../assets/images/company/backgroundImage4.jpg",
+            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
+        },
+        {
+            "title": "Valores",
+            "image": "../assets/images/company/backgroundImage5.jpg",
+            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
+        }
+    ],
+    "products": [
+        {
+            "name": "Leche",
+            "image": "leche.png",
+            "description": "Leche fresca de vaca."
+        },
+        {
+            "name": "Queso",
+            "image": "queso.png",
+            "description": "Queso fresco."
+        },
+        {
+            "name": "Mantequilla",
+            "image": "mantequilla.png",
+            "description": "Mantequilla fresca."
+        },
+        {
+            "name": "Yogurt",
+            "image": "yogurt.png",
+            "description": "Yogurt natural."
+        }
+    ],
+    "testimonies": [
+        {
+            "name": "Juan Pérez",
+            "image": "juanperez.png",
+            "time": "Hace 1 mes",
+            "content": "Lorem ..."
+        },
+        {
+            "name": "María Rodríguez",
+            "image": "mariarodriguez.png",
+            "time": "Hace 2 meses",
+            "content": "Lorem ..."
+        },
+        {
+            "name": "Carlos Sánchez",
+            "image": "carlossanchez.png",
+            "time": "Hace 3 meses",
+            "content": "Lorem ..."
+        }
+    ],
+    "team": [
+        {
+            "name": "Jordy Castro",
+            "image": "jordycastro.png",
+            "role": "CEO"
+        },
+        {
+            "name": "María Rodríguez",
+            "image": "mariarodriguez.png",
+            "role": "Gerente de ventas"
+        },
+        {
+            "name": "Carlos Sánchez",
+            "image": "carlossanchez.png",
+            "role": "Gerente de producción"
+        },
+        {
+            "name": "Juan Pérez",
+            "image": "juanperez.png",
+            "role": "Gerente de logística"
+        },
+        {
+            "name": "Ana Jiménez",
+            "image": "anajimenez.png",
+            "role": "Gerente de calidad"
+        }
+    ],
+    "FAQ": [
+        {
+            "question": "¿Cuál es el horario de atención?",
+            "answer": "De lunes a viernes de 8:00 a.m. a 5:00 p.m."
+        },
+        {
+            "question": "¿Cuál es el tiempo de entrega?",
+            "answer": "El tiempo de entrega es de 1 a 2 días hábiles."
+        },
+        {
+            "question": "¿Cuál es el precio del envío?",
+            "answer": "El precio del envío es de $5."
+        }
+    ]
+}

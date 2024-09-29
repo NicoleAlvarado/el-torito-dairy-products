@@ -1,0 +1,29 @@
+---
+type Props = {
+    number: string;
+    checked?: boolean;
+};
+
+const { number, checked } = Astro.props;
+---
+
+<div>
+    <input id=`header-carousel-control-${number}` type="radio" name="radio" checked={checked} />
+    <label for=`header-carousel-control-${number}`>{number}</label>
+</div>
+
+<style>
+    input {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        transition: font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+    }
+
+    input:checked + label {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+</style>

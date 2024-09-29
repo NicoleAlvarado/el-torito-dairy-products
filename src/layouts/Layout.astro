@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -8,43 +8,118 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <div>
+            <slot />
+        </div>
+    </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+    :root {
+        --font: Poppins, system-ui, "Open Sans", sans-serif;
+        --neutral-50: #fbfbfc;
+        --neutral-100: #f3f3f5;
+        --neutral-200: #e8e8ea;
+        --neutral-300: #dcdce0;
+        --neutral-400: #d1d1d6;
+        --neutral-500: #b2b2ba;
+        --neutral-600: #a0a0b0;
+        --neutral-700: #565660;
+        --neutral-800: #2b2b30;
+        --neutral-900: #161618;
+        --primary-50: #d1f4dd;
+        --primary-300: #48d575;
+        --primary-500: #208c43;
+        --primary-700: #0b3017;
+        --primary-900: #06180c;
+        --max-width: 1542px;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font);
+        background-color: var(--neutral-50);
+        color: var(--neutral-900);
+    }
+
+    h1 {
+        font-size: clamp(2.027rem, 5vw + 1rem, 3.815rem);
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: clamp(1.802rem, 4vw + 1rem, 3.052rem);
+        font-weight: 500;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: clamp(1.602rem, 3vw + 1rem, 2.441rem);
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: clamp(1.424rem, 2.5vw + 1rem, 1.953rem);
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: clamp(1.266rem, 2vw + 1rem, 1.563rem);
+        font-weight: 500;
+    }
+
+    h6 {
+        font-size: clamp(1.125rem, 1.5vw + 1rem, 1.25rem);
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a,
+    button {
+        cursor: pointer;
+    }
+
+    button {
+        font-family: inherit;
+        font-size: inherit;
+    }
+</style>
+
+<style>
+    div {
+        display: grid;
+        gap: 3rem;
+    }
 </style>

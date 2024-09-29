@@ -1,0 +1,31 @@
+---
+import AboutDetailCard from "@/components/AboutDetailCard.astro";
+import { aboutUs } from "@data";
+import { getImage } from "astro:assets";
+---
+
+<section>
+    <h2>Sobre nosotros</h2>
+    <div>
+        {
+            aboutUs.map(({ title, image, content }, index) => (
+                <AboutDetailCard number={`0${index + 1}`} image={image} title={title} content={content} />
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    section {
+        width: min(100%, var(--max-width));
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+</style>

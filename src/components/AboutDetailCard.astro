@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import imageTest from "@/assets/images/company/backgroundImage1.jpg";
+
+type Props = {
+    number: string;
+    title: string;
+    image: string;
+    content: string;
+};
+
+const { number, title, image, content } = Astro.props;
+---
+
+<article>
+    <div>
+        <span>{number}</span>
+        <Image src={imageTest} alt={""} />
+    </div>
+    <div>
+        <h3>{title}</h3>
+        <p>{content}</p>
+    </div>
+</article>
+
+<style>
+    article {
+        height: 500px;
+        display: flex;
+        gap: 1rem;
+    }
+
+    div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        height: 100%;
+    }
+
+    div:first-child {
+        position: relative;
+    }
+
+    span {
+        display: block;
+        font-size: 1.25rem;
+        border-bottom: 1px solid var(--neutral-900);
+        padding-bottom: 1rem;
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+</style>

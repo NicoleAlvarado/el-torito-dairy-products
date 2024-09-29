@@ -1,0 +1,81 @@
+---
+import Button from "./Button.astro";
+import PhoneIcon from "@/assets/icons/PhoneIcon.astro";
+import { Image } from "astro:assets";
+import logoImage from "@/assets/images/company/logo.png";
+---
+
+<nav>
+    <figure>
+        <Image src={logoImage} alt="Astro logo" />
+    </figure>
+    <ul>
+        <li>
+            <a href="#">Sobre nosotros</a>
+        </li>
+        <li>
+            <a href="#">Productos</a>
+        </li>
+        <li>
+            <a href="#">Testimonios</a>
+        </li>
+        <li>
+            <a href="#">Nuestro equipo</a>
+        </li>
+    </ul>
+    <Button type="button" className="primary-btn">
+        Contacto <PhoneIcon width={16} height={16} color="var(--neutral-50)" />
+    </Button>
+</nav>
+
+<style>
+    nav {
+        width: min(100%, var(--max-width));
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    figure {
+        display: flex;
+    }
+
+    img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: auto;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: var(--neutral-50);
+        transition:
+            transform 0.3s ease-in-out,
+            width 0.3s ease-in-out;
+    }
+
+    li {
+        position: relative;
+    }
+
+    li:hover::before {
+        width: 100%;
+        transform: translateX(-50%);
+    }
+
+    a {
+        color: var(--neutral-50);
+    }
+</style>
