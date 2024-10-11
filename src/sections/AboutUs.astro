@@ -1,17 +1,25 @@
 ---
 import AboutDetailCard from "@/components/AboutDetailCard.astro";
 import { aboutUs } from "@data";
-import { getImage } from "astro:assets";
 ---
 
-<section>
-    <h2>Sobre nosotros</h2>
+<section id="about-us">
     <div>
-        {
-            aboutUs.map(({ title, image, content }, index) => (
-                <AboutDetailCard number={`0${index + 1}`} image={image} title={title} content={content} />
-            ))
-        }
+        <div>
+            <h2>Sobre nosotros</h2>
+            <div>
+                {
+                    aboutUs.map(({ title, image, content }, index) => (
+                        <AboutDetailCard
+                            number={(index + 1).toString().padStart(2, "0")}
+                            image={image}
+                            title={title}
+                            content={content}
+                        />
+                    ))
+                }
+            </div>
+        </div>
     </div>
 </section>
 
@@ -23,9 +31,41 @@ import { getImage } from "astro:assets";
         gap: 2rem;
     }
 
-    div {
+    /* section > div {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        height: 500vh;
+        view-timeline-name: --section-pin-tl;
+        view-timeline-axis: block;
+        position: relative;
     }
+
+    section > div > div {
+        position: sticky;
+        inset: 0;
+        height: 100dvh;
+        overflow: hidden;
+        background-color: rgba(255, 0, 0, 0.137);
+    }
+    */
+
+    section > div > div > div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        /* animation: prueba linear both;
+        animation-timeline: --section-pin-tl;
+        animation-range: 20% contain; */
+    }
+
+    /*
+    @keyframes prueba {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    } */
 </style>

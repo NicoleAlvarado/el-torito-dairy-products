@@ -17,11 +17,11 @@
             }
         ],
         "mainImages": [
-            "../assets/images/company/backgroundImage1.jpg",
-            "../assets/images/company/backgroundImage2.jpg",
-            "../assets/images/company/backgroundImage3.jpg",
-            "../assets/images/company/backgroundImage4.jpg",
-            "../assets/images/company/backgroundImage5.jpg"
+            "/src/assets/images/company/backgroundImage1.webp",
+            "/src/assets/images/company/backgroundImage2.jpg",
+            "/src/assets/images/company/backgroundImage3.jpg",
+            "/src/assets/images/company/backgroundImage4.jpg",
+            "/src/assets/images/company/backgroundImage5.jpg"
         ]
     },
     "awards": [
@@ -41,22 +41,22 @@
     "aboutUs": [
         {
             "title": "Historia",
-            "image": "../assets/images/company/backgroundImage2.jpg",
+            "image": "/src/assets/images/company/backgroundImage2.jpg",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         },
         {
             "title": "Misión",
-            "image": "../assets/images/company/backgroundImage3.jpg",
+            "image": "/src/assets/images/company/backgroundImage3.jpg",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         },
         {
             "title": "Visión",
-            "image": "../assets/images/company/backgroundImage4.jpg",
+            "image": "/src/assets/images/company/backgroundImage4.jpg",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         },
         {
             "title": "Valores",
-            "image": "../assets/images/company/backgroundImage5.jpg",
+            "image": "/src/assets/images/company/backgroundImage5.jpg",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         }
     ],
@@ -80,6 +80,21 @@
             "name": "Yogurt",
             "image": "yogurt.png",
             "description": "Yogurt natural."
+        },
+        {
+            "name": "Helado",
+            "image": "helado.png",
+            "description": "Helado de varios sabores."
+        },
+        {
+            "name": "Crema",
+            "image": "crema.png",
+            "description": "Crema fresca."
+        },
+        {
+            "name": "Leche condensada",
+            "image": "lechecondensada.png",
+            "description": "Leche condensada."
         }
     ],
     "testimonies": [

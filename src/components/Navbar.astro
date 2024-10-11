@@ -6,12 +6,12 @@ import logoImage from "@/assets/images/company/logo.png";
 ---
 
 <nav>
-    <figure>
+    <a href="#">
         <Image src={logoImage} alt="Astro logo" />
-    </figure>
+    </a>
     <ul>
         <li>
-            <a href="#">Sobre nosotros</a>
+            <a href="#about-us">Sobre nosotros</a>
         </li>
         <li>
             <a href="#">Productos</a>
@@ -36,13 +36,13 @@ import logoImage from "@/assets/images/company/logo.png";
         gap: 2rem;
     }
 
-    figure {
+    a {
         display: flex;
     }
 
     img {
-        width: 55px;
-        height: 55px;
+        max-width: 50px;
+        height: 100%;
         object-fit: contain;
     }
 

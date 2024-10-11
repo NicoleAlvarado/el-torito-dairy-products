@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar.astro";
 import Hero from "@/sections/Hero.astro";
 import Awards from "@/sections/Awards.astro";
 import AboutUs from "@/sections/AboutUs.astro";
-import Testimonies from "@/sections/Testimonies.astro";
 ---
 
 <Layout title="Lácteos El Torito">
@@ -15,7 +14,6 @@ import Testimonies from "@/sections/Testimonies.astro";
     </header>
     <main>
         <AboutUs />
-        <Testimonies />
     </main>
 </Layout>
 
@@ -31,17 +29,45 @@ import Testimonies from "@/sections/Testimonies.astro";
     header {
         color: var(--neutral-900);
         z-index: 1;
-        padding: 0.5rem 1rem;
+        padding: 1rem;
         min-height: 100dvh;
-        background: url("../assets/images/company/backgroundImage1.jpg") no-repeat center center/cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
         position: relative;
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 2rem;
+        animation: changeBackground 25s infinite linear;
+    }
+
+    @keyframes changeBackground {
+        0%,
+        15%,
+        100% {
+            background-image: url("../assets/images/company/backgroundImage1.webp");
+        }
+        20%,
+        35% {
+            background-image: url("../assets/images/company/backgroundImage2.jpg");
+        }
+        40%,
+        55% {
+            background-image: url("../assets/images/company/backgroundImage3.jpg");
+        }
+        60%,
+        75% {
+            background-image: url("../assets/images/company/backgroundImage4.jpg");
+        }
+        80%,
+        95% {
+            background-image: url("../assets/images/company/backgroundImage5.jpg");
+        }
     }
 
     main {
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;

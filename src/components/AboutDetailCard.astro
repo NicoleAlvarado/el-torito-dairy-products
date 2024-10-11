@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import imageTest from "@/assets/images/company/backgroundImage1.jpg";
 
 type Props = {
     number: string;
@@ -9,13 +8,13 @@ type Props = {
     content: string;
 };
 
-const { number, title, image, content } = Astro.props;
+const { number, image, title, content } = Astro.props;
 ---
 
 <article>
     <div>
         <span>{number}</span>
-        <Image src={imageTest} alt={""} />
+        <Image src={image} alt={`Imagen de ${title}`} width="400" height="300" />
     </div>
     <div>
         <h3>{title}</h3>
@@ -28,6 +27,7 @@ const { number, title, image, content } = Astro.props;
         height: 500px;
         display: flex;
         gap: 1rem;
+        /* background-color: aqua; */
     }
 
     div {
