@@ -1,17 +1,18 @@
 ---
-import Button from "@/components/Button.astro";
-import HeaderCarouselControl from "@/components/HeaderCarouselControl.astro";
+import Button from "@components/Button.astro";
+import HeaderCarouselControl from "@components/HeaderCarouselControl.astro";
 import { basics } from "@data";
+
 const { name, summary, mainImages } = basics;
 ---
 
 <section>
-    <div>
+    <div class="hero__content">
         <h1>{name}</h1>
         <p>{summary}</p>
         <Button type="button" className="primary-btn">Ver productos</Button>
     </div>
-    <div id="carousel-controls">
+    <div class="carousel__controls" id="carousel-controls">
         {mainImages.map((_, index) => <HeaderCarouselControl number={(index + 1).toString().padStart(2, "0")} />)}
     </div>
 </section>
@@ -33,31 +34,18 @@ const { name, summary, mainImages } = basics;
         gap: 1rem;
     }
 
-    div:first-child {
-        align-items: start;
-    }
-
-    div:last-child {
-        align-items: center;
-    }
-
     p {
         font-size: 1.125rem;
         max-width: 50ch;
     }
+
+    .hero__content {
+        align-items: start;
+    }
+
+    .carousel__controls {
+        align-items: center;
+    }
 </style>
 
-<script>
-    const carouselControlSpans = document.querySelectorAll("#carousel-controls span");
-    let currentIndex = 0;
-
-    const activateNext = () => {
-        carouselControlSpans[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % carouselControlSpans.length;
-        carouselControlSpans[currentIndex].classList.add("active");
-    };
-
-    carouselControlSpans[0].classList.add("active");
-
-    setInterval(activateNext, 5000);
-</script>
+<script src="../scripts/handleCarouselControls.ts"></script>

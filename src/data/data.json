@@ -1,7 +1,7 @@
 {
     "basics": {
         "name": "Lácteos El Torito",
-        "logo": "logo.png",
+        "logo": "/src/assets/images/company/logo.webp",
         "email": "lacteoseltorito@gmail.com",
         "summary": "Lácteos El Torito es una empresa familiar que se dedica a la producción y comercialización de productos lácteos. Nuestro objetivo es ofrecer productos de calidad a precios accesibles.",
         "address": "El Torito, Santa Cruz de Turrialba",
@@ -18,10 +18,10 @@
         ],
         "mainImages": [
             "/src/assets/images/company/backgroundImage1.webp",
-            "/src/assets/images/company/backgroundImage2.jpg",
-            "/src/assets/images/company/backgroundImage3.jpg",
-            "/src/assets/images/company/backgroundImage4.jpg",
-            "/src/assets/images/company/backgroundImage5.jpg"
+            "/src/assets/images/company/backgroundImage2.webp",
+            "/src/assets/images/company/backgroundImage3.webp",
+            "/src/assets/images/company/backgroundImage4.webp",
+            "/src/assets/images/company/backgroundImage5.webp"
         ]
     },
     "awards": [
@@ -41,78 +41,78 @@
     "aboutUs": [
         {
             "title": "Historia",
-            "image": "/src/assets/images/company/backgroundImage2.jpg",
+            "image": "/src/assets/images/company/backgroundImage2.webp",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         },
         {
             "title": "Misión",
-            "image": "/src/assets/images/company/backgroundImage3.jpg",
+            "image": "/src/assets/images/company/backgroundImage3.webp",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         },
         {
             "title": "Visión",
-            "image": "/src/assets/images/company/backgroundImage4.jpg",
+            "image": "/src/assets/images/company/backgroundImage4.webp",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         },
         {
             "title": "Valores",
-            "image": "/src/assets/images/company/backgroundImage5.jpg",
+            "image": "/src/assets/images/company/backgroundImage5.webp",
             "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
         }
     ],
     "products": [
         {
             "name": "Leche",
-            "image": "leche.png",
+            "image": "leche.webp",
             "description": "Leche fresca de vaca."
         },
         {
             "name": "Queso",
-            "image": "queso.png",
+            "image": "queso.webp",
             "description": "Queso fresco."
         },
         {
             "name": "Mantequilla",
-            "image": "mantequilla.png",
+            "image": "mantequilla.webp",
             "description": "Mantequilla fresca."
         },
         {
             "name": "Yogurt",
-            "image": "yogurt.png",
+            "image": "yogurt.webp",
             "description": "Yogurt natural."
         },
         {
             "name": "Helado",
-            "image": "helado.png",
+            "image": "helado.webp",
             "description": "Helado de varios sabores."
         },
         {
             "name": "Crema",
-            "image": "crema.png",
+            "image": "crema.webp",
             "description": "Crema fresca."
         },
         {
             "name": "Leche condensada",
-            "image": "lechecondensada.png",
+            "image": "lechecondensada.webp",
             "description": "Leche condensada."
         }
     ],
     "testimonies": [
         {
             "name": "Juan Pérez",
-            "image": "juanperez.png",
+            "image": "juanperez.webp",
             "time": "Hace 1 mes",
             "content": "Lorem ..."
         },
         {
             "name": "María Rodríguez",
-            "image": "mariarodriguez.png",
+            "image": "mariarodriguez.webp",
             "time": "Hace 2 meses",
             "content": "Lorem ..."
         },
         {
             "name": "Carlos Sánchez",
-            "image": "carlossanchez.png",
+            "image": "carlossanchez.webp",
             "time": "Hace 3 meses",
             "content": "Lorem ..."
         }
@@ -120,27 +120,27 @@
     "team": [
         {
             "name": "Jordy Castro",
-            "image": "jordycastro.png",
+            "image": "jordycastro.webp",
             "role": "CEO"
         },
         {
             "name": "María Rodríguez",
-            "image": "mariarodriguez.png",
+            "image": "mariarodriguez.webp",
             "role": "Gerente de ventas"
         },
         {
             "name": "Carlos Sánchez",
-            "image": "carlossanchez.png",
+            "image": "carlossanchez.webp",
             "role": "Gerente de producción"
         },
         {
             "name": "Juan Pérez",
-            "image": "juanperez.png",
+            "image": "juanperez.webp",
             "role": "Gerente de logística"
         },
         {
             "name": "Ana Jiménez",
-            "image": "anajimenez.png",
+            "image": "anajimenez.webp",
             "role": "Gerente de calidad"
         }
     ],

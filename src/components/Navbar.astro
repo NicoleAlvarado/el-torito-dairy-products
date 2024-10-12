@@ -1,20 +1,18 @@
 ---
 import Button from "./Button.astro";
-import PhoneIcon from "@/assets/icons/PhoneIcon.astro";
+import PhoneIcon from "@icons/PhoneIcon.astro";
 import { Image } from "astro:assets";
-import logoImage from "@/assets/images/company/logo.png";
+import { basics } from "@data";
+const { logo } = basics;
 ---
 
 <nav>
     <a href="#">
-        <Image src={logoImage} alt="Astro logo" />
+        <Image src={logo} alt="Lácteo El Torito Logo" width={50} height={50} />
     </a>
     <ul>
         <li>
             <a href="#about-us">Sobre nosotros</a>
-        </li>
-        <li>
-            <a href="#">Productos</a>
         </li>
         <li>
             <a href="#">Testimonios</a>

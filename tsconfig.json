@@ -3,8 +3,12 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"],
-            "@data": ["./src/data/data.json"]
+            "@components/*": ["src/components/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@sections/*": ["src/sections/*"],
+            "@images/*": ["src/assets/images/*"],
+            "@icons/*": ["src/assets/icons/*"],
+            "@data": ["src/data/data.json"]
         }
     }
 }
