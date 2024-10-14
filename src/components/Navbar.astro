@@ -1,8 +1,9 @@
 ---
-import Button from "./Button.astro";
+import CTA from "./CTA.astro";
 import PhoneIcon from "@icons/PhoneIcon.astro";
 import { Image } from "astro:assets";
 import { basics } from "@data";
+
 const { logo } = basics;
 ---
 
@@ -15,15 +16,15 @@ const { logo } = basics;
             <a href="#about-us">Sobre nosotros</a>
         </li>
         <li>
-            <a href="#">Testimonios</a>
+            <a href="#testimonies">Testimonios</a>
         </li>
         <li>
-            <a href="#">Nuestro equipo</a>
+            <a href="#our-team">Nuestro equipo</a>
         </li>
     </ul>
-    <Button type="button" className="primary-btn">
+    <CTA href="#contact-us">
         Contacto <PhoneIcon width={16} height={16} color="var(--neutral-50)" />
-    </Button>
+    </CTA>
 </nav>
 
 <style>

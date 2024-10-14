@@ -4,22 +4,18 @@ import { aboutUs } from "@data";
 ---
 
 <section id="about-us">
+    <h2>Sobre nosotros</h2>
     <div>
-        <div>
-            <h2>Sobre nosotros</h2>
-            <div>
-                {
-                    aboutUs.map(({ title, image, content }, index) => (
-                        <AboutDetailCard
-                            number={(index + 1).toString().padStart(2, "0")}
-                            image={image}
-                            title={title}
-                            content={content}
-                        />
-                    ))
-                }
-            </div>
-        </div>
+        {
+            aboutUs.map(({ title, image, content }, index) => (
+                <AboutDetailCard
+                    number={(index + 1).toString().padStart(2, "0")}
+                    image={image}
+                    title={title}
+                    content={content}
+                />
+            ))
+        }
     </div>
 </section>
 
@@ -31,41 +27,11 @@ import { aboutUs } from "@data";
         gap: 2rem;
     }
 
-    /* section > div {
+    section > div {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        height: 500vh;
-        view-timeline-name: --section-pin-tl;
-        view-timeline-axis: block;
-        position: relative;
+        /* overflow: clip; */
+        contain: paint;
     }
-
-    section > div > div {
-        position: sticky;
-        inset: 0;
-        height: 100dvh;
-        overflow: hidden;
-        background-color: rgba(255, 0, 0, 0.137);
-    }
-    */
-
-    section > div > div > div {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        /* animation: prueba linear both;
-        animation-timeline: --section-pin-tl;
-        animation-range: 20% contain; */
-    }
-
-    /*
-    @keyframes prueba {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(-100%);
-        }
-    } */
 </style>

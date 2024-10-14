@@ -1,5 +1,5 @@
 ---
-import Button from "@components/Button.astro";
+import CTA from "@components/CTA.astro";
 import HeaderCarouselControl from "@components/HeaderCarouselControl.astro";
 import { basics } from "@data";
 
@@ -10,7 +10,7 @@ const { name, summary, mainImages } = basics;
     <div class="hero__content">
         <h1>{name}</h1>
         <p>{summary}</p>
-        <Button type="button" className="primary-btn">Ver productos</Button>
+        <CTA href="#products">Ver productos</CTA>
     </div>
     <div class="carousel__controls" id="carousel-controls">
         {mainImages.map((_, index) => <HeaderCarouselControl number={(index + 1).toString().padStart(2, "0")} />)}
