@@ -20,17 +20,18 @@ import { aboutUs } from "@data";
 </section>
 
 <style>
-    section {
-        width: min(100%, var(--max-width));
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
+    section,
     section > div {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
+    }
+
+    section {
+        width: min(100%, var(--max-width));
+    }
+
+    section > div {
         /* overflow: clip; */
         contain: paint;
     }

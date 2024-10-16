@@ -15,7 +15,8 @@ import Products from "@sections/Products.astro";
     </header>
     <main>
         <AboutUs />
-        <!-- <Products /> -->
+        <Products />
+        <section></section>
     </main>
 </Layout>
 
@@ -74,5 +75,9 @@ import Products from "@sections/Products.astro";
         flex-direction: column;
         align-items: center;
         gap: 3rem;
+    }
+
+    section {
+        min-height: 100vh;
     }
 </style>

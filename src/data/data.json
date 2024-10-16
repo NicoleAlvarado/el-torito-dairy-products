@@ -63,38 +63,45 @@
     "products": [
         {
             "name": "Leche",
-            "image": "leche.webp",
-            "description": "Leche fresca de vaca."
+            "image": "product1",
+            "description": "Leche fresca de vaca.",
+            "gridArea": "product1"
         },
         {
             "name": "Queso",
-            "image": "queso.webp",
-            "description": "Queso fresco."
+            "image": "product2",
+            "description": "Queso fresco.",
+            "gridArea": "product2"
         },
         {
             "name": "Mantequilla",
-            "image": "mantequilla.webp",
-            "description": "Mantequilla fresca."
+            "image": "product3",
+            "description": "Mantequilla fresca.",
+            "gridArea": "product3"
         },
         {
             "name": "Yogurt",
-            "image": "yogurt.webp",
-            "description": "Yogurt natural."
+            "image": "product4",
+            "description": "Yogurt natural.",
+            "gridArea": "product4"
         },
         {
             "name": "Helado",
-            "image": "helado.webp",
-            "description": "Helado de varios sabores."
+            "image": "product5",
+            "description": "Helado de varios sabores.",
+            "gridArea": "product5"
         },
         {
             "name": "Crema",
-            "image": "crema.webp",
-            "description": "Crema fresca."
+            "image": "product6",
+            "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam",
+            "gridArea": "product7"
         },
         {
             "name": "Leche condensada",
-            "image": "lechecondensada.webp",
-            "description": "Leche condensada."
+            "image": "product7",
+            "description": "Leche condensada.",
+            "gridArea": "product6"
         }
     ],
     "testimonies": [

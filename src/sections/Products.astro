@@ -3,10 +3,14 @@ import ProductCard from "@components/ProductCard.astro";
 import { products } from "@data";
 ---
 
-<section>
-    <h2>Productos</h2>
+<section id="products">
+    <h2>Nuestros Productos</h2>
     <div>
-        {products.map(({ name }) => <ProductCard name={name} />)}
+        {
+            products.map(({ name, image, description, gridArea }) => (
+                <ProductCard name={name} image={image} description={description} gridArea={gridArea} />
+            ))
+        }
     </div>
 </section>
 
@@ -18,14 +22,19 @@ import { products } from "@data";
         gap: 2rem;
     }
 
-    div {
+    section > div {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         gap: 1rem;
-    }
-
-    div > * {
-        background-color: green;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "product1 product1 product2 product2 product2 product3 product3 product3"
+            "product1 product1 product2 product2 product2 product3 product3 product3"
+            "product4 product4 product2 product2 product2 product5 product5 product5"
+            "product4 product4 product2 product2 product2 product5 product5 product5"
+            "product4 product4 product6 product6 product6 product6 product7 product7"
+            "product4 product4 product6 product6 product6 product6 product7 product7";
+        height: 800px;
     }
 </style>
