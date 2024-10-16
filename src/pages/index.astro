@@ -5,6 +5,7 @@ import Hero from "@sections/Hero.astro";
 import Awards from "@sections/Awards.astro";
 import AboutUs from "@sections/AboutUs.astro";
 import Products from "@sections/Products.astro";
+import Footer from "@components/Footer.astro";
 ---
 
 <Layout title="Lácteos El Torito">
@@ -16,8 +17,8 @@ import Products from "@sections/Products.astro";
     <main>
         <AboutUs />
         <Products />
-        <section></section>
     </main>
+    <Footer />
 </Layout>
 
 <style>
@@ -75,9 +76,5 @@ import Products from "@sections/Products.astro";
         flex-direction: column;
         align-items: center;
         gap: 3rem;
-    }
-
-    section {
-        min-height: 100vh;
     }
 </style>

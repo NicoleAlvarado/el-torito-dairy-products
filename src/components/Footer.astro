@@ -1,9 +1,148 @@
 ---
+import WhatsappIcon from "@icons/WhatsappIcon.astro";
+import FacebookIcon from "@icons/FacebookIcon.astro";
+import InstagramIcon from "@icons/InstagramIcon.astro";
+import { basics } from "@data";
+import { Image } from "astro:assets";
 
+const { name, logo, slogan } = basics;
+const year = new Date().getFullYear();
 ---
 
-<!-- <section></section>
-<section>
-    <p>© 2021 Lácteos El Torito. Todos los derechos reservados.</p>
+<footer>
+    <section>
+        <div>
+            <Image src={logo} alt={`Logo de ${name}`} width={50} height={50} />
+            <p>{slogan}</p>
+        </div>
+        <nav>
+            <div>
+                <h6>Empresa</h6>
+                <ul>
+                    <li><a href="#about-us">Sobre nosotros</a></li>
+                    <li><a href="#products">Nuestros productos</a></li>
+                    <li><a href="#testimonies">Testimonios</a></li>
+                    <li><a href="#our-team">Nuestro equipo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6>Legal</h6>
+                <ul>
+                    <li><a href="#politicas">Privacidad</a></li>
+                    <li><a href="#terminos">Términos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
     <div></div>
-</section> -->
+    <section>
+        <p>© {year} Lácteos El Torito. Todos los derechos reservados.</p>
+        <div>
+            <a href="https://wa.me/50684466964" target="_blank" rel="noopener noreferrer">
+                <WhatsappIcon width={24} height={24} color="var(--neutral-50)" />
+            </a>
+            <a href="https://www.facebook.com/LacteosElTorito" target="_blank" rel="noopener noreferrer">
+                <FacebookIcon width={24} height={24} color="var(--neutral-50)" />
+            </a>
+            <a href="https://www.instagram/LacteosElTorito" target="_blank" rel="noopener noreferrer">
+                <InstagramIcon width={24} height={24} color="var(--neutral-50)" />
+            </a>
+        </div>
+    </section>
+</footer>
+
+<style>
+    footer {
+        padding: 1rem;
+        background-color: var(--primary-700);
+        color: var(--neutral-50);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    footer > div {
+        height: 1px;
+        width: min(100%, var(--max-width));
+        background-color: var(--neutral-50);
+    }
+
+    footer > section {
+        width: min(100%, var(--max-width));
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    footer > section > div {
+        display: flex;
+        gap: 1rem;
+    }
+
+    footer > section:first-child > div {
+        flex-direction: column;
+    }
+
+    footer > section:first-child > div > img{
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    footer > section > nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    footer > section > nav > div,
+    footer > section > nav > div > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > section > nav > div {
+        gap: 1rem;
+    }
+
+    footer > section > nav > div > ul {
+        gap: 0.5rem;
+    }
+
+    footer > section > nav > div > ul > li::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: var(--neutral-50);
+        transition:
+            transform 0.3s ease-in-out,
+            width 0.3s ease-in-out;
+    }
+
+    footer > section > nav > div > ul > li {
+        position: relative;
+    }
+
+    footer > section > nav > div > ul > li:hover::before {
+        width: 100%;
+        transform: translateX(-50%);
+    }
+
+    footer > section > nav > div > ul > li > a {
+        color: var(--neutral-50);
+    }
+
+    footer > section > div > a {
+        display: flex;
+        transition: scale 0.3s ease-in-out;
+    }
+
+    footer > section > div > a:hover {
+        scale: 1.1;
+    }
+</style>
