@@ -10,11 +10,11 @@
         "socialNetworks": [
             {
                 "network": "Whatsapp",
-                "url": "https://www.linkedin.com/in/yordicastro/"
+                "url": "https://wa.me/50684466964"
             },
             {
                 "network": "Facebook",
-                "url": "https://github.com/Jordy756"
+                "url": "https://www.facebook.com/LacteosElTorito"
             }
         ],
         "mainImages": [
@@ -162,19 +162,19 @@
             "gridArea": "staffImage3"
         },
         {
-            "name": "Juan Pérez",
+            "name": "Ana Jiménez",
             "image": "staff4",
             "role": "Gerente de logística",
             "gridArea": "staffImage4"
         },
         {
-            "name": "Ana Jiménez",
+            "name": "Juan Pérez",
             "image": "staff5",
             "role": "Gerente de calidad",
             "gridArea": "staffImage5"
         }
     ],
-    "FAQ": [
+    "FAQs": [
         {
             "question": "¿Cuál es el horario de atención?",
             "answer": "De lunes a viernes de 8:00 a.m. a 5:00 p.m."
@@ -186,6 +186,30 @@
         {
             "question": "¿Cuál es el precio del envío?",
             "answer": "El precio del envío es de $5."
+        },
+        {
+            "question": "¿Cuál es el tiempo de garantía?",
+            "answer": "El tiempo de garantía es de 30 días."
+        },
+        {
+            "question": "¿Cuál es el tiempo de respuesta?",
+            "answer": "El tiempo de respuesta es de 24 horas."
+        },
+        {
+            "question": "¿Cuál es el tiempo de devolución?",
+            "answer": "El tiempo de devolución es de 15 días."
+        },
+        {
+            "question": "¿Cuál es el tiempo de cambio?",
+            "answer": "El tiempo de cambio es de 15 días."
+        },
+        {
+            "question": "¿Cuál es el tiempo de reembolso?",
+            "answer": "El tiempo de reembolso es de 15 días."
+        },
+        {
+            "question": "¿Cuál es el tiempo de reembolso?",
+            "answer": "El tiempo de reembolso es de 15 días."
         }
     ]
 }

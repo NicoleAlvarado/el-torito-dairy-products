@@ -1,0 +1,130 @@
+---
+type Props = {
+    question: string;
+    answer: string;
+};
+
+const { question, answer } = Astro.props;
+---
+
+<details name="FAQs">
+    <summary>
+        <h6>{question}</h6>
+        <div></div>
+    </summary>
+    <p>{answer}</p>
+</details>
+
+<style>
+    details {
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+
+    details > summary {
+        font-weight: 500;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    details > summary > div {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    details > summary > div::before,
+    details > summary > div::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        background-color: var(--neutral-900);
+        width: 100%;
+        height: 2px;
+        translate: 0 -50%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    details > summary > div::before {
+        transform: rotate(180deg);
+    }
+
+    details > summary > div::after {
+        transform: rotate(90deg);
+    }
+
+    details[open] > summary > div::before,
+    details[open] > summary > div::after {
+        transform: rotate(0);
+    }
+
+    @starting-style {
+        details[open] > summary > div::before,
+        details[open] > summary > div::after {
+        }
+    }
+</style>
+
+<!-- 
+---
+type Props = {
+    question: string;
+    answer: string;
+};
+
+const { question, answer } = Astro.props;
+---
+
+<details>
+    <summary>{question}</summary>
+    <div>
+        {answer}
+    </div>
+</details>
+
+<details>
+    <summary>{question}</summary>
+    <div>
+        <p>{answer}</p>
+    </div>
+</details>
+
+<style>
+    details {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    summary {
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    details div {
+        max-height: 0;
+        overflow: hidden;
+
+        overflow: hidden;
+        background-color: red;
+    }
+
+    details[open] div {
+        max-height: 1000px;
+        transition: max-height 5s ease-in-out allow-discrete;
+    }
+
+    @starting-style {
+        details[open] div {
+            max-height: 0;
+        }
+    }
+</style> -->
