@@ -1,0 +1,80 @@
+---
+import Image from "astro/components/Image.astro";
+
+type Props = {
+    index: number;
+    name: string;
+    image: string;
+    role: string;
+    gridArea: string;
+};
+
+const { index, name, image, role, gridArea } = Astro.props;
+---
+
+<article>
+    <Image src={`/src/assets/images/team/${image}.webp`} alt={`Foto de ${name}`} width={1} height={1} />
+    <div>
+        <h6>{name}</h6>
+        <p>{role}</p>
+    </div>
+</article>
+
+<style define:vars={{ index, gridArea }}>
+    article::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: 2;
+    }
+
+    article {
+        padding: 1rem;
+        grid-area: var(--gridArea);
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        color: var(--neutral-50);
+        animation: scaleShift 2.5s infinite alternate ease-in-out;
+        animation-delay: calc(var(--index) * 0.5s);
+    }
+
+    article:hover {
+        animation-play-state: paused;
+    }
+
+    article:hover > div {
+        transform: translateY(calc(-100% - 1rem));
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    article > div {
+        position: absolute;
+        top: 100%;
+        width: calc(100% - 2rem);
+        background-color: var(--glass-color);
+        backdrop-filter: var(--blur-effect);
+        border-radius: 5px;
+        padding: 0.5rem;
+        transition: transform 0.3s ease-in-out;
+        z-index: 2;
+    }
+
+    article > div > p {
+        font-size: 0.875rem;
+    }
+
+    @keyframes scaleShift {
+        to {
+            scale: 1.1;
+        }
+    }
+</style>

@@ -1,9 +1,10 @@
 ---
+import MainSection from "@components/MainSection.astro";
 import ProductCard from "@components/ProductCard.astro";
 import { products } from "@data";
 ---
 
-<section id="products">
+<MainSection id="products" flexDirection="column">
     <h2>Nuestros Productos</h2>
     <div>
         {
@@ -12,17 +13,11 @@ import { products } from "@data";
             ))
         }
     </div>
-</section>
+</MainSection>
 
 <style>
-    section {
-        width: min(100%, var(--max-width));
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    section > div {
+    div {
+        flex: 1;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(6, 1fr);
@@ -35,6 +30,5 @@ import { products } from "@data";
             "product4 product4 product2 product2 product2 product5 product5 product5"
             "product4 product4 product6 product6 product6 product6 product7 product7"
             "product4 product4 product6 product6 product6 product6 product7 product7";
-        height: 800px;
     }
 </style>

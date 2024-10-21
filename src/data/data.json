@@ -145,28 +145,33 @@
     "team": [
         {
             "name": "Jordy Castro",
-            "image": "jordycastro.webp",
-            "role": "CEO"
+            "image": "staff1",
+            "role": "CEO",
+            "gridArea": "staffImage1"
         },
         {
             "name": "María Rodríguez",
-            "image": "mariarodriguez.webp",
-            "role": "Gerente de ventas"
+            "image": "staff2",
+            "role": "Gerente de ventas",
+            "gridArea": "staffImage2"
         },
         {
             "name": "Carlos Sánchez",
-            "image": "carlossanchez.webp",
-            "role": "Gerente de producción"
+            "image": "staff3",
+            "role": "Gerente de producción",
+            "gridArea": "staffImage3"
         },
         {
             "name": "Juan Pérez",
-            "image": "juanperez.webp",
-            "role": "Gerente de logística"
+            "image": "staff4",
+            "role": "Gerente de logística",
+            "gridArea": "staffImage4"
         },
         {
             "name": "Ana Jiménez",
-            "image": "anajimenez.webp",
-            "role": "Gerente de calidad"
+            "image": "staff5",
+            "role": "Gerente de calidad",
+            "gridArea": "staffImage5"
         }
     ],
     "FAQ": [

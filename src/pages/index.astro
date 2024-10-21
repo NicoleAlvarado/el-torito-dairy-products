@@ -8,24 +8,36 @@ import Products from "@sections/Products.astro";
 import Footer from "@components/Footer.astro";
 import Testimonies from "@sections/Testimonies.astro";
 import Team from "@sections/Team.astro";
+
+import { basics } from "@data";
+
+const { name } = basics;
 ---
 
-<Layout title="Lácteos El Torito">
-    <header>
-        <Navbar />
-        <Hero />
-        <Awards />
-    </header>
-    <main>
-        <AboutUs />
-        <Products />
-        <Testimonies />
-        <Team />
-    </main>
-    <Footer />
+<Layout title={name}>
+    <div>
+        <header>
+            <Navbar />
+            <Hero />
+            <Awards />
+        </header>
+        <main>
+            <AboutUs />
+            <Products />
+            <Testimonies />
+            <Team />
+        </main>
+        <Footer backgroundColor="var(--primary-700)" />
+    </div>
 </Layout>
 
 <style>
+    div {
+        display: grid;
+        gap: 3rem;
+        position: relative;
+    }
+
     header::before {
         content: "";
         position: absolute;
@@ -75,7 +87,7 @@ import Team from "@sections/Team.astro";
     }
 
     main {
-        padding: 1rem;
+        padding-inline: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;

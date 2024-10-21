@@ -1,9 +1,10 @@
 ---
 import AboutDetailCard from "@components/AboutDetailCard.astro";
+import MainSection from "@components/MainSection.astro";
 import { aboutUs } from "@data";
 ---
 
-<section id="about-us">
+<MainSection id="about-us" flexDirection="column">
     <h2>Sobre nosotros</h2>
     <div>
         {
@@ -17,22 +18,13 @@ import { aboutUs } from "@data";
             ))
         }
     </div>
-</section>
+</MainSection>
 
 <style>
-    section,
-    section > div {
+    div {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-    }
-
-    section {
-        width: min(100%, var(--max-width));
-    }
-
-    section > div {
-        /* overflow: clip; */
         contain: paint;
     }
 </style>

@@ -1,17 +1,57 @@
 ---
-
+import OurTeamCard from "@components/OurTeamCard.astro";
+import { team } from "@data";
 ---
 
-<section>
-    <h2>Nuestro equipo</h2>
+<section id="our-team">
+    <div>
+        <h2>Nuestro equipo</h2>
+        <p>
+            Nuestro equipo está conformado por personas apasionadas por la calidad y el bienestar. Cada uno de nuestros
+            colaboradores comparte el compromiso de ofrecer productos lácteos frescos y saludables, trabajando con
+            dedicación en cada paso del proceso, desde la recolección de la leche hasta la entrega de nuestros productos
+            en su mesa.
+        </p>
+    </div>
+    {
+        team.map(({ name, image, role, gridArea }, index) => (
+            <OurTeamCard index={index} name={name} image={image} role={role} gridArea={gridArea} />
+        ))
+    }
 </section>
 
 <style>
     section {
+        padding-block: 1rem;
         width: min(100%, var(--max-width));
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        grid-auto-columns: 1fr;
+        gap: 1rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". . . staffImage1 staffImage1 staffImage1 . . . . . ."
+            ". . . staffImage1 staffImage1 staffImage1 . . . . staffImage2 staffImage2"
+            ". . . staffImage1 staffImage1 staffImage1 . . . . staffImage2 staffImage2"
+            "staffImage5 staffImage5 . text text text text text text . staffImage2 staffImage2"
+            "staffImage5 staffImage5 . text text text text text text . . ."
+            "staffImage5 staffImage5 . text text text text text text . . ."
+            "staffImage5 staffImage5 . text text text text text text . . ."
+            ". . . . . . . . staffImage4 staffImage4 staffImage4 ."
+            ". . . staffImage3 staffImage3 . . . staffImage4 staffImage4 staffImage4 ."
+            ". . . staffImage3 staffImage3 . . . staffImage4 staffImage4 staffImage4 ."
+            ". . . staffImage3 staffImage3 . . . . . . .";
+    }
+
+    div {
+        grid-area: text;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        min-height: 100VH;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
     }
 </style>
