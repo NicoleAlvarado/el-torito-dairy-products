@@ -1,0 +1,90 @@
+---
+type Props = {
+    name: string;
+    fieldType: "input" | "textarea";
+    inputType?: "text" | "email";
+    pattern?: string;
+};
+
+const { name, inputType, fieldType, pattern } = Astro.props;
+---
+
+<div>
+    {
+        fieldType === "input" ? (
+            <input type={inputType} placeholder="" pattern={pattern} required />
+        ) : (
+            <textarea name={name} placeholder="" required />
+        )
+    }
+    <label>{name}</label>
+    <span>Error al insertar una persona</span>
+</div>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+    }
+
+    div > :is(input, textarea):not(:placeholder-shown):valid {
+        border-color: var(--success-900);
+    }
+
+    div > :is(input, textarea):not(:placeholder-shown):invalid {
+        border-color: var(--error-500);
+    }
+
+    div > :is(input, textarea) {
+        padding: 0.5625rem calc(0.5625rem * 2 - 0.25rem);
+        border: 1px solid var(--neutral-400);
+        border-radius: 5px;
+        background-color: var(--neutral-50);
+    }
+
+    div > textarea {
+        resize: none;
+        min-height: 250px;
+    }
+
+    div > :is(label, span) {
+        line-height: 1;
+    }
+
+    div > label {
+        padding-inline: 0.25rem;
+        position: absolute;
+        top: calc(0.5625rem * 2 - 0.25rem);
+        left: 0.5625rem;
+        pointer-events: none;
+        background-color: var(--neutral-50);
+        transition:
+            top 0.3s ease-in-out,
+            font-size 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+    }
+
+    div > :is(input, textarea):focus + label,
+    div > :is(input, textarea):not(:placeholder-shown) + label {
+        top: calc(-0.5625rem * 2 + 0.65rem);
+        font-size: 0.9rem;
+        color: var(--neutral-700);
+    }
+
+    div > :is(input, textarea):not(:placeholder-shown):valid + label {
+        color: var(--success-900);
+    }
+
+    div > :is(input, textarea):not(:placeholder-shown):invalid + label {
+        color: var(--error-900);
+    }
+
+    div > span {
+        padding-inline: 0.5625rem;
+        color: var(--error-900);
+        font-size: 0.75rem;
+        display: none;
+    }
+</style>

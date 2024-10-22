@@ -41,6 +41,12 @@ const { title } = Astro.props;
         --primary-500: #208c43;
         --primary-700: #0b3017;
         --primary-900: #06180c;
+        --success-500: #b3e145;
+        --success-700: #8fce10;
+        --success-900: #5c9408;
+        --error-500: #ff745c;
+        --error-700: #ff3426;
+        --error-900: #b71323;
         --glass-color: rgba(255, 255, 255, 0.2);
         --blur-effect: blur(2.5px);
         --box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.1);
@@ -111,7 +117,9 @@ const { title } = Astro.props;
         cursor: pointer;
     }
 
-    button {
+    button,
+    input,
+    textarea {
         font-family: inherit;
         font-size: inherit;
     }

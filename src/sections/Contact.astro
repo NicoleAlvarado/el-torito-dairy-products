@@ -1,16 +1,45 @@
 ---
-
+import Form from "@components/Form.astro";
+import InputField from "@components/InputField.astro";
+import MainSection from "@components/MainSection.astro";
 ---
 
-<section>
-    <h2>Contactanos</h2>
-</section>
+<MainSection id="contact-us" flexDirection="column">
+    <h2>Contáctanos</h2>
+    <div>
+        <article>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id reprehenderit modi voluptas architecto
+                nihil, omnis, aspernatur consequuntur repudiandae tempora ducimus, ullam iusto mollitia vero earum totam
+                fugit ea eos maiores.
+            </p>
+        </article>
+        <article>
+            <Form>
+                <InputField name="Nombre" fieldType="input" inputType="text" />
+                <InputField name="Correo" fieldType="input" inputType="email" />
+                <InputField name="Asunto" fieldType="input" inputType="text" />
+                <InputField name="Mensaje" fieldType="textarea" />
+            </Form>
+        </article>
+    </div>
+</MainSection>
 
 <style>
-    section {
-        width: min(100%, var(--max-width));
+    div {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 2rem;
+        flex: 1;
+    }
+
+    div > article:first-child {
+        flex: 3;
+        background-color: red;
+    }
+
+    div > article:last-child {
+        flex: 1;
+        /* background-color: rebeccapurple; */
     }
 </style>
