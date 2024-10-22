@@ -12,14 +12,17 @@ const { question, answer } = Astro.props;
         <h6>{question}</h6>
         <div></div>
     </summary>
-    <p>{answer}</p>
+    <div>
+        <p>{answer}</p>
+    </div>
 </details>
-
 <style>
     details {
         padding: 1rem;
         border-radius: 5px;
         box-shadow: var(--box-shadow);
+        animation: revealFAQ linear both;
+        animation-timeline: view();
     }
 
     details > summary {
@@ -65,66 +68,32 @@ const { question, answer } = Astro.props;
         transform: rotate(0);
     }
 
+    details > div {
+        margin-top: 0.5rem;
+    }
+
     @starting-style {
         details[open] > summary > div::before,
         details[open] > summary > div::after {
         }
     }
-</style>
 
-<!-- 
----
-type Props = {
-    question: string;
-    answer: string;
-};
-
-const { question, answer } = Astro.props;
----
-
-<details>
-    <summary>{question}</summary>
-    <div>
-        {answer}
-    </div>
-</details>
-
-<details>
-    <summary>{question}</summary>
-    <div>
-        <p>{answer}</p>
-    </div>
-</details>
-
-<style>
-    details {
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-bottom: 10px;
-    }
-
-    summary {
-        padding: 10px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    details div {
-        max-height: 0;
-        overflow: hidden;
-
-        overflow: hidden;
-        background-color: red;
-    }
-
-    details[open] div {
-        max-height: 1000px;
-        transition: max-height 5s ease-in-out allow-discrete;
-    }
-
-    @starting-style {
-        details[open] div {
-            max-height: 0;
+    @keyframes revealFAQ {
+        entry 0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        entry 100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        exit 0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        exit 100% {
+            opacity: 0;
+            transform: translateY(-100%);
         }
     }
-</style> -->
+</style>
