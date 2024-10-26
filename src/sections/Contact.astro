@@ -2,44 +2,109 @@
 import Form from "@components/Form.astro";
 import InputField from "@components/InputField.astro";
 import MainSection from "@components/MainSection.astro";
+import LocationIcon from "@icons/LocationIcon.astro";
+import PhoneIcon from "@icons/PhoneIcon.astro";
+import EmailIcon from "@icons/EmailIcon.astro";
+import { basics } from "@data";
+import ContactLink from "@components/ContactLink.astro";
+
+const { email, phone, location, schedules } = basics;
+const { address, addressLink, addressMapLink } = location;
 ---
 
-<MainSection id="contact-us" flexDirection="column">
-    <h2>Contáctanos</h2>
-    <div>
-        <article>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id reprehenderit modi voluptas architecto
-                nihil, omnis, aspernatur consequuntur repudiandae tempora ducimus, ullam iusto mollitia vero earum totam
-                fugit ea eos maiores.
-            </p>
-        </article>
-        <article>
-            <Form>
-                <InputField name="Nombre" fieldType="input" inputType="text" />
-                <InputField name="Correo" fieldType="input" inputType="email" />
-                <InputField name="Asunto" fieldType="input" inputType="text" />
-                <InputField name="Mensaje" fieldType="textarea" />
-            </Form>
-        </article>
-    </div>
+<MainSection id="contact-us">
+    <article class="contact__info">
+        <h2>Contáctanos</h2>
+        <p>
+            Estamos aquí para ayudarte. Si tienes preguntas sobre nuestros productos lácteos, necesitas asesoría
+            personalizada o deseas realizar un pedido, no dudes en contactarnos. Completa el formulario o usa nuestros
+            datos de contacto, y un miembro de nuestro equipo estará encantado de atenderte.
+        </p>
+        <div>
+            <div>
+                <h6>Información de contacto</h6>
+                <ContactLink link={addressLink} text={address}>
+                    <LocationIcon width={24} height={24} color="var(--neutral-900)" />
+                </ContactLink>
+                <ContactLink link={`tel:${phone.trim()}`} text={phone}>
+                    <PhoneIcon width={24} height={24} color="var(--neutral-900)" />
+                </ContactLink>
+                <ContactLink link={`mailto:${email}`} text={email}>
+                    <EmailIcon width={24} height={24} color="var(--neutral-900)" />
+                </ContactLink>
+            </div>
+            <div>
+                <h6>Horario</h6>
+                {
+                    schedules.map(({ day, hours }) => (
+                        <p>
+                            {day}: {hours}
+                        </p>
+                    ))
+                }
+            </div>
+        </div>
+        <iframe src={addressMapLink} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </article>
+    <article class="contact__form">
+        <h5>Ponte en contacto con nosotros</h5>
+        <Form buttonText="Enviar">
+            <InputField name="Nombre" fieldType="input" inputType="text" />
+            <InputField name="Apellidos" fieldType="input" inputType="text" />
+            <InputField name="Correo" fieldType="input" inputType="email" />
+            <InputField name="Asunto" fieldType="input" inputType="text" />
+            <InputField name="Mensaje" fieldType="textarea" flex={1} />
+        </Form>
+    </article>
 </MainSection>
 
 <style>
-    div {
+    article:is(.contact__info, .contact__form) {
         display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        flex: 1;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    div > article:first-child {
+    article:is(.contact__info > h2, .contact__form > h5) {
+        line-height: 1;
+    }
+
+    /* CONTACT INFO */
+
+    .contact__info {
         flex: 3;
-        background-color: red;
     }
 
-    div > article:last-child {
+    .contact__info > h2 {
+        text-align: start;
+    }
+
+    .contact__info > div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .contact__info > div > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contact__info > iframe {
+        border: none;
+        border-radius: 5px;
         flex: 1;
-        /* background-color: rebeccapurple; */
+    }
+
+    /* CONTACT FORM */
+
+    .contact__form {
+        flex: 1;
+    }
+
+    .contact__form > h5 {
+        text-align: center;
     }
 </style>

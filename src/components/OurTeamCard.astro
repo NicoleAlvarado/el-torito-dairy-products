@@ -25,7 +25,7 @@ const { index, name, image, role, gridArea } = Astro.props;
         content: "";
         position: absolute;
         inset: 0;
-        background-color: rgba(0, 0, 0, 0.25);
+        background-color: var(--image-background);
         z-index: 2;
     }
 
@@ -36,8 +36,7 @@ const { index, name, image, role, gridArea } = Astro.props;
         overflow: hidden;
         position: relative;
         color: var(--neutral-50);
-        animation: scaleShift 2.5s infinite alternate ease-in-out;
-        animation-delay: calc(var(--index) * 0.5s);
+        animation: scaleShift 2.5s infinite alternate calc(var(--index) * 0.5s) ease-in-out;
     }
 
     article:hover {
@@ -48,7 +47,7 @@ const { index, name, image, role, gridArea } = Astro.props;
         transform: translateY(calc(-100% - 1rem));
     }
 
-    img {
+    article > img {
         position: absolute;
         inset: 0;
         width: 100%;

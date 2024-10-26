@@ -10,15 +10,21 @@ type Props = {
 };
 
 const { backgroundColor } = Astro.props;
-const { name, logo, slogan } = basics;
+const { name, logo, slogan, socialNetworks } = basics;
 const year = new Date().getFullYear();
+
+const SOCIAL_NETWORKS: Record<string, string | any> = {
+    Whatsapp: WhatsappIcon,
+    Facebook: FacebookIcon,
+    Instagram: InstagramIcon,
+};
 ---
 
 <footer>
     <section>
         <div>
             <a href="/#">
-                <Image src={logo} alt={`Logo de ${name}`} width={50} height={50} />
+                <Image src={logo} alt={`Logo de ${name}`} width={1} height={1} />
             </a>
             <p>{slogan}</p>
         </div>
@@ -47,21 +53,16 @@ const year = new Date().getFullYear();
     <section>
         <p>© {year} {name}. Todos los derechos reservados.</p>
         <ul>
-            <li>
-                <a href="https://wa.me/50684466964" target="_blank" rel="noopener noreferrer">
-                    <WhatsappIcon width={24} height={24} color="var(--neutral-50)" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/LacteosElTorito" target="_blank" rel="noopener noreferrer">
-                    <FacebookIcon width={24} height={24} color="var(--neutral-50)" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram/LacteosElTorito" target="_blank" rel="noopener noreferrer">
-                    <InstagramIcon width={24} height={24} color="var(--neutral-50)" />
-                </a>
-            </li>
+            {
+                socialNetworks.map(({ network, url }) => {
+                    const Icon = SOCIAL_NETWORKS[network];
+                    return (
+                        <a href={url} target="_blank" rel="noopener noreferrer">
+                            <Icon color="var(--neutral-50)" width={24} height={24} />
+                        </a>
+                    );
+                })
+            }
         </ul>
     </section>
 </footer>

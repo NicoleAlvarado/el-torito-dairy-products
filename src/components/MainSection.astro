@@ -1,10 +1,10 @@
 ---
 type Props = {
     id: "our-team" | "testimonies" | "products" | "about-us" | "FAQ" | "contact-us";
-    flexDirection: "row" | "column";
+    flexDirection?: "row" | "column";
 };
 
-const { id, flexDirection } = Astro.props;
+const { id, flexDirection = "row" } = Astro.props;
 ---
 
 <section id={id}>
