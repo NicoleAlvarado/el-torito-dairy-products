@@ -94,11 +94,9 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
 
     footer > section > div {
         display: flex;
-        gap: 1rem;
-    }
-
-    footer > section > div {
         flex-direction: column;
+        gap: 1rem;
+        flex: 1;
     }
 
     footer > section > ul,
@@ -116,7 +114,7 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
     footer > section > nav {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     footer > section > nav > div,
@@ -169,5 +167,25 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
 
     footer > section > ul > li:hover > a {
         scale: 1.1;
+    }
+
+    @media screen and (width <= 650px) {
+        :is(
+                footer > section,
+                footer > section > div,
+                footer > section > nav,
+                footer > section > nav > div,
+                footer > section > nav > div > ul
+            ) {
+            align-items: center;
+        }
+
+        :is(footer > section, footer > section > nav) {
+            flex-direction: column;
+        }
+
+        :is(footer > section > div, footer > section > p) {
+            text-align: center;
+        }
     }
 </style>

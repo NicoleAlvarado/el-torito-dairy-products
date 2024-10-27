@@ -8,9 +8,16 @@ const { name, logo } = basics;
 ---
 
 <nav>
-    <a href="/#">
-        <Image src={logo} alt={`Logo de ${name}`} width={50} height={50} />
-    </a>
+    <div>
+        <a href="/#">
+            <Image src={logo} alt={`Logo de ${name}`} width={50} height={50} />
+        </a>
+        <button id="menu-btn" type="button">
+            <span style="--index: 3"></span>
+            <span style="--index: 2"></span>
+            <span style="--index: 1"></span>
+        </button>
+    </div>
     <ul>
         <li><a href="/#about-us">Sobre nosotros</a></li>
         <li><a href="/#testimonies">Testimonios</a></li>
@@ -29,24 +36,49 @@ const { name, logo } = basics;
         gap: 2rem;
     }
 
-    a {
+    nav > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-right: auto;
+    }
+
+    nav > div > a {
         display: flex;
     }
 
-    img {
+    nav > div > button {
+        width: 36px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: transparent;
+        border: none;
+        display: none;
+    }
+
+    button > span {
+        width: calc(var(--index) * 33.33%);
+        height: 3px;
+        background-color: var(--neutral-50);
+        border-radius: 5px;
+    }
+
+    nav > div > a > img {
         max-width: 50px;
         height: auto;
         object-fit: contain;
     }
 
-    ul {
+    nav > ul {
         display: flex;
         align-items: center;
         gap: 1rem;
         margin-left: auto;
     }
 
-    li::before {
+    nav > ul > li::before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -59,16 +91,57 @@ const { name, logo } = basics;
             width 0.3s ease-in-out;
     }
 
-    li {
+    nav > ul > li {
         position: relative;
     }
 
-    li:hover::before {
+    nav > ul > li:hover::before {
         width: 100%;
         transform: translateX(-50%);
     }
 
-    a {
+    nav > ul > li > a {
         color: var(--neutral-50);
     }
+
+    @media screen and (width <= 768px) {
+        nav > div > button {
+            display: flex;
+        }
+
+        nav > ul {
+            display: none;
+        }
+
+        /* nav > ul {
+            transform: translateY(-100%);
+            display: none;
+        }
+
+        nav > ul.open {
+            display: flex;
+            padding: 1rem;
+            position: fixed;
+            inset: 0;
+            align-items: start;
+            flex-direction: column;
+            background-color: var(--neutral-50);
+            z-index: 10;
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav > ul > li > a {
+            color: var(--neutral-900);
+        } */
+    }
 </style>
+
+<!-- <script>
+    const menuBtn = document.getElementById("menu-btn") as HTMLButtonElement;
+    const nav = document.querySelector("nav > ul") as HTMLElement;
+
+    menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script> -->
