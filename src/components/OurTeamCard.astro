@@ -12,7 +12,7 @@ type Props = {
 const { index, name, image, role, gridArea } = Astro.props;
 ---
 
-<article>
+<article class="article-container">
     <Image src={`/src/assets/images/team/${image}.webp`} alt={`Foto de ${name}`} width={1} height={1} />
     <div>
         <h6>{name}</h6>
@@ -30,12 +30,13 @@ const { index, name, image, role, gridArea } = Astro.props;
     }
 
     article {
+        height: 100%;
         padding: 1rem;
-        grid-area: var(--gridArea);
         border-radius: 5px;
         overflow: hidden;
         position: relative;
         color: var(--neutral-50);
+        grid-area: var(--gridArea);
         animation: scaleShift 2.5s infinite alternate calc(var(--index) * 0.5s) ease-in-out;
     }
 

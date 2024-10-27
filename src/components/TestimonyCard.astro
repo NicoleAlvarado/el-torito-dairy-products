@@ -41,20 +41,15 @@ const { name, time, testimony, gridArea, position } = Astro.props;
         animation: revealTestimony linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 25%;
-    }
-
-    @keyframes revealTestimony {
-        from {
-            translate: var(--position);
-        }
-        to {
-            translate: 0 0;
-        }
+        width: fit-content;
+        height: fit-content;
+        transition: box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
     }
 
     article:hover {
         z-index: 1;
-        box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadow-hover);
+        scale: 1.025;
     }
 
     article > header {
@@ -81,6 +76,19 @@ const { name, time, testimony, gridArea, position } = Astro.props;
         font-size: 0.75rem;
         color: var(--neutral-700);
     }
+
+    article > main > p {
+        max-width: 50ch;
+    }
+
+    @keyframes revealTestimony {
+        from {
+            translate: var(--position);
+        }
+        to {
+            translate: 0 0;
+        }
+    }
 </style>
 
 <!-- 
@@ -91,5 +99,4 @@ Este movimiento esta muy bueno
 0% 8% 
 -84% -40% 
 
- 
 -->
