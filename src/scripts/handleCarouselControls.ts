@@ -1,12 +1,16 @@
 const carouselControlSpans = document.querySelectorAll("#carousel-controls span");
 let currentIndex = 0;
 
-const activateNext = () => {
-    carouselControlSpans[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % carouselControlSpans.length;
-    carouselControlSpans[currentIndex].classList.add("active");
+const changeSlide = (index: number) => {
+    carouselControlSpans[index].classList.toggle("active");
 };
 
-carouselControlSpans[0].classList.add("active");
+const main = () => {
+    changeSlide(currentIndex);
+    currentIndex = (currentIndex + 1) % carouselControlSpans.length;
+    changeSlide(currentIndex);
+};
 
-setInterval(activateNext, 5000);
+changeSlide(currentIndex);
+
+setInterval(main, 5000);
