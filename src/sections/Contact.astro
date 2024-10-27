@@ -5,21 +5,17 @@ import MainSection from "@components/MainSection.astro";
 import LocationIcon from "@icons/LocationIcon.astro";
 import PhoneIcon from "@icons/PhoneIcon.astro";
 import EmailIcon from "@icons/EmailIcon.astro";
-import { basics } from "@data";
+import { basics, contactUsSection } from "@data";
 import ContactLink from "@components/ContactLink.astro";
 
-const { email, phone, location, schedules } = basics;
-const { address, addressLink, addressMapLink } = location;
+const { email, phone, address } = basics;
+const { title, description, addressLink, addressMapLink, schedules } = contactUsSection;
 ---
 
 <MainSection id="contact-us">
     <article class="contact__info">
-        <h2>Contáctanos</h2>
-        <p>
-            Estamos aquí para ayudarte. Si tienes preguntas sobre nuestros productos lácteos, necesitas asesoría
-            personalizada o deseas realizar un pedido, no dudes en contactarnos. Completa el formulario o usa nuestros
-            datos de contacto, y un miembro de nuestro equipo estará encantado de atenderte.
-        </p>
+        <h2>{title}</h2>
+        <p>{description}</p>
         <div>
             <div>
                 <h6>Información de contacto</h6>

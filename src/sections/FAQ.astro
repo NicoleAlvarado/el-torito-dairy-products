@@ -1,21 +1,30 @@
 ---
 import FAQItem from "@components/FAQItem.astro";
 import MainSection from "@components/MainSection.astro";
-import { FAQs } from "@data";
+import { FAQsSection } from "@data";
+
+const { title, description, FAQs } = FAQsSection;
 ---
 
 <MainSection id="FAQ" flexDirection="column">
-    <h2>Preguntas frecuentes</h2>
+    <div>
+        <h2>{title}</h2>
+        <p>{description}</p>
+    </div>
     <div>
         {FAQs.map(({ question, answer }) => <FAQItem question={question} answer={answer} />)}
     </div>
 </MainSection>
 
 <style>
-    div {
+    div:last-child {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         flex: 1;
+    }
+
+    p {
+        text-align: center;
     }
 </style>

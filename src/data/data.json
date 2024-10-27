@@ -6,11 +6,7 @@
         "summary": "Lácteos El Torito es una empresa familiar que se dedica a la producción y comercialización de productos lácteos. Nuestro objetivo es ofrecer productos de calidad a precios accesibles.",
         "phone": "+506 8412 6988",
         "slogan": "¡Calidad y sabor en un solo lugar!",
-        "location": {
-            "address": "El Torito, Santa Cruz de Turrialba, Cartago, Costa Rica",
-            "addressLink": "https://maps.app.goo.gl/tRkwK6eujYHQGy6W8",
-            "addressMapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.6592555810253!2d-83.69846772927654!3d9.990984762797327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d176a388655f%3A0xcc5ba0955c7d9442!2sPlanta%20L%C3%A1cteos%20El%20Torito!5e0!3m2!1ses-419!2scr!4v1729632878101!5m2!1ses-419!2scr"
-        },
+        "address": "El Torito, Santa Cruz de Turrialba, Cartago, Costa Rica",
         "socialNetworks": [
             {
                 "network": "Whatsapp",
@@ -24,7 +20,229 @@
                 "network": "Instagram",
                 "url": "https://www.instagram.com/lacteoseltorito"
             }
+        ]
+    },
+    "heroSection": {
+        "mainImages": [
+            "/src/assets/images/company/backgroundImage1.webp",
+            "/src/assets/images/company/backgroundImage2.webp",
+            "/src/assets/images/company/backgroundImage3.webp",
+            "/src/assets/images/company/backgroundImage4.webp",
+            "/src/assets/images/company/backgroundImage5.webp"
         ],
+        "awards": [
+            {
+                "title": "A nivel nacional",
+                "value": "#1"
+            },
+            {
+                "title": "Productos vendidos",
+                "value": "40K+"
+            },
+            {
+                "title": "Clientes satisfechos",
+                "value": "100%"
+            }
+        ]
+    },
+    "aboutUsSection": {
+        "title": "Sobre nosotros",
+        "description": "Conoce más sobre nosotros y lo que hacemos",
+        "identities": [
+            {
+                "title": "Historia",
+                "image": "/src/assets/images/company/backgroundImage2.webp",
+                "content": "Nuestra empresa fue fundada en 1990 por Juan Pérez, un emprendedor visionario que decidió apostar por la producción de productos lácteos de calidad. Desde entonces, nos hemos dedicado a elaborar productos frescos y naturales, utilizando ingredientes de la más alta calidad. Gracias a la dedicación y el esfuerzo de nuestro equipo de trabajo, hemos logrado posicionarnos como una de las empresas líderes en el sector lácteo en Costa Rica. Nuestro compromiso con la calidad y la excelencia nos ha permitido ganarnos la confianza y fidelidad de nuestros clientes, quienes reconocen y valoran la calidad de nuestros productos."
+            },
+            {
+                "title": "Misión",
+                "image": "/src/assets/images/company/backgroundImage3.webp",
+                "content": "Nuestra misión es producir y comercializar productos lácteos de la más alta calidad, elaborados con ingredientes frescos y naturales, sin conservantes ni aditivos artificiales. Nos esforzamos por satisfacer las necesidades y expectativas de nuestros clientes, brindándoles productos de calidad y un servicio excepcional. En Lácteos El Torito, trabajamos con pasión y dedicación para ofrecer a nuestros clientes productos deliciosos y nutritivos, que contribuyan a su bienestar y salud."
+            },
+            {
+                "title": "Visión",
+                "image": "/src/assets/images/company/backgroundImage4.webp",
+                "content": "Nuestra visión es ser la empresa líder en la producción y comercialización de productos lácteos en Costa Rica, reconocida por la calidad y excelencia de nuestros productos. Nos esforzamos por innovar y mejorar continuamente nuestros procesos de producción, para ofrecer a nuestros clientes productos deliciosos y nutritivos. En Lácteos El Torito, trabajamos con integridad y compromiso para ser un referente en el sector lácteo, contribuyendo al bienestar y la salud de nuestros clientes."
+            },
+            {
+                "title": "Valores",
+                "image": "/src/assets/images/company/backgroundImage5.webp",
+                "content": "En Lácteos El Torito, nos regimos por los siguientes valores: Calidad: Nos esforzamos por ofrecer productos de la más alta calidad, elaborados con ingredientes frescos y naturales. Excelencia: Buscamos la excelencia en todo lo que hacemos, desde la selección de los ingredientes hasta la elaboración de nuestros productos. Pasión: Trabajamos con pasión y dedicación para ofrecer a nuestros clientes productos deliciosos y nutritivos. Integridad: Nos regimos por los más altos estándares éticos y morales en todas nuestras acciones y decisiones. Compromiso: Estamos comprometidos con la satisfacción de nuestros clientes, brindándoles productos de calidad y un servicio excepcional."
+            }
+        ]
+    },
+    "productsSection": {
+        "title": "Nuestros productos",
+        "description": "Conoce los productos que ofrecemos",
+        "products": [
+            {
+                "name": "Leche",
+                "image": "product1",
+                "description": "Leche fresca de vaca.",
+                "gridArea": "product1"
+            },
+            {
+                "name": "Queso",
+                "image": "product2",
+                "description": "Queso fresco.",
+                "gridArea": "product2"
+            },
+            {
+                "name": "Mantequilla",
+                "image": "product3",
+                "description": "Mantequilla fresca.",
+                "gridArea": "product3"
+            },
+            {
+                "name": "Yogurt",
+                "image": "product4",
+                "description": "Yogurt natural.",
+                "gridArea": "product4"
+            },
+            {
+                "name": "Helado",
+                "image": "product5",
+                "description": "Helado de varios sabores.",
+                "gridArea": "product5"
+            },
+            {
+                "name": "Crema",
+                "image": "product6",
+                "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam",
+                "gridArea": "product7"
+            },
+            {
+                "name": "Leche condensada",
+                "image": "product7",
+                "description": "Leche condensada.",
+                "gridArea": "product6"
+            }
+        ]
+    },
+    "testimoniesSection": {
+        "title": "Testimonios",
+        "description": "Conoce lo que las personas dicen de nosotros",
+        "testimonies": [
+            {
+                "name": "Juan Pérez",
+                "time": "Hace 1 mes",
+                "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones.",
+                "gridArea": "1 / 2 / 5 / 5",
+                "position": "90% 90%"
+            },
+            {
+                "name": "María Rodríguez",
+                "time": "Hace 2 meses",
+                "testimony": "Desde que empezamos a utilizar sus servicios, nuestra productividad ha aumentado significativamente. El equipo de soporte siempre está disponible para ayudarnos y las actualizaciones constantes mantienen nuestro sistema a la vanguardia.",
+                "gridArea": "3 / 4 / 7 / 9",
+                "position": "0% 0%"
+            },
+            {
+                "name": "Carlos Sánchez",
+                "time": "Hace 3 meses",
+                "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
+                "gridArea": "1 / 8 / 4 / 12",
+                "position": "-100% 89%"
+            },
+            {
+                "name": "Ana Jiménez",
+                "time": "Hace 4 meses",
+                "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones. ",
+                "gridArea": "6 / 1 / 10 / 5",
+                "position": "90% -89%"
+            },
+            {
+                "name": "Jordy Castro",
+                "time": "Hace 5 meses",
+                "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
+                "gridArea": "6 / 7 / 10 / 12",
+                "position": "-76% -89%"
+            }
+        ]
+    },
+    "ourTeamSection": {
+        "title": "Nuestro equipo",
+        "description": "Nuestro equipo está conformado por personas apasionadas por la calidad y el bienestar. Cada uno de nuestros colaboradores comparte el compromiso de ofrecer productos lácteos frescos y saludables, trabajando con dedicación en cada paso del proceso, desde la recolección de la leche hasta la entrega de nuestros productosen su mesa.",
+        "team": [
+            {
+                "name": "Jordy Castro",
+                "image": "staff1",
+                "role": "CEO",
+                "gridArea": "staffImage1"
+            },
+            {
+                "name": "María Rodríguez",
+                "image": "staff2",
+                "role": "Gerente de ventas",
+                "gridArea": "staffImage2"
+            },
+            {
+                "name": "Carlos Sánchez",
+                "image": "staff3",
+                "role": "Gerente de producción",
+                "gridArea": "staffImage3"
+            },
+            {
+                "name": "Ana Jiménez",
+                "image": "staff4",
+                "role": "Gerente de logística",
+                "gridArea": "staffImage4"
+            },
+            {
+                "name": "Juan Pérez",
+                "image": "staff5",
+                "role": "Gerente de calidad",
+                "gridArea": "staffImage5"
+            }
+        ]
+    },
+    "FAQsSection": {
+        "title": "Preguntas frecuentes",
+        "description": "Resolvemos tus dudas",
+        "FAQs": [
+            {
+                "question": "¿Cuál es el horario de atención?",
+                "answer": "De lunes a viernes de 8:00 a.m. a 5:00 p.m."
+            },
+            {
+                "question": "¿Cuál es el tiempo de entrega?",
+                "answer": "El tiempo de entrega es de 1 a 2 días hábiles."
+            },
+            {
+                "question": "¿Cuál es el precio del envío?",
+                "answer": "El precio del envío es de $5."
+            },
+            {
+                "question": "¿Cuál es el tiempo de garantía?",
+                "answer": "El tiempo de garantía es de 30 días."
+            },
+            {
+                "question": "¿Cuál es el tiempo de respuesta?",
+                "answer": "El tiempo de respuesta es de 24 horas."
+            },
+            {
+                "question": "¿Cuál es el tiempo de devolución?",
+                "answer": "El tiempo de devolución es de 15 días."
+            },
+            {
+                "question": "¿Cuál es el tiempo de cambio?",
+                "answer": "El tiempo de cambio es de 15 días."
+            },
+            {
+                "question": "¿Cuál es el tiempo de reembolso?",
+                "answer": "El tiempo de reembolso es de 15 días."
+            },
+            {
+                "question": "¿Cuál es el tiempo de reembolso?",
+                "answer": "El tiempo de reembolso es de 15 días."
+            }
+        ]
+    },
+    "contactUsSection": {
+        "title": "Contáctanos",
+        "description": "Estamos aquí para ayudarte. Si tienes preguntas sobre nuestros productos lácteos, necesitas asesoría personalizada o deseas realizar un pedido, no dudes en contactarnos. Completa el formulario o usa nuestros datos de contacto, y un miembro de nuestro equipo estará encantado de atenderte.",
+        "addressLink": "https://maps.app.goo.gl/tRkwK6eujYHQGy6W8",
+        "addressMapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.6592555810253!2d-83.69846772927654!3d9.990984762797327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d176a388655f%3A0xcc5ba0955c7d9442!2sPlanta%20L%C3%A1cteos%20El%20Torito!5e0!3m2!1ses-419!2scr!4v1729632878101!5m2!1ses-419!2scr",
         "schedules": [
             {
                 "day": "Lunes a viernes",
@@ -38,200 +256,6 @@
                 "day": "Domingo",
                 "hours": "Cerrado"
             }
-        ],
-        "mainImages": [
-            "/src/assets/images/company/backgroundImage1.webp",
-            "/src/assets/images/company/backgroundImage2.webp",
-            "/src/assets/images/company/backgroundImage3.webp",
-            "/src/assets/images/company/backgroundImage4.webp",
-            "/src/assets/images/company/backgroundImage5.webp"
         ]
-    },
-    "awards": [
-        {
-            "title": "A nivel nacional",
-            "value": "#1"
-        },
-        {
-            "title": "Productos vendidos",
-            "value": "40K+"
-        },
-        {
-            "title": "Clientes satisfechos",
-            "value": "100%"
-        }
-    ],
-    "aboutUs": [
-        {
-            "title": "Historia",
-            "image": "/src/assets/images/company/backgroundImage2.webp",
-            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
-        },
-        {
-            "title": "Misión",
-            "image": "/src/assets/images/company/backgroundImage3.webp",
-            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
-        },
-        {
-            "title": "Visión",
-            "image": "/src/assets/images/company/backgroundImage4.webp",
-            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
-        },
-        {
-            "title": "Valores",
-            "image": "/src/assets/images/company/backgroundImage5.webp",
-            "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam eos iste, quo aut, sint earum in eligendi deleniti, porro consectetur soluta dolorem officia dicta magnam nemo ipsa."
-        }
-    ],
-    "products": [
-        {
-            "name": "Leche",
-            "image": "product1",
-            "description": "Leche fresca de vaca.",
-            "gridArea": "product1"
-        },
-        {
-            "name": "Queso",
-            "image": "product2",
-            "description": "Queso fresco.",
-            "gridArea": "product2"
-        },
-        {
-            "name": "Mantequilla",
-            "image": "product3",
-            "description": "Mantequilla fresca.",
-            "gridArea": "product3"
-        },
-        {
-            "name": "Yogurt",
-            "image": "product4",
-            "description": "Yogurt natural.",
-            "gridArea": "product4"
-        },
-        {
-            "name": "Helado",
-            "image": "product5",
-            "description": "Helado de varios sabores.",
-            "gridArea": "product5"
-        },
-        {
-            "name": "Crema",
-            "image": "product6",
-            "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam",
-            "gridArea": "product7"
-        },
-        {
-            "name": "Leche condensada",
-            "image": "product7",
-            "description": "Leche condensada.",
-            "gridArea": "product6"
-        }
-    ],
-    "testimonies": [
-        {
-            "name": "Juan Pérez",
-            "time": "Hace 1 mes",
-            "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones.",
-            "gridArea": "1 / 2 / 5 / 5",
-            "position": "90% 90%"
-        },
-        {
-            "name": "María Rodríguez",
-            "time": "Hace 2 meses",
-            "testimony": "Desde que empezamos a utilizar sus servicios, nuestra productividad ha aumentado significativamente. El equipo de soporte siempre está disponible para ayudarnos y las actualizaciones constantes mantienen nuestro sistema a la vanguardia.",
-            "gridArea": "3 / 4 / 7 / 9",
-            "position": "0% 0%"
-        },
-        {
-            "name": "Carlos Sánchez",
-            "time": "Hace 3 meses",
-            "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
-            "gridArea": "1 / 8 / 4 / 12",
-            "position": "-100% 89%"
-        },
-        {
-            "name": "Ana Jiménez",
-            "time": "Hace 4 meses",
-            "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones. ",
-            "gridArea": "6 / 1 / 10 / 5",
-            "position": "90% -89%"
-        },
-        {
-            "name": "Jordy Castro",
-            "time": "Hace 5 meses",
-            "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
-            "gridArea": "6 / 7 / 10 / 12",
-            "position": "-76% -89%"
-        }
-    ],
-    "team": [
-        {
-            "name": "Jordy Castro",
-            "image": "staff1",
-            "role": "CEO",
-            "gridArea": "staffImage1"
-        },
-        {
-            "name": "María Rodríguez",
-            "image": "staff2",
-            "role": "Gerente de ventas",
-            "gridArea": "staffImage2"
-        },
-        {
-            "name": "Carlos Sánchez",
-            "image": "staff3",
-            "role": "Gerente de producción",
-            "gridArea": "staffImage3"
-        },
-        {
-            "name": "Ana Jiménez",
-            "image": "staff4",
-            "role": "Gerente de logística",
-            "gridArea": "staffImage4"
-        },
-        {
-            "name": "Juan Pérez",
-            "image": "staff5",
-            "role": "Gerente de calidad",
-            "gridArea": "staffImage5"
-        }
-    ],
-    "FAQs": [
-        {
-            "question": "¿Cuál es el horario de atención?",
-            "answer": "De lunes a viernes de 8:00 a.m. a 5:00 p.m."
-        },
-        {
-            "question": "¿Cuál es el tiempo de entrega?",
-            "answer": "El tiempo de entrega es de 1 a 2 días hábiles."
-        },
-        {
-            "question": "¿Cuál es el precio del envío?",
-            "answer": "El precio del envío es de $5."
-        },
-        {
-            "question": "¿Cuál es el tiempo de garantía?",
-            "answer": "El tiempo de garantía es de 30 días."
-        },
-        {
-            "question": "¿Cuál es el tiempo de respuesta?",
-            "answer": "El tiempo de respuesta es de 24 horas."
-        },
-        {
-            "question": "¿Cuál es el tiempo de devolución?",
-            "answer": "El tiempo de devolución es de 15 días."
-        },
-        {
-            "question": "¿Cuál es el tiempo de cambio?",
-            "answer": "El tiempo de cambio es de 15 días."
-        },
-        {
-            "question": "¿Cuál es el tiempo de reembolso?",
-            "answer": "El tiempo de reembolso es de 15 días."
-        },
-        {
-            "question": "¿Cuál es el tiempo de reembolso?",
-            "answer": "El tiempo de reembolso es de 15 días."
-        }
-    ]
+    }
 }

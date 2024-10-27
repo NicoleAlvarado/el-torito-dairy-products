@@ -1,14 +1,19 @@
 ---
 import AboutDetailCard from "@components/AboutDetailCard.astro";
 import MainSection from "@components/MainSection.astro";
-import { aboutUs } from "@data";
+import { aboutUsSection } from "@data";
+
+const { title, description, identities } = aboutUsSection;
 ---
 
 <MainSection id="about-us" flexDirection="column">
-    <h2>Sobre nosotros</h2>
+    <div>
+        <h2>{title}</h2>
+        <p>{description}</p>
+    </div>
     <div>
         {
-            aboutUs.map(({ title, image, content }, index) => (
+            identities.map(({ title, image, content }, index) => (
                 <AboutDetailCard
                     number={(index + 1).toString().padStart(2, "0")}
                     image={image}
@@ -21,10 +26,14 @@ import { aboutUs } from "@data";
 </MainSection>
 
 <style>
-    div {
+    div:last-child {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 5rem;
         contain: paint;
+    }
+
+    p {
+        text-align: center;
     }
 </style>

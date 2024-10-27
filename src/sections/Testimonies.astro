@@ -1,13 +1,15 @@
 ---
 import MainSection from "@components/MainSection.astro";
 import TestimonyCard from "@components/TestimonyCard.astro";
-import { testimonies } from "@data";
+import { testimoniesSection } from "@data";
+
+const { title, description, testimonies } = testimoniesSection;
 ---
 
 <MainSection id="testimonies" flexDirection="column">
     <div>
-        <h2>Testimonios</h2>
-        <p>Conoce lo que las personas dicen de nosotros</p>
+        <h2>{title}</h2>
+        <p>{description}</p>
     </div>
     <div>
         {
@@ -22,7 +24,7 @@ import { testimonies } from "@data";
     p {
         text-align: center;
     }
-    
+
     div:last-child {
         flex: 1;
         position: relative;

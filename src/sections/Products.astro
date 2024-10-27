@@ -1,11 +1,16 @@
 ---
 import MainSection from "@components/MainSection.astro";
 import ProductCard from "@components/ProductCard.astro";
-import { products } from "@data";
+import { productsSection } from "@data";
+
+const { title, description, products } = productsSection;
 ---
 
 <MainSection id="products" flexDirection="column">
-    <h2>Nuestros productos</h2>
+    <div>
+        <h2>{title}</h2>
+        <p>{description}</p>
+    </div>
     <div>
         {
             products.map(({ name, image, description, gridArea }) => (
@@ -16,7 +21,11 @@ import { products } from "@data";
 </MainSection>
 
 <style>
-    div {
+    p {
+        text-align: center;
+    }
+
+    div:last-child {
         flex: 1;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
