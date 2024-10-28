@@ -14,7 +14,6 @@ const { id, flexDirection = "row" } = Astro.props;
 <style define:vars={{ flexDirection }}>
     section {
         padding-block: 1rem;
-        width: min(100%, var(--max-width));
         display: flex;
         flex-direction: var(--flexDirection);
         gap: 2rem;

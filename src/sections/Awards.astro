@@ -3,10 +3,15 @@ import AwardCard from "@components/AwardCard.astro";
 import { heroSection } from "@data";
 
 const { awards } = heroSection;
+const totalAwards = awards.length;
 ---
 
 <section>
-    {awards.map(({ title, value }) => <AwardCard title={title} value={value} />)}
+    {
+        awards.map(({ title, value }, index) => (
+            <AwardCard index={index} title={title} value={value} totalAwards={totalAwards} />
+        ))
+    }
 </section>
 
 <style>
@@ -15,5 +20,19 @@ const { awards } = heroSection;
         display: flex;
         justify-content: end;
         gap: 2rem;
+        overflow: hidden;
+    }
+
+    @media screen and (width <= 905px) {
+        section {
+            height: 170px;
+            position: relative;
+        }
+    }
+
+    @media screen and (width <= 480px) {
+        section {
+            height: 160px;
+        }
     }
 </style>

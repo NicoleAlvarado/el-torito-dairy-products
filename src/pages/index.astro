@@ -24,20 +24,22 @@ const { name } = basics;
             <Awards />
         </header>
         <main>
-            <AboutUs />
+            <!-- <AboutUs />
             <Products />
             <Testimonies />
             <OurTeam />
             <FAQ />
-            <Contact />
+            <Contact /> -->
         </main>
-        <Footer backgroundColor="var(--primary-700)" />
+        <!-- <Footer backgroundColor="var(--primary-700)" /> -->
     </div>
 </Layout>
 
 <style>
     div {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 3rem;
         position: relative;
     }
@@ -54,6 +56,7 @@ const { name } = basics;
         color: var(--neutral-900);
         z-index: 1;
         padding: 1rem;
+        width: 100%;
         min-height: 100dvh;
         background-repeat: no-repeat;
         background-position: center center;
@@ -62,8 +65,16 @@ const { name } = basics;
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 2rem;
+        gap: 3rem;
         animation: changeBackground 25s infinite linear;
+    }
+
+    main {
+        padding-inline: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: min(100%, var(--max-width));
     }
 
     @keyframes changeBackground {
@@ -88,13 +99,5 @@ const { name } = basics;
         95% {
             background-image: url("../assets/images/company/backgroundImage5.webp");
         }
-    }
-
-    main {
-        padding-inline: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
     }
 </style>

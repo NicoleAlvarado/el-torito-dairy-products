@@ -1,10 +1,12 @@
 ---
 type Props = {
+    index: number;
     title: string;
     value: string;
+    totalAwards: number;
 };
 
-const { title, value } = Astro.props;
+const { index, title, value, totalAwards } = Astro.props;
 ---
 
 <article>
@@ -14,9 +16,10 @@ const { title, value } = Astro.props;
     </div>
 </article>
 
-<style>
+<style define:vars={{ index, totalAwards }}>
     article {
-        min-width: 270px;
+        --award-card-width: min(100%, 270px);
+        width: var(--award-card-width);
         height: 170px;
         padding: 1rem;
         border-radius: 5px;
@@ -36,7 +39,32 @@ const { title, value } = Astro.props;
 
     article > div > p {
         text-align: center;
-        font-size: 3rem;
+        font-size: clamp(1.802rem, 4vw + 1rem, 3.052rem);
         font-weight: 500;
+    }
+
+    @media screen and (width <= 905px) {
+        article {
+            --animation-duration: 25s;
+            position: absolute;
+            top: 0;
+            left: calc(var(--award-card-width) * var(--totalAwards));
+            animation: moveAwardToLeft var(--animation-duration) linear infinite;
+            animation-delay: calc(
+                var(--animation-duration) / var(--totalAwards) * (var(--totalAwards) - var(--index)) * -1
+            );
+        }
+
+        @keyframes moveAwardToLeft {
+            to {
+                left: calc(-1 * var(--award-card-width));
+            }
+        }
+    }
+
+    @media screen and (width <= 480px) {
+        article {
+            height: 160px;
+        }
     }
 </style>

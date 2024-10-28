@@ -47,6 +47,12 @@ const { mainImages } = heroSection;
     .carousel__controls {
         align-items: center;
     }
+
+    @media screen and (width <= 480px) {
+        .carousel__controls {
+            display: none;
+        }
+    }
 </style>
 
 <script src="../scripts/handleCarouselControls.ts"></script>
