@@ -7,11 +7,11 @@ const { title, description, identities } = aboutUsSection;
 ---
 
 <MainSection id="about-us" flexDirection="column">
-    <div>
+    <header>
         <h2>{title}</h2>
         <p>{description}</p>
-    </div>
-    <div>
+    </header>
+    <main>
         {
             identities.map(({ title, image, content }, index) => (
                 <AboutDetailCard
@@ -22,18 +22,30 @@ const { title, description, identities } = aboutUsSection;
                 />
             ))
         }
-    </div>
+    </main>
 </MainSection>
 
 <style>
-    div:last-child {
+    header {
+        text-align: center;
+    }
+
+    main {
         display: flex;
         flex-direction: column;
         gap: 5rem;
         contain: paint;
     }
 
-    p {
-        text-align: center;
+    @media screen and (width <= 1000px) {
+        main {
+            gap: 3rem;
+        }
+    }
+
+    @media screen and (width <= 700px) {
+        main {
+            gap: 2rem;
+        }
     }
 </style>

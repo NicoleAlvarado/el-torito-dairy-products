@@ -13,11 +13,11 @@ const { number, image, title, content } = Astro.props;
 
 <article>
     <div>
-        <div>
+        <div class="about__statistic-card">
             <span>{number}</span>
-            <Image src={image} alt={`Imagen de ${title}`} width="400" height="500" />
+            <Image src={image} alt={`Imagen de ${title}`} width={400} height={500} />
         </div>
-        <div>
+        <div class="about__description-card">
             <h3>{title}</h3>
             <p>{content}</p>
         </div>
@@ -39,7 +39,7 @@ const { number, image, title, content } = Astro.props;
         gap: 1rem;
     }
 
-    article > div > div {
+    :is(.about__statistic-card, .about__description-card) {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -47,18 +47,18 @@ const { number, image, title, content } = Astro.props;
         gap: 0.5rem;
     }
 
-    article > div > div > span {
+    .about__statistic-card {
+        position: relative;
+    }
+
+    .about__statistic-card > span {
         display: block;
         font-size: 1.25rem;
         border-bottom: 1px solid var(--neutral-900);
         padding-bottom: 1rem;
     }
 
-    article > div > div:first-child {
-        position: relative;
-    }
-
-    article > div > div:first-child > img {
+    .about__statistic-card > img {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -77,6 +77,36 @@ const { number, image, title, content } = Astro.props;
         to {
             opacity: 1;
             translate: 0 0;
+        }
+    }
+
+    @media screen and (width <= 1000px) {
+        article {
+            height: 350px;
+        }
+
+        .about__statistic-card > img {
+            width: 75%;
+            height: 350px;
+        }
+    }
+
+    @media screen and (width <= 700px) {
+        article {
+            height: auto;
+            animation-range: entry 20% cover 35%;
+        }
+
+        .about__statistic-card > img {
+            display: none;
+        }
+
+        .about__statistic-card {
+            flex: 1;
+        }
+
+        .about__description-card {
+            flex: 5;
         }
     }
 </style>

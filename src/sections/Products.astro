@@ -7,25 +7,25 @@ const { title, description, products } = productsSection;
 ---
 
 <MainSection id="products" flexDirection="column">
-    <div>
+    <header>
         <h2>{title}</h2>
         <p>{description}</p>
-    </div>
-    <div>
+    </header>
+    <main>
         {
             products.map(({ name, image, description, gridArea }) => (
                 <ProductCard name={name} image={image} description={description} gridArea={gridArea} />
             ))
         }
-    </div>
+    </main>
 </MainSection>
 
 <style>
-    p {
+    header {
         text-align: center;
     }
 
-    div:last-child {
+    main {
         flex: 1;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -39,5 +39,31 @@ const { title, description, products } = productsSection;
             "product4 product4 product2 product2 product2 product5 product5 product5"
             "product4 product4 product6 product6 product6 product6 product7 product7"
             "product4 product4 product6 product6 product6 product6 product7 product7";
+    }
+
+    @media screen and (width <= 999px) {
+        main {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "product1 product2"
+                "product3 product4"
+                "product5 product6"
+                "product7 product7";
+        }
+    }
+
+    @media (max-width: 767px) {
+        main {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "product1"
+                "product2"
+                "product3"
+                "product4"
+                "product5"
+                "product6"
+                "product7";
+        }
     }
 </style>

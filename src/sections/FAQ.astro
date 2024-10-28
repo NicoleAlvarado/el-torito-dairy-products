@@ -7,24 +7,24 @@ const { title, description, FAQs } = FAQsSection;
 ---
 
 <MainSection id="FAQ" flexDirection="column">
-    <div>
+    <header>
         <h2>{title}</h2>
         <p>{description}</p>
-    </div>
-    <div>
+    </header>
+    <main>
         {FAQs.map(({ question, answer }) => <FAQItem question={question} answer={answer} />)}
-    </div>
+    </main>
 </MainSection>
 
 <style>
-    div:last-child {
+    header {
+        text-align: center;
+    }
+
+    main {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         flex: 1;
-    }
-
-    p {
-        text-align: center;
     }
 </style>

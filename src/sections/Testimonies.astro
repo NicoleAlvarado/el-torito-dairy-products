@@ -7,25 +7,25 @@ const { title, description, testimonies } = testimoniesSection;
 ---
 
 <MainSection id="testimonies" flexDirection="column">
-    <div>
+    <header>
         <h2>{title}</h2>
         <p>{description}</p>
-    </div>
-    <div>
+    </header>
+    <main>
         {
             testimonies.map(({ name, time, testimony, gridArea, position }) => (
                 <TestimonyCard name={name} time={time} testimony={testimony} gridArea={gridArea} position={position} />
             ))
         }
-    </div>
+    </main>
 </MainSection>
 
 <style>
-    p {
+    header {
         text-align: center;
     }
 
-    div:last-child {
+    main {
         flex: 1;
         position: relative;
         display: grid;
