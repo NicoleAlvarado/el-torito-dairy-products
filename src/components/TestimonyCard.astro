@@ -2,6 +2,7 @@
 import UserIcon from "@icons/UserIcon.astro";
 
 type Props = {
+    id: string;
     name: string;
     time: string;
     testimony: string;
@@ -9,10 +10,10 @@ type Props = {
     position: string;
 };
 
-const { name, time, testimony, gridArea, position } = Astro.props;
+const { id, name, time, testimony, gridArea, position } = Astro.props;
 ---
 
-<article>
+<article {id}>
     <header>
         <figure>
             <UserIcon width={32} height={32} color="var(--neutral-50)" />
@@ -31,25 +32,11 @@ const { name, time, testimony, gridArea, position } = Astro.props;
     article {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         gap: 1.5rem;
         padding: 2rem;
         border-radius: 5px;
         background-color: var(--neutral-50);
         box-shadow: var(--box-shadow);
-        grid-area: var(--gridArea);
-        animation: revealTestimony linear both;
-        animation-timeline: view();
-        animation-range: entry 20% cover 25%;
-        width: fit-content;
-        height: fit-content;
-        transition: box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
-    }
-
-    article:hover {
-        z-index: 1;
-        box-shadow: var(--box-shadow-hover);
-        scale: 1.025;
     }
 
     article > header {
@@ -69,7 +56,6 @@ const { name, time, testimony, gridArea, position } = Astro.props;
     article > header > div {
         display: flex;
         flex-direction: column;
-        gap: 0rem;
     }
 
     article > header > div > p {
@@ -81,12 +67,51 @@ const { name, time, testimony, gridArea, position } = Astro.props;
         max-width: 50ch;
     }
 
-    @keyframes revealTestimony {
+    @media (width >= 950px) {
+        article {
+            grid-area: var(--gridArea);
+            width: fit-content;
+            animation: reveal linear both;
+            animation-timeline: view();
+            animation-range: entry 20% cover 25%;
+            transition:
+                box-shadow 0.3s ease,
+                scale 0.3s ease;
+        }
+
+        article:hover {
+            z-index: 1;
+            box-shadow: var(--box-shadow-hover);
+            scale: 1.025;
+        }
+    }
+
+    @media screen and (width < 950px) {
+        article {
+            scroll-snap-align: center;
+            min-width: calc(50% - 0.5rem);
+            padding: 1rem;
+        }
+
+        article > main > p {
+            max-width: 100%;
+        }
+    }
+
+    @media (width < 600px) {
+        article {
+            min-width: 100%;
+        }
+    }
+
+    @keyframes reveal {
         from {
             translate: var(--position);
+            opacity: 0;
         }
         to {
             translate: 0 0;
+            opacity: 1;
         }
     }
 </style>

@@ -2,21 +2,22 @@
 type Props = {
     id: "our-team" | "testimonies" | "products" | "about-us" | "FAQ" | "contact-us";
     flexDirection?: "row" | "column";
+    paddingInline?: "1rem" | 0;
 };
 
-const { id, flexDirection = "row" } = Astro.props;
+const { id, flexDirection = "row", paddingInline = "1rem" } = Astro.props;
 ---
 
 <section id={id}>
     <slot />
 </section>
 
-<style define:vars={{ flexDirection }}>
+<style define:vars={{ flexDirection, paddingInline }}>
     section {
-        padding-block: 1rem;
+        padding: 1rem var(--paddingInline);
         display: flex;
         flex-direction: var(--flexDirection);
         gap: 2rem;
-        min-height: 100vh;
+        /* min-height: 100vh; */
     }
 </style>
