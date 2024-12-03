@@ -84,6 +84,17 @@ const { id, name, time, testimony, gridArea, position } = Astro.props;
             box-shadow: var(--box-shadow-hover);
             scale: 1.025;
         }
+
+        @keyframes reveal {
+            from {
+                translate: var(--position);
+                opacity: 0;
+            }
+            to {
+                translate: 0 0;
+                opacity: 1;
+            }
+        }
     }
 
     @media screen and (width < 950px) {
@@ -101,17 +112,6 @@ const { id, name, time, testimony, gridArea, position } = Astro.props;
     @media (width < 600px) {
         article {
             min-width: 100%;
-        }
-    }
-
-    @keyframes reveal {
-        from {
-            translate: var(--position);
-            opacity: 0;
-        }
-        to {
-            translate: 0 0;
-            opacity: 1;
         }
     }
 </style>
