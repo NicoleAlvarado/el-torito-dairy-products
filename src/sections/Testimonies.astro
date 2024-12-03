@@ -8,7 +8,7 @@ const { title, description, testimonies } = testimoniesSection;
 const getTestimonyId = (index: number) => `testimony-${index}`;
 ---
 
-<MainSection id="testimonies" flexDirection="column" paddingInline={0}>
+<MainSection id="testimonies" paddingInline={0}>
     <header>
         <h2>{title}</h2>
         <p>{description}</p>
@@ -73,58 +73,55 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
         }
     }
 
-    @supports (animation-timeline: view()) {
-        @media screen and (width < 950px) {
-            header {
-                padding-inline: 1rem;
-            }
-
-            main {
-                timeline-scope: --carousel;
-                --sections: calc(100% / var(--testimoniesLength));
-            }
-
-            main > div {
-                display: flex;
-                gap: 1rem;
-                padding-block: 1rem;
-                overflow-x: scroll;
-                scrollbar-width: none;
-                overscroll-behavior: contain;
-                scroll-timeline: --carousel x;
-                scroll-padding: 0 25%;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
-            }
-
-            main > nav > a {
-                animation: colorize-dot linear;
-                animation-timeline: --carousel;
-                animation-range: calc((var(--i) - 1) * var(--sections)) calc(var(--i) * var(--sections) + 1px);
-            }
-
-            @keyframes colorize-dot {
-                0%,
-                100% {
-                    background: var(--primary-500);
-                    width: 32px;
-                    border-radius: 16px;
-                }
-            }
+    @media screen and (width < 950px) {
+        /* TODO: ARREGLAR EN ESTE TAMAÑO COMO SE VEN EL CAMBIO  */
+        header {
+            padding-inline: 1rem;
         }
 
-        @media screen and (width < 600px) {
-            main {
-                --sections: calc(100% / var(--testimoniesLength));
-            }
+        main {
+            timeline-scope: --carousel;
+            --sections: calc(100% / var(--testimoniesLength));
+        }
 
-            main > div {
-                scroll-padding: 0;
-            }
+        main > div {
+            display: flex;
+            gap: 1rem;
+            padding-block: 1rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            overscroll-behavior: contain;
+            scroll-timeline: --carousel x;
+            scroll-padding: 0 25%;
+            scroll-margin-top: 200px;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            pointer-events: none;
+        }
 
-            main > nav > a {
-                animation-range: calc((var(--i) - 1) * var(--sections)) calc(var(--i) * var(--sections) + 1px);
+        main > nav > a {
+            animation: colorize-dot linear;
+            animation-timeline: --carousel;
+            animation-range: calc((var(--i) - 1) * var(--sections)) calc(var(--i) * var(--sections));
+        }
+
+        @keyframes colorize-dot {
+            0%,
+            100% {
+                background: var(--primary-500);
+                width: 32px;
+                border-radius: 16px;
             }
+        }
+    }
+
+    @media screen and (width < 600px) {
+        main > div {
+            scroll-padding: 0;
+        }
+
+        main > nav > a {
+            animation-range: calc((var(--i) - 1) * var(--sections)) calc(var(--i) * var(--sections) + 1px);
         }
     }
 </style>

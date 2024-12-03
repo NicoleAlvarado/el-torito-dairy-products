@@ -31,7 +31,7 @@ const { name, image, description, gridArea } = Astro.props;
     article {
         position: relative;
         grid-area: var(--gridArea);
-        border-radius: 5px;
+        border-radius: var(--border-radius);
         overflow: hidden;
         animation: revealProduct linear both;
         animation-timeline: view();

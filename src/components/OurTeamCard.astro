@@ -32,7 +32,7 @@ const { index, name, image, role, gridArea } = Astro.props;
     article {
         height: 100%;
         padding: 1rem;
-        border-radius: 5px;
+        border-radius: var(--border-radius);
         overflow: hidden;
         position: relative;
         color: var(--neutral-50);
@@ -62,7 +62,7 @@ const { index, name, image, role, gridArea } = Astro.props;
         width: calc(100% - 2rem);
         background-color: var(--glass-color);
         backdrop-filter: var(--blur-effect);
-        border-radius: 5px;
+        border-radius: var(--border-radius);
         padding: 0.5rem;
         transition: transform 0.3s ease-in-out;
         z-index: 2;

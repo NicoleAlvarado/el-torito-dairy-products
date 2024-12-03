@@ -12,11 +12,13 @@ const { email, phone, address } = basics;
 const { title, description, addressLink, addressMapLink, schedules } = contactUsSection;
 ---
 
-<MainSection id="contact-us">
+<MainSection id="contact-us" flexDirection="row" flexWrap="wrap">
     <article class="contact__info">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <div>
+        <header>
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </header>
+        <main>
             <div>
                 <h6>Información de contacto</h6>
                 <ContactLink link={addressLink} text={address}>
@@ -39,7 +41,7 @@ const { title, description, addressLink, addressMapLink, schedules } = contactUs
                     ))
                 }
             </div>
-        </div>
+        </main>
         <iframe src={addressMapLink} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </article>
     <article class="contact__form">
@@ -68,26 +70,34 @@ const { title, description, addressLink, addressMapLink, schedules } = contactUs
     /* CONTACT INFO */
 
     .contact__info {
-        flex: 3;
+        flex: 2.5;
     }
 
-    .contact__info > div {
+    .contact__info > header,
+    .contact__info > main > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .contact__info > header > p {
+        max-width: 100%;
+    }
+
+    .contact__info > main {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 1rem;
     }
 
-    .contact__info > div > div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
     .contact__info > iframe {
         border: none;
-        border-radius: 5px;
+        border-radius: var(--border-radius);
         flex: 1;
+        width: 100%;
+        min-height: 250px;
     }
 
     /* CONTACT FORM */

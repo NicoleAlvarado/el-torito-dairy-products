@@ -42,14 +42,14 @@ const { name, inputType, fieldType, pattern, flex } = Astro.props;
     div > :is(input, textarea) {
         padding: 0.5625rem calc(0.5625rem * 2 - 0.25rem);
         border: 1px solid var(--neutral-400);
-        border-radius: 5px;
+        border-radius: var(--border-radius);
         background-color: var(--neutral-50);
+        flex: 1;
     }
 
     div > textarea {
         resize: none;
         min-height: 200px;
-        flex: 1;
     }
 
     div > :is(label, span) {
@@ -89,5 +89,11 @@ const { name, inputType, fieldType, pattern, flex } = Astro.props;
         color: var(--error-900);
         font-size: 0.75rem;
         display: none;
+    }
+
+    @media screen and (width <= 400px) {
+        div > :is(input, textarea) {
+            width: 100%;
+        }
     }
 </style>
