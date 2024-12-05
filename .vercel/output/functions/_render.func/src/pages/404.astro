@@ -1,0 +1,61 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+import { basics } from "@data";
+
+const { name } = basics;
+---
+
+<Layout title={`${name} 404`}>
+    <div>
+        <header>
+            <Navbar />
+        </header>
+        <main>
+            <span>404</span>
+        </main>
+        <Footer backgroundColor="transparent" />
+    </div>
+</Layout>
+
+<style>
+    div::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--image-background);
+        z-index: -1;
+    }
+
+    div,
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div {
+        padding: 1rem 1rem 0 1rem;
+        position: relative;
+        gap: 3rem;
+        min-height: 100vh;
+        background: url(../assets/images/company/backgroundImage3.webp) no-repeat center center / cover;
+        z-index: 1;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    div > main {
+        flex: 1;
+        display: grid;
+        place-items: center;
+    }
+
+    span {
+        font-size: clamp(10rem, 20vw, 20rem);
+        color: var(--neutral-50);
+        line-height: 1;
+    }
+</style>

@@ -1,0 +1,102 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Navbar from "@components/Navbar.astro";
+import Hero from "@sections/Hero.astro";
+import Awards from "@sections/Awards.astro";
+import AboutUs from "@sections/AboutUs.astro";
+import Products from "@sections/Products.astro";
+import Testimonies from "@sections/Testimonies.astro";
+import OurTeam from "@sections/OurTeam.astro";
+import FAQ from "@sections/FAQ.astro";
+import Contact from "@sections/Contact.astro";
+import Footer from "@components/Footer.astro";
+
+import { basics } from "@data";
+
+const { name } = basics;
+---
+
+<Layout title={name}>
+    <div>
+        <header>
+            <Navbar />
+            <Hero />
+            <Awards />
+        </header>
+        <main>
+            <AboutUs />
+            <Products />
+            <Testimonies />
+            <OurTeam />
+            <FAQ />
+            <Contact />
+        </main>
+        <Footer backgroundColor="var(--primary-700)" />
+    </div>
+</Layout>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--image-background);
+        z-index: -1;
+    }
+
+    header {
+        color: var(--neutral-900);
+        z-index: 1;
+        padding: 1rem;
+        width: 100%;
+        min-height: 100dvh;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+        animation: changeBackground 25s infinite linear;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: min(100%, var(--max-width));
+    }
+
+    @keyframes changeBackground {
+        0%,
+        15%,
+        100% {
+            background-image: url("../assets/images/company/backgroundImage1.webp");
+        }
+        20%,
+        35% {
+            background-image: url("../assets/images/company/backgroundImage2.webp");
+        }
+        40%,
+        55% {
+            background-image: url("../assets/images/company/backgroundImage3.webp");
+        }
+        60%,
+        75% {
+            background-image: url("../assets/images/company/backgroundImage4.webp");
+        }
+        80%,
+        95% {
+            background-image: url("../assets/images/company/backgroundImage5.webp");
+        }
+    }
+</style>
