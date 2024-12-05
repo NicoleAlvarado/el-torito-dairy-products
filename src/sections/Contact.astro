@@ -22,12 +22,12 @@ type ContactField = {
     flex?: number;
 };
 
-type Errors = {
-    required: string;
-    pattern?: string;
-    minLength: string;
-    maxLength: string;
-};
+// type Errors = {
+//     required: string;
+//     pattern?: string;
+//     minLength: string;
+//     maxLength: string;
+// };
 
 const contactFields: Record<string, ContactField> = {
     name: {
@@ -72,34 +72,34 @@ const contactFields: Record<string, ContactField> = {
     },
 };
 
-const errors: Record<string, Errors> = {
-    name: {
-        required: "El nombre es requerido",
-        minLength: "El nombre debe tener al menos 3 caracteres",
-        maxLength: "El nombre debe tener menos de 30 caracteres",
-    },
-    lastName: {
-        required: "Los apellidos son requeridos",
-        minLength: "Los apellidos deben tener al menos 3 caracteres",
-        maxLength: "Los apellidos deben tener menos de 50 caracteres",
-    },
-    email: {
-        required: "El correo es requerido",
-        pattern: "El correo no es válido",
-        minLength: "El correo debe tener al menos 5 caracteres",
-        maxLength: "El correo debe tener menos de 50 caracteres",
-    },
-    subject: {
-        required: "El asunto es requerido",
-        minLength: "El asunto debe tener al menos 5 caracteres",
-        maxLength: "El asunto debe tener menos de 50 caracteres",
-    },
-    message: {
-        required: "El mensaje es requerido",
-        minLength: "El mensaje debe tener al menos 10 caracteres",
-        maxLength: "El mensaje debe tener menos de 500 caracteres",
-    },
-};
+// const errors: Record<string, Errors> = {
+//     name: {
+//         required: "El nombre es requerido",
+//         minLength: "El nombre debe tener al menos 3 caracteres",
+//         maxLength: "El nombre debe tener menos de 30 caracteres",
+//     },
+//     lastName: {
+//         required: "Los apellidos son requeridos",
+//         minLength: "Los apellidos deben tener al menos 3 caracteres",
+//         maxLength: "Los apellidos deben tener menos de 50 caracteres",
+//     },
+//     email: {
+//         required: "El correo es requerido",
+//         pattern: "El correo no es válido",
+//         minLength: "El correo debe tener al menos 5 caracteres",
+//         maxLength: "El correo debe tener menos de 50 caracteres",
+//     },
+//     subject: {
+//         required: "El asunto es requerido",
+//         minLength: "El asunto debe tener al menos 5 caracteres",
+//         maxLength: "El asunto debe tener menos de 50 caracteres",
+//     },
+//     message: {
+//         required: "El mensaje es requerido",
+//         minLength: "El mensaje debe tener al menos 10 caracteres",
+//         maxLength: "El mensaje debe tener menos de 500 caracteres",
+//     },
+// };
 
 if (Astro.request.method === "POST") {
     try {
