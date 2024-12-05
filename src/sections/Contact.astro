@@ -1,5 +1,4 @@
 ---
-import Form from "@components/Form.astro";
 import InputField from "@components/InputField.astro";
 import MainSection from "@components/MainSection.astro";
 import LocationIcon from "@icons/LocationIcon.astro";
@@ -7,12 +6,130 @@ import PhoneIcon from "@icons/PhoneIcon.astro";
 import EmailIcon from "@icons/EmailIcon.astro";
 import { basics, contactUsSection } from "@data";
 import ContactLink from "@components/ContactLink.astro";
+import Button from "@components/Button.astro";
 
 const { email, phone, address } = basics;
 const { title, description, addressLink, addressMapLink, schedules } = contactUsSection;
+
+type ContactField = {
+    name: string;
+    fieldType: "input" | "textarea";
+    inputType?: "text" | "email";
+    pattern?: string;
+    minLength?: number;
+    maxLength?: number;
+    currentError: string;
+    flex?: number;
+};
+
+type Errors = {
+    required: string;
+    pattern?: string;
+    minLength: string;
+    maxLength: string;
+};
+
+const contactFields: Record<string, ContactField> = {
+    name: {
+        name: "Nombre",
+        fieldType: "input",
+        inputType: "text",
+        minLength: 3,
+        maxLength: 30,
+        currentError: "Pedro dxfsdf ",
+    },
+    lastName: {
+        name: "Apellidos",
+        fieldType: "input",
+        inputType: "text",
+        minLength: 3,
+        maxLength: 50,
+        currentError: "",
+    },
+    email: {
+        name: "Correo",
+        fieldType: "input",
+        inputType: "email",
+        minLength: 5,
+        maxLength: 50,
+        currentError: "",
+    },
+    subject: {
+        name: "Asunto",
+        fieldType: "input",
+        inputType: "text",
+        minLength: 5,
+        maxLength: 50,
+        currentError: "",
+    },
+    message: {
+        name: "Mensaje",
+        fieldType: "textarea",
+        minLength: 10,
+        maxLength: 500,
+        currentError: "",
+        flex: 1,
+    },
+};
+
+const errors: Record<string, Errors> = {
+    name: {
+        required: "El nombre es requerido",
+        minLength: "El nombre debe tener al menos 3 caracteres",
+        maxLength: "El nombre debe tener menos de 30 caracteres",
+    },
+    lastName: {
+        required: "Los apellidos son requeridos",
+        minLength: "Los apellidos deben tener al menos 3 caracteres",
+        maxLength: "Los apellidos deben tener menos de 50 caracteres",
+    },
+    email: {
+        required: "El correo es requerido",
+        pattern: "El correo no es válido",
+        minLength: "El correo debe tener al menos 5 caracteres",
+        maxLength: "El correo debe tener menos de 50 caracteres",
+    },
+    subject: {
+        required: "El asunto es requerido",
+        minLength: "El asunto debe tener al menos 5 caracteres",
+        maxLength: "El asunto debe tener menos de 50 caracteres",
+    },
+    message: {
+        required: "El mensaje es requerido",
+        minLength: "El mensaje debe tener al menos 10 caracteres",
+        maxLength: "El mensaje debe tener menos de 500 caracteres",
+    },
+};
+
+if (Astro.request.method === "POST") {
+    try {
+        const data = await Astro.request.formData();
+        const formData = Object.fromEntries(data.entries());
+
+        const { name, lastName, email, subject, message } = formData;
+
+        console.log({ name, lastName, email, subject, message });
+
+        if (typeof name !== "string" || name.length < 100) {
+            console.log("Hola 1");
+            console.log("ContactField1", contactFields["name"].currentError);
+            contactFields["name"].currentError = "Please enter a username. ";
+            console.log("ContactField2", contactFields["name"].currentError);
+        }
+        const hasErrors = Object.values(contactFields).some(({ currentError }) => currentError);
+        if (!hasErrors) {
+            return Astro.redirect("/login");
+        }
+        console.log("Hola 2");
+    } catch (error) {
+        console.log("Hola error");
+        if (error instanceof Error) {
+            console.error(error.message);
+        }
+    }
+}
 ---
 
-<!-- TODO: HACER LAS VALIDACIONES DE LOS INPUTS Y EL FORMULARIO -->
 <MainSection id="contact-us" flexDirection="row" flexWrap="wrap">
     <article class="contact__info">
         <header>
@@ -47,13 +164,27 @@ const { title, description, addressLink, addressMapLink, schedules } = contactUs
     </article>
     <article class="contact__form">
         <h5>Ponte en contacto con nosotros</h5>
-        <Form buttonText="Enviar">
-            <InputField name="Nombre" fieldType="input" inputType="text" />
-            <InputField name="Apellidos" fieldType="input" inputType="text" />
-            <InputField name="Correo" fieldType="input" inputType="email" />
-            <InputField name="Asunto" fieldType="input" inputType="text" />
-            <InputField name="Mensaje" fieldType="textarea" flex={1} />
-        </Form>
+        <form id="prueba" method="POST">
+            {
+                Object.entries(contactFields).map(
+                    ([key, { name, fieldType, inputType, minLength, pattern, maxLength, currentError, flex }]) => (
+                        <InputField
+                            name={key}
+                            label={name}
+                            fieldType={fieldType}
+                            inputType={inputType}
+                            pattern={pattern}
+                            minLength={minLength}
+                            maxLength={maxLength}
+                            error={currentError}
+                            flex={flex}
+                        />
+                    )
+                )
+            }
+            <Button type="submit" className="primary-btn">Enviar</Button>
+        </form>
+        <!-- {Object.values(contactFields).some(({ currentError }) => currentError) && <p>Error</p>} -->
     </article>
 </MainSection>
 
@@ -110,4 +241,25 @@ const { title, description, addressLink, addressMapLink, schedules } = contactUs
     .contact__form > h5 {
         text-align: center;
     }
+
+    .contact__form > form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        flex: 1;
+    }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("prueba") as HTMLFormElement;
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // Esto previene la recarga de página
+            console.log("Hola");
+
+            // Aquí puedes enviar el formulario de forma tradicional o con fetch
+            form.submit();
+        });
+    });
+</script>
