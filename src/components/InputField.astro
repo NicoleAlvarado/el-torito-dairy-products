@@ -4,14 +4,13 @@ type Props = {
     label: string;
     fieldType: "input" | "textarea";
     inputType?: "text" | "email";
-    pattern?: string;
+    pattern?: RegExp;
     minLength?: number;
     maxLength?: number;
-    error: string;
     flex?: number;
 };
 
-const { name, label, inputType, fieldType, pattern, minLength, maxLength, error, flex } = Astro.props;
+const { name, label, inputType, fieldType, pattern, minLength, maxLength, flex } = Astro.props;
 ---
 
 <div>
@@ -21,7 +20,7 @@ const { name, label, inputType, fieldType, pattern, minLength, maxLength, error,
                 name={name}
                 type={inputType}
                 placeholder=""
-                pattern={pattern}
+                pattern={pattern?.source}
                 minlength={minLength}
                 maxlength={maxLength}
                 required
@@ -31,8 +30,7 @@ const { name, label, inputType, fieldType, pattern, minLength, maxLength, error,
         )
     }
     <label>{label}</label>
-    {error && <span>{error}</span>}
-    <!-- <span>{error}</span> -->
+    <span></span>
 </div>
 
 <style define:vars={{ flex }}>
@@ -63,6 +61,7 @@ const { name, label, inputType, fieldType, pattern, minLength, maxLength, error,
     div > textarea {
         resize: none;
         min-height: 200px;
+        scrollbar-width: thin;
     }
 
     div > :is(label, span) {
