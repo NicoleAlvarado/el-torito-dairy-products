@@ -27,6 +27,11 @@ const { index, name, image, role, gridArea } = Astro.props;
         inset: 0;
         background-color: var(--image-background);
         z-index: 2;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    article:hover::before {
+        background-color: var(--image-background-hover);
     }
 
     article {

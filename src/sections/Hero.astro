@@ -1,5 +1,5 @@
 ---
-import CTA from "@components/CTA.astro";
+import Actionable from "@components/Actionable.astro";
 import HeaderCarouselControl from "@components/HeaderCarouselControl.astro";
 import { basics, heroSection } from "@data";
 
@@ -11,7 +11,7 @@ const { mainImages } = heroSection;
     <div class="hero__content">
         <h1>{name}</h1>
         <p>{summary}</p>
-        <CTA href="#products">Ver productos</CTA>
+        <Actionable type="CTA" className="primary" href="/#products">Ver productos</Actionable>
     </div>
     <div class="carousel__controls" id="carousel-controls">
         {mainImages.map((_, index) => <HeaderCarouselControl number={(index + 1).toString().padStart(2, "0")} />)}

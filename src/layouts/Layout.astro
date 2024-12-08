@@ -23,11 +23,13 @@ const { title } = Astro.props;
 
 <style is:global>
     /* TODO: BUSCAR COMO HACER PARA MEJORAR COMO SE VEN LAS FUENTES Y EL RENDIMIENTO DE ESTAS */
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
     /* TODO: VER SI SE PUEDE MEJORAR EL RENDIMIENTO DEL CSS EN ALGUNAS PARTES */
+
     :root {
-        --font: Poppins, system-ui, "Open Sans", sans-serif;
+        --font: "Poppins", "Open Sans", sans-serif, system-ui;
+        --font-weight-normal: 300;
+        --font-weight-title: 400;
         --neutral-50: #fbfbfc;
         --neutral-100: #f3f3f5;
         --neutral-200: #e8e8ea;
@@ -50,7 +52,8 @@ const { title } = Astro.props;
         --error-700: #ff3426;
         --error-900: #b71323;
         --glass-color: rgba(255, 255, 255, 0.2);
-        --image-background: rgba(0, 0, 0, 0.3);
+        --image-background: rgba(0, 0, 0, 0.35);
+        --image-background-hover: rgba(0, 0, 0, 0.5);
         --blur-effect: blur(2.5px);
         --box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.1);
         --box-shadow-hover: 0px 6px 12px 0px rgba(0, 0, 0, 0.25);
@@ -74,11 +77,13 @@ const { title } = Astro.props;
         font-family: var(--font);
         background-color: var(--neutral-50);
         color: var(--neutral-900);
+        font-weight: var(--font-weight-normal);
     }
 
     :is(h1, h2, h3, h4, h5, h6) {
-        font-weight: 500;
+        font-weight: var(--font-weight-title);
         line-height: 1.25;
+        text-wrap: balance;
     }
 
     h1 {
@@ -107,6 +112,9 @@ const { title } = Astro.props;
 
     p {
         font-size: 1rem;
+        line-height: 1.5;
+        word-spacing: 0.1rem;
+        text-wrap: pretty;
     }
 
     ul {
@@ -127,5 +135,6 @@ const { title } = Astro.props;
     textarea {
         font-family: inherit;
         font-size: inherit;
+        font-weight: inherit;
     }
 </style>

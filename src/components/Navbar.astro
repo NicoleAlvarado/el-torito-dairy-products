@@ -1,5 +1,5 @@
 ---
-import CTA from "./CTA.astro";
+import Actionable from "./Actionable.astro";
 import PhoneIcon from "@icons/PhoneIcon.astro";
 import { Image } from "astro:assets";
 import { basics } from "@data";
@@ -24,9 +24,9 @@ const { name, logo } = basics;
         <li><a href="/#testimonies">Testimonios</a></li>
         <li><a href="/#our-team">Nuestro equipo</a></li>
     </ul>
-    <CTA href="/#contact-us">
+    <Actionable type="CTA" className="primary" href="/#contact-us">
         Contacto <PhoneIcon width={16} height={16} color="var(--neutral-50)" />
-    </CTA>
+    </Actionable>
 </nav>
 
 <style>
