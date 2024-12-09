@@ -1,5 +1,6 @@
-import type { ErrorsTypes } from "../utils/validateInput";
-import { validateInput } from "../utils/validateInput";
+import type { ErrorsTypes } from "@utils/validateInput";
+import { validateInput } from "@utils/validateInput";
+import { showToast } from "@utils/handleToast";
 
 const errors: Record<string, ErrorsTypes> = {
     name: {
@@ -31,25 +32,27 @@ const errors: Record<string, ErrorsTypes> = {
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form") as HTMLFormElement;
     const inputs = form.querySelectorAll("div > input, div > textarea") as NodeListOf<HTMLInputElement>;
-    const spans = form.querySelectorAll("div > span") as NodeListOf<HTMLSpanElement>;
+    const paragraphs = form.querySelectorAll("div > p") as NodeListOf<HTMLParagraphElement>;
     const sendButton = form.querySelector("button[type='submit']") as HTMLButtonElement;
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const { name, lastName, email, subject, message } = Object.fromEntries(new FormData(form).entries());
         console.log({ name, lastName, email, subject, message });
-        form.reset();
+        showToast("Mensaje enviado", "success");
+        // showToast("Error al enviar el mensaje", "error");
+        // form.reset();
     });
 
     inputs.forEach((input, index) => {
         input.setCustomValidity(" ");
         input.addEventListener("input", (e) => {
             const target = e.target as HTMLInputElement;
-            spans[index].textContent = validateInput(target, errors);
+            paragraphs[index].textContent = validateInput(target, errors);
         });
     });
 
     sendButton.addEventListener("click", () =>
-        inputs.forEach((input, index) => (spans[index].textContent = validateInput(input, errors)))
+        inputs.forEach((input, index) => (paragraphs[index].textContent = validateInput(input, errors)))
     );
 });

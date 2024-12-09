@@ -30,7 +30,7 @@ const { name, label, inputType, fieldType, pattern, minLength, maxLength, flex }
         )
     }
     <label>{label}</label>
-    <span></span>
+    <p></p>
 </div>
 
 <style define:vars={{ flex }}>
@@ -64,7 +64,7 @@ const { name, label, inputType, fieldType, pattern, minLength, maxLength, flex }
         scrollbar-width: thin;
     }
 
-    div > :is(label, span) {
+    div > label {
         line-height: 1;
     }
 
@@ -96,11 +96,10 @@ const { name, label, inputType, fieldType, pattern, minLength, maxLength, flex }
         color: var(--error-900);
     }
 
-    div > span {
+    div > p {
         padding-inline: 0.5625rem;
         color: var(--error-900);
         font-size: 0.75rem;
-        /* display: none; */
     }
 
     @media screen and (width <= 400px) {
