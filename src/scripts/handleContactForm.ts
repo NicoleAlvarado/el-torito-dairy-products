@@ -36,12 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const sendButton = form.querySelector("button[type='submit']") as HTMLButtonElement;
 
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const { name, lastName, email, subject, message } = Object.fromEntries(new FormData(form).entries());
-        console.log({ name, lastName, email, subject, message });
-        showToast("Mensaje enviado", "success");
-        // showToast("Error al enviar el mensaje", "error");
-        // form.reset();
+        try {
+            e.preventDefault();
+            const { name, lastName, email, subject, message } = Object.fromEntries(new FormData(form).entries());
+            console.log({ name, lastName, email, subject, message });
+            showToast("Mensaje enviado", "success");
+            form.reset();
+        } catch (error) {
+            console.error(error);
+            showToast("Error al enviar el mensaje", "error");
+        }
     });
 
     inputs.forEach((input, index) => {
