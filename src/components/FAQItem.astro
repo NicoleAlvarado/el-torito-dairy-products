@@ -28,7 +28,6 @@ const { question, answer } = Astro.props;
 
     details > summary {
         cursor: pointer;
-        list-style: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -39,8 +38,6 @@ const { question, answer } = Astro.props;
         position: relative;
         width: 20px;
         height: 20px;
-        display: flex;
-        transition: transform 0.3s ease-in-out;
     }
 
     details > summary > div::before,
@@ -51,8 +48,8 @@ const { question, answer } = Astro.props;
         background-color: var(--neutral-900);
         width: 100%;
         height: 2px;
-        translate: 0 -50%;
-        transition: transform 0.3s ease-in-out;
+        transform: translate(0, -50%);
+        transition: transform 0.2s ease-in-out;
     }
 
     details > summary > div::before {
@@ -68,13 +65,26 @@ const { question, answer } = Astro.props;
         transform: rotate(0);
     }
 
-    details > div {
-        margin-top: 0.5rem;
+    @supports (interpolate-size: allow-keywords) {
+        details::details-content {
+            height: 0;
+            overflow: clip;
+            transition:
+                margin-top 0.2s ease-in-out,
+                height 0.2s ease-in-out,
+                content-visibility 0.2s allow-discrete;
+            interpolate-size: allow-keywords;
+        }
+
+        details[open]::details-content {
+            margin-top: 0.5rem;
+            height: auto;
+        }
     }
 
-    @starting-style {
-        details[open] > summary > div::before,
-        details[open] > summary > div::after {
+    @supports not (interpolate-size: allow-keywords) {
+        details[open] > div {
+            margin-top: 0.5rem;
         }
     }
 
