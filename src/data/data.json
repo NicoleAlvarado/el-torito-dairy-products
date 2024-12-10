@@ -73,7 +73,7 @@
     },
     "productsSection": {
         "title": "Nuestros productos",
-        "description": "Conoce los productos que ofrecemos",
+        "description": "Conoce nuestra variedad de productos lácteos frescos y saludables",
         "products": [
             {
                 "name": "Leche",
@@ -162,7 +162,7 @@
     },
     "ourTeamSection": {
         "title": "Nuestro equipo",
-        "description": "Nuestro equipo está conformado por personas apasionadas por la calidad y el bienestar. Cada uno de nuestros colaboradores comparte el compromiso de ofrecer productos lácteos frescos y saludables, trabajando con dedicación en cada paso del proceso, desde la recolección de la leche hasta la entrega de nuestros productos en su mesa.",
+        "description": "Nuestro equipo, comprometido con la calidad y el bienestar, trabaja con dedicación para ofrecer productos lácteos frescos y saludables, cuidando cada paso del proceso.",
         "team": [
             {
                 "name": "Jordy Castro",
@@ -198,7 +198,7 @@
     },
     "FAQsSection": {
         "title": "Preguntas frecuentes",
-        "description": "Resolvemos tus dudas",
+        "description": "Si no encuentras la respuesta a tu pregunta, no dudes en contactarnos.",
         "FAQs": [
             {
                 "question": "¿Cuál es el horario de atención?",

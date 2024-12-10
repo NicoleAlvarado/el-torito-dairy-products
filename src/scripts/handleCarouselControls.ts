@@ -1,14 +1,18 @@
-const carouselControlSpans = document.querySelectorAll("#carousel-controls span");
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth < 480) return;
 
-const changeSlide = (index: number) => carouselControlSpans[index].classList.toggle("active");
+    let currentIndex = 0;
 
-const main = () => {
+    const carouselControlSpans = document.querySelectorAll("#carousel-controls span") as NodeListOf<HTMLSpanElement>;
+    const changeSlide = (index: number) => carouselControlSpans[index].classList.toggle("active");
+
+    const main = () => {
+        changeSlide(currentIndex);
+        currentIndex = (currentIndex + 1) % carouselControlSpans.length;
+        changeSlide(currentIndex);
+    };
+
     changeSlide(currentIndex);
-    currentIndex = (currentIndex + 1) % carouselControlSpans.length;
-    changeSlide(currentIndex);
-};
 
-changeSlide(currentIndex);
-
-setInterval(main, 5000);
+    setInterval(main, 5000);
+});
