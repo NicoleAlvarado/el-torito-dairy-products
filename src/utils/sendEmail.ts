@@ -1,4 +1,4 @@
-import { MAILGUN_API_URL, MAILGUN_HEADERS } from "@utils/configEmail";
+import { MAILGUN_API_URL, MAILGUN_HEADERS } from "@config/configEmail";
 
 export const sendContactEmail = async ({
     name,
@@ -18,7 +18,6 @@ export const sendContactEmail = async ({
                 subject: subject,
                 text: `${message}\n\n${fullName}`,
                 html: `
-                    <h1>Nuevo Mensaje de Contacto</h1>
                     <p>${message}</p>
                     <p>${fullName}</p>
                 `,
