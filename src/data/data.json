@@ -47,7 +47,7 @@
     },
     "aboutUsSection": {
         "title": "Sobre nosotros",
-        "description": "Conoce más sobre nosotros y lo que hacemos",
+        "description": "Conoce más sobre nosotros y lo que hacemos.",
         "identities": [
             {
                 "title": "Historia",
@@ -72,7 +72,7 @@
         ]
     },
     "productsSection": {
-        "title": "Nuestros productos",
+        "title": "Nuestros productos.",
         "description": "Conoce nuestra variedad de productos lácteos frescos y saludables",
         "products": [
             {
@@ -121,7 +121,7 @@
     },
     "testimoniesSection": {
         "title": "Testimonios",
-        "description": "Conoce lo que las personas dicen de nosotros",
+        "description": "Conoce lo que las personas dicen de nosotros.",
         "testimonies": [
             {
                 "name": "Juan Pérez",

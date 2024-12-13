@@ -29,22 +29,35 @@ const errors: Record<string, ErrorsTypes> = {
     },
 };
 
+type ResponseType = {
+    success: boolean;
+    message: string;
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form") as HTMLFormElement;
     const inputs = form.querySelectorAll("div > input, div > textarea") as NodeListOf<HTMLInputElement>;
     const paragraphs = form.querySelectorAll("div > p") as NodeListOf<HTMLParagraphElement>;
     const sendButton = form.querySelector("button[type='submit']") as HTMLButtonElement;
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
         try {
-            e.preventDefault();
-            const { name, lastName, email, subject, message } = Object.fromEntries(new FormData(form).entries());
-            console.log({ name, lastName, email, subject, message });
-            showToast("Mensaje enviado", "success");
-            form.reset();
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                body: new FormData(form),
+            });
+
+            const result: ResponseType = await response.json();
+
+            if (result.success) {
+                showToast(result.message, "success");
+                form.reset();
+            } else showToast(result.message, "error");
         } catch (error) {
-            console.error(error);
-            showToast("Error al enviar el mensaje", "error");
+            console.log(error);
+            showToast("No se pudo enviar el correo", "error");
         }
     });
 
