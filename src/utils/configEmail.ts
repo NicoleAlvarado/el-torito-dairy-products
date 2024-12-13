@@ -1,7 +1,8 @@
-import formData from "form-data";
-import Mailgun from "mailgun.js";
+const { PUBLIC_MAILGUN_API_KEY: MAILGUN_API_KEY, PUBLIC_MAILGUN_DOMAIN: MAILGUN_DOMAIN } = import.meta.env;
 
-const mailgun = new Mailgun(formData);
+export const MAILGUN_API_URL = `https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`;
 
-export const { PUBLIC_MAILGUN_API_KEY: MAILGUN_API_KEY, PUBLIC_MAILGUN_DOMAIN: MAILGUN_DOMAIN } = import.meta.env;
-export const mailgunClient = mailgun.client({ username: "api", key: MAILGUN_API_KEY });
+export const MAILGUN_HEADERS = {
+    Authorization: `Basic ${btoa(`api:${MAILGUN_API_KEY}`)}`,
+    "Content-Type": "application/x-www-form-urlencoded",
+};

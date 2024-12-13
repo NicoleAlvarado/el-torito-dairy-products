@@ -1,6 +1,8 @@
 import type { ErrorsTypes } from "@utils/validateInput";
 import { validateInput } from "@utils/validateInput";
 import { showToast } from "@utils/handleToast";
+import { sendContactEmail } from "@utils/sendEmail";
+import { formDataEntryToString } from "@utils/convertToString";
 
 const errors: Record<string, ErrorsTypes> = {
     name: {
@@ -43,22 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        try {
-            const response = await fetch("/api/send-email", {
-                method: "POST",
-                body: new FormData(form),
-            });
+        const data = Object.fromEntries(
+            [...new FormData(form)].map(([key, value]) => [key, formDataEntryToString(value)])
+        );
 
-            const result: ResponseType = await response.json();
+        const response: ResponseType = await (await sendContactEmail(data)).json();
 
-            if (result.success) {
-                showToast(result.message, "success");
-                form.reset();
-            } else showToast(result.message, "error");
-        } catch (error) {
-            console.log(error);
-            showToast("No se pudo enviar el correo", "error");
-        }
+        if (response.success) {
+            showToast(response.message, "success");
+            form.reset();
+        } else showToast(response.message, "error");
     });
 
     inputs.forEach((input, index) => {

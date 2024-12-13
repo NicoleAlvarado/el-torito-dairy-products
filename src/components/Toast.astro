@@ -12,7 +12,6 @@
         bottom: -25vh;
         right: 1rem;
         padding: 1rem;
-        max-width: min(25ch, 100%);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         color: var(--neutral-50);
@@ -33,5 +32,9 @@
 
     div.error {
         background-color: var(--error-700);
+    }
+
+    div > p {
+        max-width: min(25ch, 100%);
     }
 </style>
