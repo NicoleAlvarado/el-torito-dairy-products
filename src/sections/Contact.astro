@@ -6,65 +6,13 @@ import PhoneIcon from "@icons/PhoneIcon.astro";
 import EmailIcon from "@icons/EmailIcon.astro";
 import ContactLink from "@components/ContactLink.astro";
 import Actionable from "@components/Actionable.astro";
+import SendIcon from "@icons/SendIcon.astro";
 
 import { basics, contactUsSection } from "@data";
-import SendIcon from "@icons/SendIcon.astro";
+import { contactFields } from "@types/contactFieldTypes";
 
 const { email, phone, address } = basics;
 const { title, description, addressLink, addressMapLink, schedules } = contactUsSection;
-
-type ContactField = {
-    name: string;
-    fieldType: "input" | "textarea";
-    inputType?: "text" | "email";
-    pattern?: RegExp;
-    minLength?: number;
-    maxLength?: number;
-    flex?: number;
-};
-
-const contactFields: Record<string, ContactField> = {
-    name: {
-        name: "Nombre",
-        fieldType: "input",
-        inputType: "text",
-        pattern: /^[a-záéíóúñA-ZÁÉÍÓÚÑ]+$/,
-        minLength: 3,
-        maxLength: 30,
-    },
-    lastName: {
-        name: "Apellidos",
-        fieldType: "input",
-        inputType: "text",
-        pattern: /^[a-záéíóúñA-ZÁÉÍÓÚÑ]+\s[a-záéíóúñA-ZÁÉÍÓÚÑ]+$/,
-        minLength: 10,
-        maxLength: 50,
-    },
-    email: {
-        name: "Correo electrónico",
-        fieldType: "input",
-        inputType: "email",
-        pattern: /[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/,
-        minLength: 5,
-        maxLength: 50,
-    },
-    subject: {
-        name: "Asunto",
-        fieldType: "input",
-        inputType: "text",
-        pattern: /^[a-záéíóúñA-ZÁÉÍÓÚÑ\s]+$/,
-        minLength: 5,
-        maxLength: 50,
-    },
-    message: {
-        name: "Mensaje",
-        fieldType: "textarea",
-        pattern: /^[a-záéíóúñA-ZÁÉÍÓÚÑ\s]+$/,
-        minLength: 10,
-        maxLength: 500,
-        flex: 1,
-    },
-};
 ---
 
 <MainSection id="contact-us" flexDirection="row" flexWrap="wrap">
