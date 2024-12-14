@@ -15,10 +15,16 @@ const { id, flexDirection = "column", flexWrap = "nowrap", paddingInline = "1rem
 
 <style define:vars={{ flexDirection, flexWrap, paddingInline }}>
     section {
-        padding: 1rem var(--paddingInline);
+        padding-block: 1rem;
         display: flex;
         flex-direction: var(--flexDirection);
         flex-wrap: var(--flexWrap);
         gap: 2rem;
+    }
+
+    @media screen and (width < 1542px) {
+        section {
+            padding-inline: var(--paddingInline);
+        }
     }
 </style>

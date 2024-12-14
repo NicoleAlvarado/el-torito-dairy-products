@@ -33,11 +33,18 @@ const { name, logo } = basics;
 
 <style>
     nav {
-        width: min(100%, var(--max-width));
+        padding: 0.25rem;
+        width: min(calc(100% - 2rem), var(--max-width));
+        position: fixed;
         display: flex;
         align-items: center;
         gap: 2rem;
+        /* backdrop-filter: var(--blur-effect);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow); */
         z-index: 999;
+        /* animation: changeNavbarBackground linear both;
+        animation-timeline: scroll(); */
         transition: width 0.3s ease-in-out;
         interpolate-size: allow-keywords;
     }
@@ -127,7 +134,6 @@ const { name, logo } = basics;
 
         nav.open {
             padding: 1rem;
-            position: fixed;
             top: 0;
             left: 0;
             width: auto;
@@ -135,6 +141,7 @@ const { name, logo } = basics;
             flex-direction: column;
             align-items: start;
             background-color: var(--neutral-50);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
         }
 
         nav.open > div {
@@ -188,4 +195,14 @@ const { name, logo } = basics;
             z-index: 998;
         }
     }
+
+    /* @keyframes changeNavbarBackground {
+        0% {
+            background-color: transparent;
+        }
+        25%,
+        100% {
+            background-color: rgba(11, 48, 23, 0.5);
+        }
+    } */
 </style>

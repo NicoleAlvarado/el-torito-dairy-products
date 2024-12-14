@@ -9,7 +9,7 @@ const { name } = basics;
 
 <Layout title={`${name} 404`}>
     <div>
-        <header>
+        <header id="prueba">
             <Navbar />
         </header>
         <main>
@@ -29,7 +29,7 @@ const { name } = basics;
     }
 
     div,
-    header {
+    div > header {
         display: flex;
         flex-direction: column;
     }
@@ -43,19 +43,27 @@ const { name } = basics;
         z-index: 1;
     }
 
-    header {
+    div > header {
         align-items: center;
     }
 
     div > main {
-        flex: 1;
+        margin-top: 3rem;
         display: grid;
+        flex: 1;
         place-items: center;
+        min-height: calc(50vh - 43px - 7.5rem);
     }
 
-    span {
+    div > main > span {
         font-size: clamp(10rem, 20vw, 20rem);
         color: var(--neutral-50);
         line-height: 1;
+    }
+
+    @media screen and (width < 768px) {
+        div > main {
+            min-height: calc(75vh - 43px - 7.5rem);
+        }
     }
 </style>
