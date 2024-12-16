@@ -9,7 +9,7 @@ const { name } = basics;
 
 <Layout title={`${name} 404`}>
     <div>
-        <header id="prueba">
+        <header>
             <Navbar />
         </header>
         <main>
@@ -48,9 +48,9 @@ const { name } = basics;
     }
 
     div > main {
+        flex: 1;
         margin-top: 3rem;
         display: grid;
-        flex: 1;
         place-items: center;
         min-height: calc(50vh - 43px - 7.5rem);
     }

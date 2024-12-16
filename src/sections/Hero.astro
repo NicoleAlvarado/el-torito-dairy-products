@@ -7,7 +7,7 @@ const { name, summary } = basics;
 const { mainImages } = heroSection;
 ---
 
-<section>
+<section class="hero">
     <article>
         <h1>{name}</h1>
         <p>{summary}</p>
@@ -20,10 +20,9 @@ const { mainImages } = heroSection;
 
 <style>
     section {
-        margin-top: calc(43px + 0.5rem);
+        flex: 1;
         width: min(100%, var(--max-width));
         color: var(--neutral-50);
-        flex: 1;
         display: flex;
         align-items: center;
         justify-content: space-between;

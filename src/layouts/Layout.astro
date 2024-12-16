@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="Astro description" />
@@ -51,7 +51,7 @@ const { title } = Astro.props;
         --error-500: #ff745c;
         --error-700: #ff3426;
         --error-900: #b71323;
-        --glass-color: rgba(255, 255, 255, 0.2);
+        --glass-color: rgba(255, 255, 255, 0.4);
         --image-background: rgba(0, 0, 0, 0.35);
         --image-background-hover: rgba(0, 0, 0, 0.5);
         --blur-effect: blur(2.5px);
@@ -71,6 +71,10 @@ const { title } = Astro.props;
     html {
         scroll-behavior: smooth;
         scrollbar-width: thin;
+    }
+
+    html:has(:target#testimony-0, :target#testimony-1, :target#testimony-2, :target#testimony-3, :target#testimony-4) {
+        scroll-padding-top: calc(50vh - 7rem);
     }
 
     body {
@@ -111,7 +115,7 @@ const { title } = Astro.props;
     }
 
     p {
-        font-size: clamp(1rem, 1vw + 0.05rem, 1.05rem);
+        font-size: 1rem;
         line-height: 1.5;
         word-spacing: 2px;
         text-wrap: pretty;
@@ -140,5 +144,9 @@ const { title } = Astro.props;
 
     address {
         font-style: normal;
+    }
+
+    .navbar.open ~ .hero {
+        margin-top: calc(43px + 6rem);
     }
 </style>

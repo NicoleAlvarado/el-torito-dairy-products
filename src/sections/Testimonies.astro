@@ -8,7 +8,6 @@ const { title, description, testimonies } = testimoniesSection;
 const getTestimonyId = (index: number) => `testimony-${index}`;
 ---
 
-<!-- TODO: HACER QUE TESTIMONIES CUANDO ES RESPONSIVE Y SE HACE CLICK EN EL CAROUSEL SE VEA CENTRADO VERTICALMENTE -->
 <MainSection id="testimonies" paddingInline={0}>
     <header>
         <h2>{title}</h2>
@@ -75,7 +74,6 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
     }
 
     @media screen and (width < 950px) {
-        /* TODO: ARREGLAR EN ESTE TAMAÑO COMO SE VEN EL CAMBIO  */
         header {
             padding-inline: 1rem;
         }
@@ -94,7 +92,6 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
             overscroll-behavior: contain;
             scroll-timeline: --carousel x;
             scroll-padding: 0 25%;
-            scroll-margin-top: 200px;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
             pointer-events: none;
