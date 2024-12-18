@@ -5,7 +5,9 @@ import { testimoniesSection } from "@data";
 
 const { title, description, testimonies } = testimoniesSection;
 
-const getTestimonyId = (index: number) => `testimony-${index}`;
+const getTestimonyId = (i: number) => `testimony-${i}`;
+const getAnimationTimeline = (i: number) => `--${getTestimonyId(i)}`;
+const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(", ");
 ---
 
 <MainSection id="testimonies" paddingInline={0}>
@@ -29,14 +31,19 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
             }
         </div>
         <nav>
-            {testimonies.map((_, i) => <a href={`#${getTestimonyId(i)}`} style={`--i: ${i + 1}`} />)}
+            {
+                testimonies.map((_, i) => (
+                    <a href={`#${getTestimonyId(i)}`} style={`animation-timeline: ${getAnimationTimeline(i)};`} />
+                ))
+            }
         </nav>
     </main>
 </MainSection>
 
-<style define:vars={{ testimoniesLength: testimonies.length }}>
+<style define:vars={{ timelineScope }}>
     header {
         text-align: center;
+        padding-inline: 1rem;
     }
 
     main {
@@ -58,8 +65,8 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
     main > nav > a {
         width: 16px;
         height: 16px;
-        border-radius: 50%;
-        background: var(--neutral-300);
+        border-radius: 9999px;
+        background-color: var(--neutral-300);
     }
 
     @media screen and (width >= 950px) {
@@ -74,13 +81,10 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
     }
 
     @media screen and (width < 950px) {
-        header {
-            padding-inline: 1rem;
-        }
-
         main {
-            timeline-scope: --carousel;
-            --sections: calc(100% / var(--testimoniesLength));
+            timeline-scope: var(--timelineScope);
+            bottom: calc(anchor(top) - 3rem);
+            right: calc(anchor(right) + 3rem);
         }
 
         main > div {
@@ -90,7 +94,6 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
             overflow-x: auto;
             scrollbar-width: none;
             overscroll-behavior: contain;
-            scroll-timeline: --carousel x;
             scroll-padding: 0 25%;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
@@ -99,14 +102,11 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
 
         main > nav > a {
             animation: colorize-dot linear;
-            animation-timeline: --carousel;
-            animation-range: calc((var(--i) - 1) * var(--sections)) calc(var(--i) * var(--sections));
         }
 
         @keyframes colorize-dot {
-            0%,
-            100% {
-                background: var(--primary-500);
+            50% {
+                background-color: var(--primary-500);
                 width: 32px;
                 border-radius: 16px;
             }
@@ -118,8 +118,12 @@ const getTestimonyId = (index: number) => `testimony-${index}`;
             scroll-padding: 0;
         }
 
-        main > nav > a {
-            animation-range: calc((var(--i) - 1) * var(--sections)) calc(var(--i) * var(--sections) + 1px);
+        @keyframes colorize-dot {
+            50% {
+                background-color: var(--primary-500);
+                width: 32px;
+                border-radius: 16px;
+            }
         }
     }
 </style>
