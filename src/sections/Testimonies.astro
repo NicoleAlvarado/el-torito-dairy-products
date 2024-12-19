@@ -57,16 +57,7 @@ const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(",
     }
 
     main > nav {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    main > nav > a {
-        width: 16px;
-        height: 16px;
-        border-radius: 9999px;
-        background-color: var(--neutral-300);
+        display: none;
     }
 
     @media screen and (width >= 950px) {
@@ -74,55 +65,73 @@ const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(",
             display: grid;
             place-items: center;
         }
-
-        main > nav {
-            display: none;
-        }
     }
 
     @media screen and (width < 950px) {
-        main {
-            timeline-scope: var(--timelineScope);
-            bottom: calc(anchor(top) - 3rem);
-            right: calc(anchor(right) + 3rem);
+        @supports (animation-timeline: view()) {
+            main {
+                timeline-scope: var(--timelineScope);
+                bottom: calc(anchor(top) - 3rem);
+                right: calc(anchor(right) + 3rem);
+            }
+
+            main > div {
+                display: flex;
+                gap: 1rem;
+                padding-block: 1rem;
+                overflow-x: auto;
+                scrollbar-width: none;
+                overscroll-behavior: contain;
+                scroll-padding: 0 25%;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                pointer-events: none;
+            }
+
+            main > nav {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            main > nav > a {
+                width: 16px;
+                height: 16px;
+                border-radius: 9999px;
+                background-color: var(--neutral-300);
+                animation: colorize-dot linear;
+            }
+
+            @keyframes colorize-dot {
+                50% {
+                    background-color: var(--primary-500);
+                    width: 32px;
+                    border-radius: 16px;
+                }
+            }
         }
 
-        main > div {
-            display: flex;
-            gap: 1rem;
-            padding-block: 1rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-            overscroll-behavior: contain;
-            scroll-padding: 0 25%;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            pointer-events: none;
-        }
-
-        main > nav > a {
-            animation: colorize-dot linear;
-        }
-
-        @keyframes colorize-dot {
-            50% {
-                background-color: var(--primary-500);
-                width: 32px;
-                border-radius: 16px;
+        @supports not (animation-timeline: view()) {
+            main > div {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1rem;
             }
         }
     }
 
     @media screen and (width < 600px) {
-        main > div {
-            scroll-padding: 0;
-        }
+        @supports (animation-timeline: view()) {
+            main > div {
+                scroll-padding: 0;
+            }
 
-        @keyframes colorize-dot {
-            50% {
-                background-color: var(--primary-500);
-                width: 32px;
-                border-radius: 16px;
+            @keyframes colorize-dot {
+                50% {
+                    background-color: var(--primary-500);
+                    width: 32px;
+                    border-radius: 16px;
+                }
             }
         }
     }

@@ -10,7 +10,7 @@
             "@icons/*": ["src/assets/icons/*"],
             "@config/*": ["src/config/*"],
             "@utils/*": ["src/utils/*"],
-            "@types/*": ["src/types/*"],
+            "@definitions/*": ["src/types/*"],
             "@data": ["src/data/data.json"]
         }
     }

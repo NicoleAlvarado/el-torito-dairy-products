@@ -1,4 +1,4 @@
-import type { ErrorTypes } from "@types/sharedTypes";
+import type { ErrorTypes } from "@definitions/sharedTypes";
 
 type ContactField = {
     name: string;

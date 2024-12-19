@@ -99,10 +99,15 @@ const viewTimeline = `--${id}`;
     }
 
     @media screen and (width < 950px) {
+        @supports (animation-timeline: view()) {
+            article {
+                view-timeline: var(--viewTimeline) inline;
+                scroll-snap-align: center;
+                min-width: calc(50% - 0.5rem);
+            }
+        }
+
         article {
-            view-timeline: var(--viewTimeline) inline;
-            scroll-snap-align: center;
-            min-width: calc(50% - 0.5rem);
             padding: 1rem;
         }
 
@@ -112,8 +117,10 @@ const viewTimeline = `--${id}`;
     }
 
     @media (width < 600px) {
-        article {
-            min-width: 100%;
+        @supports (animation-timeline: view()) {
+            article {
+                min-width: 100%;
+            }
         }
     }
 </style>

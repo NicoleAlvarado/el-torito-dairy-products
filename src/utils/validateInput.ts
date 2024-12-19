@@ -1,4 +1,4 @@
-import type { ErrorTypes } from "@types/sharedTypes";
+import type { ErrorTypes } from "@definitions/sharedTypes";
 
 export const validateInput = (input: HTMLInputElement, errors: ErrorTypes): string => {
     for (const [validity, message] of Object.entries(errors)) {

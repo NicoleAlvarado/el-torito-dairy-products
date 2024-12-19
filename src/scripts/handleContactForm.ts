@@ -1,5 +1,5 @@
-import type { APIResponseType } from "@types/sharedTypes";
-import { contactFields } from "@types/contactFieldTypes";
+import type { APIResponseType } from "@definitions/sharedTypes";
+import { contactFields } from "@definitions/contactFieldTypes";
 import { validateInput } from "@utils/validateInput";
 import { showToast } from "@utils/handleToast";
 import { sendContactEmail } from "@utils/sendEmail";
