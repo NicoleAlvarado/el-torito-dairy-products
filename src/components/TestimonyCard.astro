@@ -7,10 +7,9 @@ type Props = {
     time: string;
     testimony: string;
     gridArea: string;
-    position: string;
 };
 
-const { id, name, time, testimony, gridArea, position } = Astro.props;
+const { id, name, time, testimony, gridArea } = Astro.props;
 const viewTimeline = `--${id}`;
 ---
 
@@ -29,7 +28,7 @@ const viewTimeline = `--${id}`;
     </main>
 </article>
 
-<style define:vars={{ gridArea, position, viewTimeline }}>
+<style define:vars={{ gridArea, viewTimeline }}>
     article {
         display: flex;
         flex-direction: column;
@@ -73,9 +72,9 @@ const viewTimeline = `--${id}`;
         article {
             grid-area: var(--gridArea);
             width: fit-content;
-            animation: reveal linear both;
+            animation: revealTestimonyCard linear both;
             animation-timeline: view();
-            animation-range: entry 15% cover 20%;
+            animation-range: entry 25% cover 30%;
             transition:
                 box-shadow 0.3s ease-in-out,
                 transform 0.3s ease-in-out;
@@ -87,14 +86,16 @@ const viewTimeline = `--${id}`;
             z-index: 1;
         }
 
-        @keyframes reveal {
+        @keyframes revealTestimonyCard {
             from {
-                transform: translate(var(--position));
                 opacity: 0;
+                scale: 0.5;
+                translate: 0 100px;
             }
             to {
-                transform: translate(0, 0);
                 opacity: 1;
+                scale: 1;
+                translate: 0 0;
             }
         }
     }

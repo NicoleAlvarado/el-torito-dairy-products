@@ -18,14 +18,13 @@ const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(",
     <main>
         <div>
             {
-                testimonies.map(({ name, time, testimony, gridArea, position }, i) => (
+                testimonies.map(({ name, time, testimony, gridArea }, i) => (
                     <TestimonyCard
                         id={getTestimonyId(i)}
                         name={name}
                         time={time}
                         testimony={testimony}
                         gridArea={gridArea}
-                        position={position}
                     />
                 ))
             }
@@ -54,7 +53,6 @@ const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(",
 
     main > div {
         padding-inline: 1rem;
-        /* contain: paint; */
     }
 
     main > nav {
@@ -115,8 +113,7 @@ const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(",
         @supports not (animation-timeline: view()) {
             main > div {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 1rem;
+                place-items: center;
             }
         }
     }
