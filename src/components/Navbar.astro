@@ -38,7 +38,6 @@ const { name, logo } = basics;
         align-items: center;
         gap: 2rem;
         transition: width 0.3s ease-in-out;
-        interpolate-size: allow-keywords;
     }
 
     nav > div {
@@ -110,7 +109,7 @@ const { name, logo } = basics;
             width: calc(var(--index) * 33.33%);
             height: 3px;
             background-color: var(--neutral-50);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-out);
             transition:
                 width 0.9s ease-in-out,
                 transform 0.9s ease-in-out,
@@ -134,7 +133,7 @@ const { name, logo } = basics;
             flex-direction: column;
             align-items: start;
             background-color: var(--neutral-50);
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            border-radius: 0 var(--border-radius-out) var(--border-radius-out) 0;
             z-index: 999;
         }
 

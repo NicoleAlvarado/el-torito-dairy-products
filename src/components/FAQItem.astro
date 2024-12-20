@@ -20,7 +20,7 @@ const { question, answer } = Astro.props;
 <style>
     details {
         padding: 1rem;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius-out);
         box-shadow: var(--box-shadow);
         animation: revealFAQ linear both;
         animation-timeline: view();
@@ -73,7 +73,6 @@ const { question, answer } = Astro.props;
                 margin-top 0.2s ease-in-out,
                 height 0.2s ease-in-out,
                 content-visibility 0.2s allow-discrete;
-            interpolate-size: allow-keywords;
         }
 
         details[open]::details-content {
