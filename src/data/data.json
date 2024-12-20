@@ -128,35 +128,35 @@
                 "time": "Hace 1 mes",
                 "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones.",
                 "gridArea": "1 / 2 / 5 / 5",
-                "position": "90% 90%"
+                "position": "90%, 90%"
             },
             {
                 "name": "María Rodríguez",
                 "time": "Hace 2 meses",
                 "testimony": "Desde que empezamos a utilizar sus servicios, nuestra productividad ha aumentado significativamente. El equipo de soporte siempre está disponible para ayudarnos y las actualizaciones constantes mantienen nuestro sistema a la vanguardia.",
                 "gridArea": "3 / 4 / 7 / 9",
-                "position": "0% 0%"
+                "position": "0%, 0%"
             },
             {
                 "name": "Carlos Sánchez",
                 "time": "Hace 3 meses",
                 "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
                 "gridArea": "1 / 8 / 4 / 12",
-                "position": "-100% 89%"
+                "position": "-100%, 89%"
             },
             {
                 "name": "Ana Jiménez",
                 "time": "Hace 4 meses",
                 "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones. ",
                 "gridArea": "6 / 1 / 10 / 5",
-                "position": "90% -89%"
+                "position": "90%, -89%"
             },
             {
                 "name": "Jordy Castro",
                 "time": "Hace 5 meses",
                 "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
                 "gridArea": "6 / 7 / 10 / 12",
-                "position": "-76% -89%"
+                "position": "-76%, -89%"
             }
         ]
     },
