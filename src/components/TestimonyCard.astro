@@ -60,8 +60,9 @@ const viewTimeline = `--${id}`;
     }
 
     article > header > div > p {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         color: var(--neutral-700);
+        opacity: 0.9;
     }
 
     article > main > p {
@@ -74,7 +75,7 @@ const viewTimeline = `--${id}`;
             width: fit-content;
             animation: reveal linear both;
             animation-timeline: view();
-            animation-range: entry 20% cover 25%;
+            animation-range: entry 15% cover 20%;
             transition:
                 box-shadow 0.3s ease-in-out,
                 transform 0.3s ease-in-out;

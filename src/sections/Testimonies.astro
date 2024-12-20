@@ -16,7 +16,7 @@ const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(",
         <p>{description}</p>
     </header>
     <main>
-        <div tabindex="0">
+        <div>
             {
                 testimonies.map(({ name, time, testimony, gridArea, position }, i) => (
                     <TestimonyCard
@@ -54,6 +54,7 @@ const timelineScope = testimonies.map((_, i) => getAnimationTimeline(i)).join(",
 
     main > div {
         padding-inline: 1rem;
+        /* contain: paint; */
     }
 
     main > nav {

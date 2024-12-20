@@ -23,7 +23,7 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
 <footer>
     <section class="footer__content">
         <div>
-            <a href="/#">
+            <a href="./#">
                 <Image src={logo} alt={`Logo de ${name}`} width={1} height={1} />
             </a>
             <p>{slogan}</p>
@@ -105,6 +105,10 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
     .footer__content > div > a,
     .footer__content > ul > li > a {
         display: flex;
+    }
+
+    .footer__content > div > a {
+        width: fit-content;
     }
 
     .footer__content > div > a > img {
