@@ -1,4 +1,4 @@
-import type { APIResponseType } from "@definitions/sharedTypes";
+import type { APIResponse } from "@definitions/sharedTypes";
 import { contactFields } from "@definitions/contactFieldTypes";
 import { validateInput } from "@utils/validateInput";
 import { showToast } from "@utils/handleToast";
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             [...new FormData(form)].map(([key, value]) => [key, formDataEntryToString(value)])
         );
 
-        const response: APIResponseType = await (await sendContactEmail(data)).json();
+        const response: APIResponse = await (await sendContactEmail(data)).json();
 
         if (response.success) {
             showToast(response.message, "success");

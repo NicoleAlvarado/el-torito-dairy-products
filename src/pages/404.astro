@@ -2,9 +2,14 @@
 import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
-import { basics } from "@data";
+import { getNotFoundBannerImage } from "@scripts/handleBannerImages";
+
+import { basics, bannerSection } from "@data";
 
 const { name } = basics;
+const { bannerNotFoundImages } = bannerSection;
+
+const [bg1] = bannerNotFoundImages.map(({ id }) => `url(${getNotFoundBannerImage(id)})`);
 ---
 
 <Layout title={`${name} 404`}>
@@ -19,7 +24,7 @@ const { name } = basics;
     </div>
 </Layout>
 
-<style>
+<style define:vars={{ bg1 }}>
     div::before {
         content: "";
         position: absolute;
@@ -39,7 +44,7 @@ const { name } = basics;
         position: relative;
         gap: 3rem;
         min-height: 100vh;
-        background: url(../assets/images/company/backgroundImage3.webp) no-repeat center center / cover;
+        background: var(--bg1) no-repeat center center / cover;
         z-index: 1;
     }
 

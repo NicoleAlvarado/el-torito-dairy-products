@@ -1,20 +1,20 @@
 ---
 import Actionable from "@components/Actionable.astro";
 
-import { basics, heroSection } from "@data";
+import { basics, bannerSection } from "@data";
 
 const { name, summary } = basics;
-const { mainImages } = heroSection;
+const { bannerImages } = bannerSection;
 ---
 
 <section class="hero">
     <article>
         <h1 translate="no">{name}</h1>
         <p>{summary}</p>
-        <Actionable type="CTA" className="primary" href="./#products">Ver productos</Actionable>
+        <Actionable type="CTA" className="primary" href="/#products">Ver productos</Actionable>
     </article>
     <div id="carousel-controls">
-        {mainImages.map((_, index) => <span>{(index + 1).toString().padStart(2, "0")}</span>)}
+        {bannerImages.map((_, index) => <span>{(index + 1).toString().padStart(2, "0")}</span>)}
     </div>
 </section>
 

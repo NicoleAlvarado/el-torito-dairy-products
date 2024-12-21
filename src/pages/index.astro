@@ -11,10 +11,14 @@ import FAQ from "@sections/FAQ.astro";
 import Contact from "@sections/Contact.astro";
 import Footer from "@components/Footer.astro";
 import Toast from "@components/Toast.astro";
+import { getBannerImage } from "@scripts/handleBannerImages";
 
-import { basics } from "@data";
+import { basics, bannerSection } from "@data";
 
 const { name } = basics;
+const { bannerImages } = bannerSection;
+
+const [bg1, bg2, bg3, bg4, bg5] = bannerImages.map(({ id }) => `url(${getBannerImage(id)})`);
 ---
 
 <Layout title={name}>
@@ -37,7 +41,7 @@ const { name } = basics;
     </div>
 </Layout>
 
-<style>
+<style define:vars={{ bg1, bg2, bg3, bg4, bg5 }}>
     div {
         display: flex;
         flex-direction: column;
@@ -82,23 +86,23 @@ const { name } = basics;
         0%,
         15%,
         100% {
-            background-image: url(../assets/images/company/backgroundImage1.webp);
+            background-image: var(--bg1);
         }
         20%,
         35% {
-            background-image: url(../assets/images/company/backgroundImage2.webp);
+            background-image: var(--bg2);
         }
         40%,
         55% {
-            background-image: url(../assets/images/company/backgroundImage3.webp);
+            background-image: var(--bg3);
         }
         60%,
         75% {
-            background-image: url(../assets/images/company/backgroundImage4.webp);
+            background-image: var(--bg4);
         }
         80%,
         95% {
-            background-image: url(../assets/images/company/backgroundImage5.webp);
+            background-image: var(--bg5);
         }
     }
 </style>

@@ -1,7 +1,6 @@
 {
     "basics": {
         "name": "Lácteos El Torito",
-        "logo": "/src/assets/images/company/logo.webp",
         "email": "lacteoseltorito@gmail.com",
         "summary": "Lácteos El Torito es una empresa familiar que se dedica a la producción y comercialización de productos lácteos. Nuestro objetivo es ofrecer productos de calidad a precios accesibles.",
         "phone": "+506 8412 6988",
@@ -22,14 +21,15 @@
             }
         ]
     },
-    "heroSection": {
-        "mainImages": [
-            "/src/assets/images/company/backgroundImage1.webp",
-            "/src/assets/images/company/backgroundImage2.webp",
-            "/src/assets/images/company/backgroundImage3.webp",
-            "/src/assets/images/company/backgroundImage4.webp",
-            "/src/assets/images/company/backgroundImage5.webp"
+    "bannerSection": {
+        "bannerImages": [
+            { "id": "banner1" },
+            { "id": "banner2" },
+            { "id": "banner3" },
+            { "id": "banner4" },
+            { "id": "banner5" }
         ],
+        "bannerNotFoundImages": [{ "id": "notFoundBanner1" }],
         "awards": [
             {
                 "title": "A nivel nacional",
