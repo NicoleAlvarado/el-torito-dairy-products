@@ -1,17 +1,17 @@
 ---
 import Actionable from "./Actionable.astro";
 import PhoneIcon from "@icons/PhoneIcon.astro";
+import logo from "@images/company/logo.webp";
 import { Image } from "astro:assets";
+
 import { basics } from "@data";
 
-const { name, logo } = basics;
+const { name } = basics;
 ---
 
 <nav class="navbar">
     <div>
-        <a href="./#">
-            <Image src={logo} alt={`Logo de ${name}`} width={50} height={50} />
-        </a>
+        <a href="./#"><Image src={logo} alt={`Logo de ${name}`} /></a>
         <button id="menu-btn" type="button">
             <span style="--index: 3"></span>
             <span style="--index: 2"></span>

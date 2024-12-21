@@ -13,10 +13,10 @@ const { title, description, identities } = aboutUsSection;
     </header>
     <main>
         {
-            identities.map(({ title, image, content }, index) => (
+            identities.map(({ id, title, content }, index) => (
                 <AboutDetailCard
+                    id={id}
                     number={(index + 1).toString().padStart(2, "0")}
-                    image={image}
                     title={title}
                     content={content}
                 />

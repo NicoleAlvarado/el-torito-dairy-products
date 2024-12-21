@@ -1,19 +1,20 @@
 ---
+import { getStaffImage } from "@scripts/handleOurTeamCard";
 import Image from "astro/components/Image.astro";
 
 type Props = {
     index: number;
+    id: string;
     name: string;
-    image: string;
     role: string;
     gridArea: string;
 };
 
-const { index, name, image, role, gridArea } = Astro.props;
+const { index, id, name, role, gridArea } = Astro.props;
 ---
 
 <article class="article-container">
-    <Image src={`/src/assets/images/team/${image}.webp`} alt={`Foto de ${name}`} width={1} height={1} />
+    <Image src={getStaffImage(id)} alt={`Foto de ${name}`} />
     <div>
         <h6>{name}</h6>
         <p>{role}</p>

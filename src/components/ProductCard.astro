@@ -1,25 +1,25 @@
 ---
+import { getProductImage } from "@scripts/handleProductCard";
 import { Image } from "astro:assets";
 
 type Props = {
+    id: string;
     name: string;
-    image: string;
     description: string;
-    gridArea: string;
 };
 
-const { name, image, description, gridArea } = Astro.props;
+const { id, name, description } = Astro.props;
 ---
 
 <article>
-    <Image src={`/src/assets/images/products/${image}.webp`} alt={`Imagen del producto ${name}`} width={1} height={1} />
+    <Image src={getProductImage(id)} alt={`Imagen del producto ${name}`} />
     <div>
         <h5>{name}</h5>
         <p>{description}</p>
     </div>
 </article>
 
-<style define:vars={{ gridArea }}>
+<style define:vars={{ gridArea: id }}>
     article {
         position: relative;
         min-height: 200px;

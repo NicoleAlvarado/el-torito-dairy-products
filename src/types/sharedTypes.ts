@@ -8,3 +8,5 @@ export type APIResponseType = {
     success: boolean;
     message: string;
 };
+
+export type Images = Record<string, ImageMetadata>;

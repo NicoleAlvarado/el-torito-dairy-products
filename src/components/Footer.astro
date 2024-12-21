@@ -1,8 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import WhatsappIcon from "@icons/WhatsappIcon.astro";
 import FacebookIcon from "@icons/FacebookIcon.astro";
 import InstagramIcon from "@icons/InstagramIcon.astro";
+import logo from "@images/company/logo.webp";
+import { Image } from "astro:assets";
 import { getYear } from "@utils/handleDates";
 
 import { basics } from "@data";
@@ -12,7 +13,7 @@ type Props = {
 };
 
 const { backgroundColor = "var(--primary-700)" } = Astro.props;
-const { name, logo, slogan, socialNetworks } = basics;
+const { name, slogan, socialNetworks } = basics;
 
 const SOCIAL_NETWORKS: Record<string, string | any> = {
     Whatsapp: WhatsappIcon,
@@ -24,9 +25,7 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
 <footer>
     <section class="footer__content">
         <div>
-            <a href="./#">
-                <Image src={logo} alt={`Logo de ${name}`} width={1} height={1} />
-            </a>
+            <a href="./#"><Image src={logo} alt={`Logo de ${name}`} /></a>
             <p>{slogan}</p>
         </div>
         <nav>

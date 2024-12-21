@@ -50,23 +50,23 @@
         "description": "Conoce más sobre nosotros y lo que hacemos.",
         "identities": [
             {
+                "id": "history",
                 "title": "Historia",
-                "image": "/src/assets/images/company/backgroundImage2.webp",
                 "content": "Lácteos El Torito fue fundada en 1990 por Juan Pérez, con la visión de ofrecer productos lácteos de alta calidad en Costa Rica. Desde entonces, hemos logrado consolidarnos como una empresa líder en el sector, gracias a la dedicación de nuestro equipo y al compromiso constante con la calidad, que nos ha permitido ganar la confianza y lealtad de nuestros clientes."
             },
             {
+                "id": "mission",
                 "title": "Misión",
-                "image": "/src/assets/images/company/backgroundImage3.webp",
                 "content": "Nuestra misión es producir y comercializar productos lácteos frescos y naturales, sin conservantes ni aditivos, que cumplan con los más altos estándares de calidad. Nos enfocamos en satisfacer las necesidades de nuestros clientes mediante productos nutritivos y un servicio excepcional, contribuyendo a su bienestar y salud."
             },
             {
+                "id": "vision",
                 "title": "Visión",
-                "image": "/src/assets/images/company/backgroundImage4.webp",
                 "content": "La visión de Lácteos El Torito es ser reconocidos como la empresa líder en productos lácteos en Costa Rica, destacándonos por la calidad y excelencia de nuestros productos. Nos esforzamos en innovar y mejorar continuamente nuestros procesos para ofrecer productos nutritivos y deliciosos, con integridad y compromiso hacia nuestros clientes."
             },
             {
+                "id": "values",
                 "title": "Valores",
-                "image": "/src/assets/images/company/backgroundImage5.webp",
                 "content": "La visión de Lácteos El Torito es ser reconocidos como la empresa líder en productos lácteos en Costa Rica, destacándonos por la calidad y excelencia de nuestros productos. Nos esforzamos en innovar y mejorar continuamente nuestros procesos para ofrecer productos nutritivos y deliciosos, con integridad y compromiso hacia nuestros clientes."
             }
         ]
@@ -76,46 +76,39 @@
         "description": "Conoce nuestra variedad de productos lácteos frescos y saludables",
         "products": [
             {
+                "id": "product1",
                 "name": "Leche",
-                "image": "product1",
-                "description": "Leche fresca de vaca.",
-                "gridArea": "product1"
+                "description": "Leche fresca de vaca."
             },
             {
+                "id": "product2",
                 "name": "Queso",
-                "image": "product2",
-                "description": "Queso fresco.",
-                "gridArea": "product2"
+                "description": "Queso fresco."
             },
             {
+                "id": "product3",
                 "name": "Mantequilla",
-                "image": "product3",
-                "description": "Mantequilla fresca.",
-                "gridArea": "product3"
+                "description": "Mantequilla fresca."
             },
             {
+                "id": "product4",
                 "name": "Yogurt",
-                "image": "product4",
-                "description": "Yogurt natural.",
-                "gridArea": "product4"
+                "description": "Yogurt natural."
             },
             {
+                "id": "product5",
                 "name": "Helado",
-                "image": "product5",
-                "description": "Helado de varios sabores.",
-                "gridArea": "product5"
+                "description": "Helado de varios sabores."
             },
             {
+                "id": "product6",
                 "name": "Crema",
-                "image": "product6",
-                "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam.",
-                "gridArea": "product7"
+                "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam."
             },
             {
+                "id": "product7",
                 "name": "Leche condensada",
-                "image": "product7",
-                "description": "Leche condensada.",
-                "gridArea": "product6"
+                "description": "Leche condensada."
             }
         ]
     },
@@ -160,32 +153,32 @@
         "description": "Nuestro equipo, comprometido con la calidad y el bienestar, trabaja con dedicación para ofrecer productos lácteos frescos y saludables, cuidando cada paso del proceso.",
         "team": [
             {
+                "id": "staff1",
                 "name": "Jordy Castro",
-                "image": "staff1",
                 "role": "CEO",
                 "gridArea": "staffImage1"
             },
             {
+                "id": "staff2",
                 "name": "María Rodríguez",
-                "image": "staff2",
                 "role": "Gerente de ventas",
                 "gridArea": "staffImage2"
             },
             {
+                "id": "staff3",
                 "name": "Carlos Sánchez",
-                "image": "staff3",
                 "role": "Gerente de producción",
                 "gridArea": "staffImage3"
             },
             {
+                "id": "staff4",
                 "name": "Ana Jiménez",
-                "image": "staff4",
                 "role": "Gerente de logística",
                 "gridArea": "staffImage4"
             },
             {
+                "id": "staff5",
                 "name": "Juan Pérez",
-                "image": "staff5",
                 "role": "Gerente de calidad",
                 "gridArea": "staffImage5"
             }
