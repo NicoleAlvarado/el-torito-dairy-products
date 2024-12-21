@@ -32,7 +32,7 @@ const { name } = basics;
             <FAQ />
             <Contact />
         </main>
-        <Footer backgroundColor="var(--primary-700)" />
+        <Footer />
         <Toast />
     </div>
 </Layout>
@@ -46,7 +46,7 @@ const { name } = basics;
         position: relative;
     }
 
-    header::before {
+    div > header::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -54,7 +54,7 @@ const { name } = basics;
         z-index: -1;
     }
 
-    header {
+    div > header {
         color: var(--neutral-900);
         padding: 1rem;
         width: 100%;
@@ -71,7 +71,7 @@ const { name } = basics;
         z-index: 1;
     }
 
-    main {
+    div > main {
         display: flex;
         flex-direction: column;
         gap: 3rem;

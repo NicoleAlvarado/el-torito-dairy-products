@@ -3,15 +3,16 @@ import { Image } from "astro:assets";
 import WhatsappIcon from "@icons/WhatsappIcon.astro";
 import FacebookIcon from "@icons/FacebookIcon.astro";
 import InstagramIcon from "@icons/InstagramIcon.astro";
+import { getYear } from "@utils/handleDates";
+
 import { basics } from "@data";
 
 type Props = {
-    backgroundColor: "var(--primary-700)" | "transparent";
+    backgroundColor?: "var(--primary-700)" | "transparent";
 };
 
-const { backgroundColor } = Astro.props;
+const { backgroundColor = "var(--primary-700)" } = Astro.props;
 const { name, logo, slogan, socialNetworks } = basics;
-const year = new Date().getFullYear();
 
 const SOCIAL_NETWORKS: Record<string, string | any> = {
     Whatsapp: WhatsappIcon,
@@ -43,7 +44,7 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
             <div>
                 <h6>Legal</h6>
                 <ul>
-                    <li><a href="./#politicas">Privacidad</a></li>
+                    <li><a href="./privacyPolicy">Privacidad</a></li>
                     <li><a href="./#terminos">Términos</a></li>
                 </ul>
             </div>
@@ -51,14 +52,17 @@ const SOCIAL_NETWORKS: Record<string, string | any> = {
     </section>
     <div></div>
     <section class="footer__info">
-        <p>© {year} {name}. Todos los derechos reservados.</p>
+        <p translate="no">
+            © {getYear(new Date())}
+            {name}. <span translate="yes">Todos los derechos reservados.</span>
+        </p>
         <address>
             {
                 socialNetworks.map(({ network, url }) => {
                     const Icon = SOCIAL_NETWORKS[network];
                     return (
                         <a href={url} target="_blank" rel="noopener noreferrer">
-                            <Icon color="var(--neutral-50)" width={24} height={24} />
+                            <Icon width={24} height={24} />
                         </a>
                     );
                 })

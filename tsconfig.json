@@ -11,6 +11,7 @@
             "@config/*": ["src/config/*"],
             "@utils/*": ["src/utils/*"],
             "@definitions/*": ["src/types/*"],
+            "@scripts/*": ["src/scripts/*"],
             "@data": ["src/data/data.json"]
         }
     }

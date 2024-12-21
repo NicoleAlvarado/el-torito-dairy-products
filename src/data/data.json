@@ -253,5 +253,31 @@
                 "hours": "Cerrado"
             }
         ]
+    },
+    "privacyPolicySection": {
+        "title": "Política de privacidad",
+        "description": "En Lácteos El Torito nos comprometemos con la transparencia sobre cómo funciona nuestro sitio web y el manejo de la información que usted comparte con nosotros.",
+        "content": [
+            {
+                "subtitle": "Formulario de Contacto",
+                "description": "Cuando utiliza nuestro formulario de contacto, la información que proporciona (nombre, apellidos, correo electrónico, asunto y mensaje) se utiliza únicamente para enviar un correo electrónico a través de Mailgun. Este proceso es similar a enviar un correo electrónico directamente desde su propia cuenta de correo. No almacenamos estos datos en ninguna base de datos ni los utilizamos para otros fines."
+            },
+            {
+                "subtitle": "Uso del Sitio Web",
+                "description": "Nuestro sitio web es principalmente informativo y muestra detalles sobre nuestra empresa y productos. No recopilamos información personal de los visitantes durante la navegación normal del sitio."
+            },
+            {
+                "subtitle": "Cookies",
+                "description": "Este sitio web utiliza cookies técnicas esenciales que son necesarias para su funcionamiento básico. Estas cookies no rastrean su actividad ni almacenan información personal."
+            },
+            {
+                "subtitle": "Contacto",
+                "description": "Si tiene preguntas sobre cómo funciona nuestro sitio web o el formulario de contacto, puede comunicarse con nosotros a través de nuestro correo electrónico lacteoseltorito@gmail.com o por teléfono al +506 8412 6988."
+            },
+            {
+                "subtitle": "Actualizaciones",
+                "description": "Esta política puede actualizarse ocasionalmente para reflejar cambios en nuestro sitio web. La versión más reciente estará siempre disponible en esta página."
+            }
+        ]
     }
 }

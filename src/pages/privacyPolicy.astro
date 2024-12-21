@@ -1,0 +1,88 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+
+import { getFormattedDate } from "@utils/handleDates";
+
+import { basics, privacyPolicySection } from "@data";
+
+const { name } = basics;
+const { title, description, content } = privacyPolicySection;
+---
+
+<Layout title=`Política de privacidad de ${name}`>
+    <div>
+        <header>
+            <Navbar />
+        </header>
+        <main>
+            <section>
+                <header>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                </header>
+                <main>
+                    {
+                        content.map(({ subtitle, description }) => (
+                            <article>
+                                <h4>{subtitle}</h4>
+                                <p>{description}</p>
+                            </article>
+                        ))
+                    }
+                </main>
+                <footer>
+                    <p>Última actualización: {getFormattedDate(new Date())}</p>
+                </footer>
+            </section>
+        </main>
+        <Footer />
+    </div>
+</Layout>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+        min-height: 100dvh;
+    }
+
+    div > header {
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: var(--primary-700);
+    }
+
+    div > main {
+        padding: 1rem;
+        flex: 1;
+        width: min(100%, calc(var(--max-width) / 1.5));
+    }
+
+    div > main > section,
+    div > main > section > header,
+    div > main > section > main,
+    div > main > section > main > article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div > main > section {
+        gap: 2rem;
+    }
+
+    div > main > section > header,
+    div > main > section > main > article {
+        gap: 0.5rem;
+    }
+
+    div > main > section > main {
+        gap: 1rem;
+    }
+</style>
