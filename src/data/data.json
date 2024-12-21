@@ -139,8 +139,7 @@
                 "name": "Carlos Sánchez",
                 "time": "Hace 3 meses",
                 "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
-                "gridArea": "1 / 8 / 4 / 12",
-                "position": "-100%, 89%"
+                "gridArea": "1 / 8 / 4 / 12"
             },
             {
                 "name": "Ana Jiménez",
@@ -260,7 +259,7 @@
         "content": [
             {
                 "subtitle": "Formulario de Contacto",
-                "description": "Cuando utiliza nuestro formulario de contacto, la información que proporciona (nombre, apellidos, correo electrónico, asunto y mensaje) se utiliza únicamente para enviar un correo electrónico a través de Mailgun. Este proceso es similar a enviar un correo electrónico directamente desde su propia cuenta de correo. No almacenamos estos datos en ninguna base de datos ni los utilizamos para otros fines."
+                "description": "Cuando utiliza nuestro formulario de contacto, la información que proporciona (nombre, apellidos, correo electrónico, asunto y mensaje) se utiliza únicamente para enviar un correo electrónico a través de un servicio de envío de correos. Este proceso es similar a enviar un correo electrónico directamente desde su propia cuenta de correo. No almacenamos estos datos en ninguna base de datos ni los utilizamos para otros fines."
             },
             {
                 "subtitle": "Uso del Sitio Web",
@@ -277,6 +276,44 @@
             {
                 "subtitle": "Actualizaciones",
                 "description": "Esta política puede actualizarse ocasionalmente para reflejar cambios en nuestro sitio web. La versión más reciente estará siempre disponible en esta página."
+            }
+        ]
+    },
+    "termsAndConditions": {
+        "title": "Términos y condiciones",
+        "description": "Agradecemos su visita al sitio web de Lácteos El Torito. Al utilizar nuestro sitio web, usted acepta los términos y condiciones que hemos establecido para garantizar una mejor experiencia para todos nuestros usuarios.",
+        "content": [
+            {
+                "subtitle": "Uso del Sitio Web",
+                "description": "Este sitio web tiene como objetivo proporcionar información sobre nuestra empresa y nuestros productos lácteos. El contenido de nuestras páginas está destinado únicamente a propósitos informativos generales."
+            },
+            {
+                "subtitle": "Precisión de la Información",
+                "description": "Nos esforzamos por mantener la información en nuestro sitio web actualizada y precisa. Sin embargo, no garantizamos que el contenido esté libre de errores o que el sitio web funcione sin interrupciones. Nos reservamos el derecho de modificar o actualizar la información en cualquier momento sin previo aviso."
+            },
+            {
+                "subtitle": "Propiedad Intelectual",
+                "description": "Todo el contenido de este sitio web, incluyendo pero no limitado a textos, gráficos, logotipos, imágenes y software, es propiedad de Lácteos El Torito y está protegido por las leyes de propiedad intelectual. No está permitida la reproducción o uso de estos materiales sin nuestro consentimiento expreso."
+            },
+            {
+                "subtitle": "Formulario de Contacto",
+                "description": "Al utilizar nuestro formulario de contacto, usted se compromete a proporcionar información verdadera y precisa, utilizarlo de manera responsable y legítima, y evitar el envío de cualquier contenido spam, ilegal, ofensivo o inapropiado."
+            },
+            {
+                "subtitle": "Limitación de Responsabilidad",
+                "description": "Lácteos El Torito no será responsable por daños indirectos, consecuentes o incidentales que surjan del uso o la imposibilidad de usar nuestro sitio web."
+            },
+            {
+                "subtitle": "Modificaciones",
+                "description": "Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio web. El uso continuo del sitio después de cualquier modificación constituirá su aceptación de tales cambios."
+            },
+            {
+                "subtitle": "Ley Aplicable",
+                "description": "Estos términos y condiciones se rigen por las leyes de Costa Rica. Cualquier disputa relacionada con estos términos será sometida a la jurisdicción exclusiva de los tribunales de Costa Rica."
+            },
+            {
+                "subtitle": "Contacto",
+                "description": "Si tiene preguntas sobre estos términos y condiciones, puede comunicarse con nosotros a través de nuestro correo electrónico lacteoseltorito@gmail.com, por teléfono al +506 8412 6988, o visitarnos en El Torito, Santa Cruz de Turrialba, Cartago, Costa Rica."
             }
         ]
     }
