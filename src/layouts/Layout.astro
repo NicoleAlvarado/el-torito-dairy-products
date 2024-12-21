@@ -1,4 +1,6 @@
 ---
+import logo from "@images/company/logo.webp";
+
 interface Props {
     title: string;
 }
@@ -12,7 +14,7 @@ const { title } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="description" content="Astro description" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/src/assets/images/company/logo.webp" />
+        <link rel="icon" type="image/svg+xml" href={logo.src} />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
