@@ -13,7 +13,7 @@ const { id, name, time, testimony, gridArea } = Astro.props;
 const viewTimeline = `--${id}`;
 ---
 
-<article {id}>
+<article {id} draggable="false">
     <header>
         <figure>
             <UserIcon width={32} height={32} color="var(--neutral-50)" />
