@@ -1,11 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.querySelector("nav") as HTMLElement;
-    const menuBtn = nav.querySelector("#menu-btn") as HTMLButtonElement;
-    const overlay = document.getElementById("overlay") as HTMLDivElement;
+import type { NavbarElements } from "@definitions/navbarTypes";
 
-    const toggleNavbar = (element: HTMLButtonElement | HTMLDivElement) =>
+const createScrollObserver = (nav: HTMLElement): IntersectionObserver => {
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0,
+    };
+
+    return new IntersectionObserver((entries) => {
+        entries.forEach((entry) =>
+            entry.isIntersecting ? nav.classList.remove("scrolled") : nav.classList.add("scrolled")
+        );
+    }, options);
+};
+
+const setupMobileMenu = (elements: NavbarElements): void => {
+    if (window.innerWidth > 768) return;
+
+    const { nav, menuBtn, overlay, navLinks } = elements;
+
+    const addToggleListener = (element: HTMLElement) =>
         element.addEventListener("click", () => nav.classList.toggle("open"));
 
-    toggleNavbar(menuBtn);
-    toggleNavbar(overlay);
-});
+    addToggleListener(menuBtn);
+    addToggleListener(overlay);
+    navLinks.forEach(addToggleListener);
+};
+
+const getNavbarElements = (): NavbarElements => {
+    const banner = document.querySelector("#banner") as HTMLElement;
+    const nav = banner.querySelector("#navbar") as HTMLElement;
+
+    return {
+        banner,
+        nav,
+        menuBtn: nav.querySelector("#menu-btn") as HTMLButtonElement,
+        overlay: banner.querySelector("#overlay") as HTMLDivElement,
+        navLinks: nav.querySelectorAll("div > a, ul > li > a, a") as NodeListOf<HTMLAnchorElement>,
+    };
+};
+
+const initNavbar = (): void => {
+    const elements = getNavbarElements();
+    const observer = createScrollObserver(elements.nav);
+
+    observer.observe(elements.banner);
+    setupMobileMenu(elements);
+};
+
+document.addEventListener("DOMContentLoaded", initNavbar);

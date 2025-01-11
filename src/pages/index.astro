@@ -1,8 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Navbar from "@components/Navbar.astro";
-import Hero from "@sections/Hero.astro";
-import Awards from "@sections/Awards.astro";
+import Banner from "@sections/Banner.astro";
 import AboutUs from "@sections/AboutUs.astro";
 import Products from "@sections/Products.astro";
 import Testimonies from "@sections/Testimonies.astro";
@@ -11,23 +9,15 @@ import FAQ from "@sections/FAQ.astro";
 import Contact from "@sections/Contact.astro";
 import Footer from "@components/Footer.astro";
 import Toast from "@components/Toast.astro";
-import { getBannerImage } from "@scripts/handleBannerImages";
 
-import { basics, bannerSection } from "@data";
+import { basics } from "@data";
 
 const { name } = basics;
-const { bannerImages } = bannerSection;
-
-const [bg1, bg2, bg3, bg4, bg5] = bannerImages.map(({ id }) => `url(${getBannerImage(id)})`);
 ---
 
 <Layout title={name}>
     <div>
-        <header>
-            <Navbar />
-            <Hero />
-            <Awards />
-        </header>
+        <Banner />
         <main>
             <AboutUs />
             <Products />
@@ -41,7 +31,7 @@ const [bg1, bg2, bg3, bg4, bg5] = bannerImages.map(({ id }) => `url(${getBannerI
     </div>
 </Layout>
 
-<style define:vars={{ bg1, bg2, bg3, bg4, bg5 }}>
+<style>
     div {
         display: flex;
         flex-direction: column;
@@ -50,59 +40,10 @@ const [bg1, bg2, bg3, bg4, bg5] = bannerImages.map(({ id }) => `url(${getBannerI
         position: relative;
     }
 
-    div > header::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-color: var(--image-background);
-        z-index: -1;
-    }
-
-    div > header {
-        color: var(--neutral-900);
-        padding: 1rem;
-        width: 100%;
-        min-height: 100dvh;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 3rem;
-        animation: changeBackground 25s infinite linear;
-        z-index: 1;
-    }
-
     div > main {
         display: flex;
         flex-direction: column;
         gap: 3rem;
         width: min(100%, var(--max-width));
-    }
-
-    @keyframes changeBackground {
-        0%,
-        15%,
-        100% {
-            background-image: var(--bg1);
-        }
-        20%,
-        35% {
-            background-image: var(--bg2);
-        }
-        40%,
-        55% {
-            background-image: var(--bg3);
-        }
-        60%,
-        75% {
-            background-image: var(--bg4);
-        }
-        80%,
-        95% {
-            background-image: var(--bg5);
-        }
     }
 </style>

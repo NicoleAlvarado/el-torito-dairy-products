@@ -131,6 +131,7 @@ const { title } = Astro.props;
 
     a {
         text-decoration: none;
+        color: inherit;
     }
 
     a,
@@ -141,16 +142,15 @@ const { title } = Astro.props;
     button,
     input,
     textarea {
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
+        font: inherit;
     }
 
     address {
         font-style: normal;
     }
 
-    .navbar.open ~ .hero {
-        margin-top: calc(43px + 6rem);
+    .navbar.open ~ .hero,
+    .navbar.scrolled ~ .hero {
+        margin-top: calc(43px + 3rem);
     }
 </style>

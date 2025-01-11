@@ -9,7 +9,7 @@ import { basics } from "@data";
 const { name } = basics;
 ---
 
-<nav class="navbar">
+<nav id="navbar" class="navbar">
     <div>
         <a href="/#"><Image src={logo} alt={`Logo de ${name}`} /></a>
         <button id="menu-btn" type="button">
@@ -37,7 +37,12 @@ const { name } = basics;
         display: flex;
         align-items: center;
         gap: 2rem;
-        transition: width 0.3s ease-in-out;
+        color: var(--neutral-50);
+        transition:
+            width 0.3s ease-in-out,
+            padding 0.2s ease-in-out,
+            background-color 0.2s ease-in-out,
+            color 0.2s ease-in-out;
     }
 
     nav > div {
@@ -89,8 +94,28 @@ const { name } = basics;
         transform: translateX(-50%);
     }
 
-    nav > ul > li > a {
-        color: var(--neutral-50);
+    /* NAVBAR SCROLLED */
+
+    nav.scrolled {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem;
+        background-color: var(--neutral-50);
+        color: var(--neutral-900);
+        border-radius: 0 0 var(--border-radius-out) var(--border-radius-out);
+        box-shadow: var(--box-shadow);
+    }
+
+    nav.scrolled > div > button > span {
+        background-color: var(--primary-500);
+    }
+
+    @media screen and (width <= 1542px) {
+        nav.scrolled {
+            padding-inline: 1rem;
+        }
     }
 
     @media screen and (width <= 768px) {
@@ -133,8 +158,13 @@ const { name } = basics;
             flex-direction: column;
             align-items: start;
             background-color: var(--neutral-50);
+            color: var(--neutral-900);
             border-radius: 0 var(--border-radius-out) var(--border-radius-out) 0;
             z-index: 998;
+        }
+
+        nav.open.scrolled {
+            transform: none;
         }
 
         nav.open > div {
@@ -148,6 +178,10 @@ const { name } = basics;
         nav.open > div > button > span {
             background-color: var(--neutral-900);
             width: 75%;
+        }
+
+        nav.open.scrolled > div > button > span {
+            background-color: var(--primary-900);
         }
 
         nav.open > div > button > span:nth-child(1) {
@@ -170,15 +204,13 @@ const { name } = basics;
             align-items: start;
         }
 
-        nav.open > ul > li > a {
-            color: var(--neutral-900);
-        }
-
         nav + div {
+            display: none;
             transition: background-color 0.3s ease-in-out;
         }
 
         nav.open + div {
+            display: block;
             position: fixed;
             top: 0;
             left: 0;
