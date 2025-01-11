@@ -29,22 +29,22 @@ const setupMobileMenu = (elements: NavbarElements): void => {
 
 const getNavbarElements = (): NavbarElements => {
     const banner = document.querySelector("#banner") as HTMLElement;
-    const nav = banner.querySelector("#navbar") as HTMLElement;
+    const nav = document.querySelector("#navbar") as HTMLElement;
 
     return {
         banner,
         nav,
         menuBtn: nav.querySelector("#menu-btn") as HTMLButtonElement,
-        overlay: banner.querySelector("#overlay") as HTMLDivElement,
+        overlay: document.querySelector("#overlay") as HTMLDivElement,
         navLinks: nav.querySelectorAll("div > a, ul > li > a, a") as NodeListOf<HTMLAnchorElement>,
     };
 };
 
 const initNavbar = (): void => {
     const elements = getNavbarElements();
-    const observer = createScrollObserver(elements.nav);
 
-    observer.observe(elements.banner);
+    if (elements.banner) createScrollObserver(elements.nav).observe(elements.banner);
+
     setupMobileMenu(elements);
 };
 
