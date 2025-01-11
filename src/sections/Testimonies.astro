@@ -48,8 +48,9 @@ const { title, description, testimonies } = testimoniesSection;
         gap: 1rem;
     }
 
-    main > div { 
+    main > div {
         padding-inline: 1rem;
+        gap: 1rem;
     }
 
     main > nav {
@@ -73,15 +74,13 @@ const { title, description, testimonies } = testimoniesSection;
 
             main > div {
                 display: flex;
-                gap: 1rem;
                 padding-block: 1rem;
                 overflow-x: auto;
                 scrollbar-width: none;
-                overscroll-behavior: contain;
+                overscroll-behavior-x: contain;
                 scroll-padding: 0 25%;
                 scroll-snap-type: x mandatory;
                 scroll-behavior: smooth;
-                /* pointer-events: none; */
             }
 
             main > nav {
