@@ -104,12 +104,31 @@ const { name } = basics;
         padding: 0.5rem;
         background-color: var(--neutral-50);
         color: var(--neutral-900);
-        border-radius: 0 0 var(--border-radius-out) var(--border-radius-out);
-        box-shadow: var(--box-shadow);
+        border-radius: none;
+        border-bottom: 1px solid var(--neutral-300);
     }
 
     nav.scrolled > div > button > span {
         background-color: var(--primary-500);
+    }
+
+    @media screen and (width > 1542px) {
+        nav.scrolled::before,
+        nav.scrolled::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            border-bottom: 1px solid var(--neutral-300);
+        }
+
+        nav.scrolled::before {
+            left: 100%;
+        }
+
+        nav.scrolled::after {
+            right: 100%;
+        }
     }
 
     @media screen and (width <= 1542px) {
@@ -202,6 +221,10 @@ const { name } = basics;
             flex-direction: column;
             flex: 1;
             align-items: start;
+        }
+
+        nav.open > ul > li {
+            width: 100%;
         }
 
         nav + div {
