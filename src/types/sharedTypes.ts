@@ -1,5 +1,3 @@
-import type { GetImageResult } from "astro";
-
 export type ErrorTypes = {
     valueMissing?: string;
     tooShort?: string;
