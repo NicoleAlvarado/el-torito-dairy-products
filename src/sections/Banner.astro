@@ -41,6 +41,7 @@ const [bg1, bg2, bg3, bg4, bg5] = bannerImages.map(({ id }) => `url(${getBannerI
         gap: 3rem;
         animation: changeBackground 25s infinite linear;
         z-index: 999;
+        overflow: hidden;
     }
 
     @keyframes changeBackground {

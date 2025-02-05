@@ -3,5 +3,6 @@ export type NavbarElements = {
     nav: HTMLElement;
     menuBtn: HTMLButtonElement;
     overlay: HTMLDivElement;
-    navLinks: NodeListOf<HTMLAnchorElement>;
+    toggleLinks: NodeListOf<HTMLAnchorElement>;
+    removeLinks: NodeListOf<HTMLAnchorElement>;
 };

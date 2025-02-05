@@ -36,16 +36,18 @@ const { bannerImages } = bannerSection;
         gap: 1rem;
     }
 
+    section > article {
+        align-items: start;
+        animation: slideInRight 0.5s ease-in-out;
+    }
+
     section > article > p {
         max-width: 50ch;
     }
 
-    section > article {
-        align-items: start;
-    }
-
     section > div {
         align-items: center;
+        animation: slideInLeft 0.5s ease-in-out;
     }
 
     section > div > span {
@@ -63,6 +65,28 @@ const { bannerImages } = bannerSection;
     @media screen and (width <= 480px) {
         section > div {
             display: none;
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            transform: translateX(-700px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(700px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
         }
     }
 </style>

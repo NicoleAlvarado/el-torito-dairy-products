@@ -17,14 +17,18 @@ const createScrollObserver = (nav: HTMLElement): IntersectionObserver => {
 const setupMobileMenu = (elements: NavbarElements): void => {
     if (window.innerWidth > 768) return;
 
-    const { nav, menuBtn, overlay, navLinks } = elements;
+    const { nav, menuBtn, overlay, toggleLinks, removeLinks } = elements;
 
     const addToggleListener = (element: HTMLElement) =>
         element.addEventListener("click", () => nav.classList.toggle("open"));
 
+    const addRemoveListener = (element: HTMLElement) =>
+        element.addEventListener("click", () => nav.classList.remove("open"));
+
     addToggleListener(menuBtn);
     addToggleListener(overlay);
-    navLinks.forEach(addToggleListener);
+    toggleLinks.forEach(addToggleListener);
+    removeLinks.forEach(addRemoveListener);
 };
 
 const getNavbarElements = (): NavbarElements => {
@@ -36,7 +40,8 @@ const getNavbarElements = (): NavbarElements => {
         nav,
         menuBtn: nav.querySelector("#menu-btn") as HTMLButtonElement,
         overlay: document.querySelector("#overlay") as HTMLDivElement,
-        navLinks: nav.querySelectorAll("div > a, ul > li > a, a") as NodeListOf<HTMLAnchorElement>,
+        toggleLinks: nav.querySelectorAll("ul > li > a") as NodeListOf<HTMLAnchorElement>,
+        removeLinks: nav.querySelectorAll("div > a, a[href='/#contact-us']") as NodeListOf<HTMLAnchorElement>,
     };
 };
 

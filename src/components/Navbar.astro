@@ -43,6 +43,7 @@ const { name } = basics;
             padding 0.2s ease-in-out,
             background-color 0.2s ease-in-out,
             color 0.2s ease-in-out;
+        animation: slideInDown 0.5s ease-in-out;
     }
 
     nav > div {
@@ -112,6 +113,10 @@ const { name } = basics;
         background-color: var(--primary-500);
     }
 
+    nav.scrolled > ul > li::before {
+        background-color: var(--neutral-900);
+    }
+
     @media screen and (width > 1542px) {
         nav.scrolled::before,
         nav.scrolled::after {
@@ -163,6 +168,8 @@ const { name } = basics;
 
         nav > ul {
             display: none;
+            padding-block: 1rem;
+            border-top: 1px solid var(--neutral-300);
         }
 
         /* NAV OPEN */
@@ -176,6 +183,7 @@ const { name } = basics;
             height: 100dvh;
             flex-direction: column;
             align-items: start;
+            gap: 1rem;
             background-color: var(--neutral-50);
             color: var(--neutral-900);
             border-radius: 0 var(--border-radius-out) var(--border-radius-out) 0;
@@ -241,6 +249,17 @@ const { name } = basics;
             height: 100dvh;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 997;
+        }
+    }
+
+    @keyframes slideInDown {
+        from {
+            transform: translateY(-700px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 </style>
