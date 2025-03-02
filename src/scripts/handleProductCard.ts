@@ -1,12 +1,12 @@
 import type { Images } from "@definitions/sharedTypes";
 
-import productImage1 from "@images/products/product1.webp";
-import productImage2 from "@images/products/product2.webp";
-import productImage3 from "@images/products/product3.webp";
-import productImage4 from "@images/products/product4.webp";
-import productImage5 from "@images/products/product5.webp";
-import productImage6 from "@images/products/product6.webp";
-import productImage7 from "@images/products/product7.webp";
+import productImage1 from "@images/products/NatillaCasera.jpg";
+import productImage2 from "@images/products/QuesoMaduro.jpg";
+import productImage3 from "@images/products/QuesoPalmito.jpg";
+import productImage4 from "@images/products/YogurtGuananbana.jpg";
+import productImage5 from "@images/products/QuesoMaduroChile.jpg";
+import productImage6 from "@images/products/YogurtKiwi.jpg";
+import productImage7 from "@images/products/YogurtMora.jpg";
 
 const images: Images = {
     product1: productImage1,

@@ -14,7 +14,7 @@ const { index, id, name, role, gridArea } = Astro.props;
 ---
 
 <article class="article-container">
-    <Image src={getStaffImage(id)} alt={`Foto de ${name}`} />
+    <Image src={getStaffImage("notImage")} alt={`Foto de ${name}`} />
     <div>
         <h6>{name}</h6>
         <p>{role}</p>

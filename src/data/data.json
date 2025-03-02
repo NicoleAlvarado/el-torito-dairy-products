@@ -4,7 +4,7 @@
         "email": "lacteoseltorito@gmail.com",
         "summary": "Lácteos El Torito es una empresa familiar que se dedica a la producción y comercialización de productos lácteos. Nuestro objetivo es ofrecer productos de calidad a precios accesibles.",
         "phone": "+506 8412 6988",
-        "slogan": "¡Calidad y sabor en un solo lugar!",
+        "slogan": "¡Donde la calidad y el sabor perduran!",
         "address": "El Torito, Santa Cruz de Turrialba, Cartago, Costa Rica",
         "socialNetworks": [
             {
@@ -32,16 +32,16 @@
         "bannerNotFoundImages": [{ "id": "notFoundBanner1" }],
         "awards": [
             {
-                "title": "A nivel nacional",
-                "value": "#1"
-            },
-            {
-                "title": "Productos vendidos",
-                "value": "40K+"
+                "title": "Reconocimiento a la calidad",
+                "value": "2012"
             },
             {
                 "title": "Clientes satisfechos",
                 "value": "100%"
+            },
+            {
+                "title": "Bandera Azul Ecológica",
+                "value": "2024"
             }
         ]
     },
@@ -52,7 +52,7 @@
             {
                 "id": "history",
                 "title": "Historia",
-                "content": "Lácteos El Torito fue fundada en 1990 por Juan Pérez, con la visión de ofrecer productos lácteos de alta calidad en Costa Rica. Desde entonces, hemos logrado consolidarnos como una empresa líder en el sector, gracias a la dedicación de nuestro equipo y al compromiso constante con la calidad, que nos ha permitido ganar la confianza y lealtad de nuestros clientes."
+                "content": "Lácteos el Torito nace en 2012 en Santa Cruz de Turrialba, fundada por Bernardo Araya Abarca, quien cuenta con más de 40 años de experiencia en distribución de lácteos. Comenzamos comprando productos terminados a fabricantes locales, hasta lograr construir nuestras propias instalaciones. Nos dedicamos a preservar recetas tradicionales, garantizando calidad y seguridad en cada uno de nuestros productos elaborados en esta pintoresca zona rural costarricense."
             },
             {
                 "id": "mission",
@@ -67,7 +67,7 @@
             {
                 "id": "values",
                 "title": "Valores",
-                "content": "La visión de Lácteos El Torito es ser reconocidos como la empresa líder en productos lácteos en Costa Rica, destacándonos por la calidad y excelencia de nuestros productos. Nos esforzamos en innovar y mejorar continuamente nuestros procesos para ofrecer productos nutritivos y deliciosos, con integridad y compromiso hacia nuestros clientes."
+                "content": "En Lácteos El Torito nos fundamentamos en la excelencia, honestidad, responsabilidad y compromiso. Valoramos la tradición artesanal combinada con prácticas modernas para garantizar la máxima calidad. Trabajamos con integridad, respetando a proveedores, colaboradores y consumidores, estableciendo relaciones duraderas basadas en la confianza mutua."
             }
         ]
     },
@@ -77,38 +77,38 @@
         "products": [
             {
                 "id": "product1",
-                "name": "Leche",
-                "description": "Leche fresca de vaca."
+                "name": "Natilla Casera",
+                "description": "Cremosa natilla elaborada con ingredientes frescos y naturales, perfecta para acompañar platillos típicos costarricenses."
             },
             {
                 "id": "product2",
-                "name": "Queso",
-                "description": "Queso fresco."
+                "name": "Queso Maduro",
+                "description": "Queso con sabor intenso y textura cremosa tras un cuidadoso proceso de maduración. Ideal para tablas y sándwiches."
             },
             {
                 "id": "product3",
-                "name": "Mantequilla",
-                "description": "Mantequilla fresca."
+                "name": "Queso Palmito",
+                "description": "Sabor suave y textura firme, elaborado artesanalmente en forma de trenza. Perfecto para compartir en cualquier ocasión."
             },
             {
                 "id": "product4",
-                "name": "Yogurt",
-                "description": "Yogurt natural."
+                "name": "Yogurt Guanabana",
+                "description": "Cremoso yogurt artesanal con sabor exótico de guanábana. Sin conservantes ni colorantes artificiales."
             },
             {
                 "id": "product5",
-                "name": "Helado",
-                "description": "Helado de varios sabores."
+                "name": "Queso Maduro con Chile",
+                "description": "Variante picante de nuestro queso maduro infusionado con chiles seleccionados. Para amantes de sabores intensos."
             },
             {
                 "id": "product6",
-                "name": "Crema",
-                "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora distinctio error quibusdam."
+                "name": "Yogurt Kiwi",
+                "description": "Combina la acidez del kiwi con la suavidad del yogurt fresco. Sin aditivos artificiales, refrescante y equilibrado."
             },
             {
                 "id": "product7",
-                "name": "Leche condensada",
-                "description": "Leche condensada."
+                "name": "Yogurt Mora",
+                "description": "Yogurt artesanal con moras frescas de la región. Rico en antioxidantes y vitaminas, con delicioso sabor natural."
             }
         ]
     },
@@ -117,33 +117,33 @@
         "description": "Conoce lo que las personas dicen de nosotros.",
         "testimonies": [
             {
-                "name": "Juan Pérez",
+                "name": "Roberto Méndez",
                 "time": "Hace 1 mes",
-                "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones.",
+                "testimony": "Desde que descubrí Lácteos El Torito, mi familia no quiere otra marca. La natilla casera es excepcional, con ese sabor auténtico que recuerda a la de mi abuela. El personal siempre es amable y puntual.",
                 "gridArea": "1 / 2 / 5 / 5"
             },
             {
-                "name": "María Rodríguez",
+                "name": "Carolina Jiménez",
                 "time": "Hace 2 meses",
-                "testimony": "Desde que empezamos a utilizar sus servicios, nuestra productividad ha aumentado significativamente. El equipo de soporte siempre está disponible para ayudarnos y las actualizaciones constantes mantienen nuestro sistema a la vanguardia.",
+                "testimony": "Como dueña de un restaurante, la calidad es fundamental. Lácteos El Torito nos ha proporcionado productos consistentes durante años. Su queso palmito es el preferido de nuestros clientes y distintivo de nuestra cocina.",
                 "gridArea": "3 / 4 / 7 / 9"
             },
             {
-                "name": "Carlos Sánchez",
+                "name": "Eduardo Vargas",
                 "time": "Hace 3 meses",
-                "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
+                "testimony": "Ningún yogur se compara con los de El Torito. El de mora es mi favorito, con balance perfecto entre dulzura y acidez. Me encanta consumir un producto natural, sin conservantes y elaborado por una empresa local.",
                 "gridArea": "1 / 8 / 4 / 12"
             },
             {
-                "name": "Ana Jiménez",
+                "name": "Lucía Ramírez",
                 "time": "Hace 4 meses",
-                "testimony": "Como propietaria de una pequeña empresa, valoro mucho la atención personalizada y las soluciones a medida que ofrecen. Han sido fundamentales en el crecimiento de mi negocio, proporcionando herramientas que antes solo estaban al alcance de grandes corporaciones. ",
+                "testimony": "Como nutricionista, recomiendo productos locales y naturales. He visitado sus instalaciones y puedo dar fe de la limpieza y el cuidado en cada producto. Una empresa que se preocupa por la salud de sus consumidores.",
                 "gridArea": "6 / 1 / 10 / 5"
             },
             {
-                "name": "Jordy Castro",
+                "name": "Manuel Solano",
                 "time": "Hace 5 meses",
-                "testimony": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio, recusandae animi explicabo, accusantiumqui consequatur aperiam inventore rem ad nam velit ea! Eveniet voluptatibus esse debitis nisi. Minus, quaerat.",
+                "testimony": "El queso maduro con chile ha sido un gran descubrimiento. Como aficionado a la gastronomía, valoro sabores únicos y auténticos. Su servicio al cliente es ejemplar, siempre responden rápido y con información útil.",
                 "gridArea": "6 / 7 / 10 / 12"
             }
         ]
@@ -154,32 +154,32 @@
         "team": [
             {
                 "id": "staff1",
-                "name": "Jordy Castro",
-                "role": "CEO",
+                "name": "Bernardo Araya",
+                "role": "Fundador y CEO",
                 "gridArea": "staffImage1"
             },
             {
                 "id": "staff2",
-                "name": "María Rodríguez",
+                "name": "Pamela Araya",
                 "role": "Gerente de ventas",
                 "gridArea": "staffImage2"
             },
             {
                 "id": "staff3",
-                "name": "Carlos Sánchez",
-                "role": "Gerente de producción",
+                "name": "Vinicio Araya",
+                "role": "Gerente de ventas",
                 "gridArea": "staffImage3"
             },
             {
                 "id": "staff4",
-                "name": "Ana Jiménez",
-                "role": "Gerente de logística",
+                "name": "Cinthya Aguilar",
+                "role": "Operaria",
                 "gridArea": "staffImage4"
             },
             {
                 "id": "staff5",
-                "name": "Juan Pérez",
-                "role": "Gerente de calidad",
+                "name": "Steven Prado",
+                "role": "Operario",
                 "gridArea": "staffImage5"
             }
         ]
@@ -189,40 +189,40 @@
         "description": "Si no encuentras la respuesta a tu pregunta, no dudes en contactarnos.",
         "FAQs": [
             {
-                "question": "¿Cuál es el horario de atención?",
-                "answer": "De lunes a viernes de 8:00 a.m. a 5:00 p.m."
+                "question": "¿Cuáles son los horarios de atención de Lácteos El Torito?",
+                "answer": "Nuestro horario de atención es de lunes a viernes de 6:00 a.m. a 6:00 p.m., los sábados de 7:00 a.m. a 2:00 p.m., y los domingos permanecemos cerrados."
             },
             {
-                "question": "¿Cuál es el tiempo de entrega?",
-                "answer": "El tiempo de entrega es de 1 a 2 días hábiles."
+                "question": "¿Ofrecen servicio de entrega a domicilio?",
+                "answer": "Sí, contamos con servicio de entrega a domicilio en la zona de Turrialba y alrededores. Para otras localidades, trabajamos con empresas de mensajería. El tiempo estimado de entrega es de 1 a 2 días hábiles dependiendo de la ubicación."
             },
             {
-                "question": "¿Cuál es el precio del envío?",
-                "answer": "El precio del envío es de $5."
+                "question": "¿Qué es la Denominación de Origen del Queso Turrialba y cómo la obtuvieron?",
+                "answer": "La Denominación de Origen es un reconocimiento que certifica que nuestro queso tiene características únicas debido a los factores geográficos y métodos de producción de la región. Lácteos El Torito obtuvo esta distinción en 2012, respaldada por la Asociación Consejo Regulador, gracias a la excepcional calidad de nuestra leche y el proceso artesanal que seguimos."
             },
             {
-                "question": "¿Cuál es el tiempo de garantía?",
-                "answer": "El tiempo de garantía es de 30 días."
+                "question": "¿Utilizan conservantes o aditivos artificiales en sus productos?",
+                "answer": "No, en Lácteos El Torito nos comprometemos a elaborar productos 100% naturales, sin conservantes ni aditivos artificiales. Utilizamos métodos de preservación tradicionales y procesos que garantizan la frescura y seguridad de nuestros lácteos."
             },
             {
-                "question": "¿Cuál es el tiempo de respuesta?",
-                "answer": "El tiempo de respuesta es de 24 horas."
+                "question": "¿Cuánto tiempo duran frescos sus productos?",
+                "answer": "La duración varía según el producto: nuestros quesos frescos se mantienen en óptimas condiciones durante 7-10 días refrigerados, los quesos maduros entre 30-60 días, y nuestros yogures y natillas entre 7-14 días. Cada producto viene con su fecha de elaboración y vencimiento claramente indicada."
             },
             {
-                "question": "¿Cuál es el tiempo de devolución?",
-                "answer": "El tiempo de devolución es de 15 días."
+                "question": "¿Qué protocolos de calidad siguen en la elaboración de sus productos?",
+                "answer": "Seguimos estrictos protocolos en cada etapa, desde la recepción de la leche hasta el envasado final. Esto incluye pasteurización adecuada, control de temperatura, higiene rigurosa del personal y equipos, y pruebas regulares de calidad. Nuestros procesos cumplen con todas las normativas sanitarias nacionales."
             },
             {
-                "question": "¿Cuál es el tiempo de cambio?",
-                "answer": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum modi omnis vitae blanditiis velit dolore voluptatem expedita voluptatum. Assumenda vitae sapiente eos optio veniam minus ut numquam cum quod quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sit nisi aperiam voluptatum quod aut quas delectus harum. Nemo aliquam quam hic libero dolorum facilis, sunt voluptate quaerat eum harum?"
+                "question": "¿Realizan visitas guiadas a sus instalaciones?",
+                "answer": "Sí, ofrecemos visitas guiadas a nuestras instalaciones para grupos pequeños con reservación previa. Durante la visita, podrás conocer nuestro proceso de producción, la historia de la empresa y degustar algunos de nuestros productos. Puedes solicitar información y reservar contactándonos por teléfono o correo electrónico."
             },
             {
-                "question": "¿Cuál es el tiempo de reembolso?",
-                "answer": "El tiempo de reembolso es de 15 días."
+                "question": "¿Tienen algún programa de fidelidad para clientes frecuentes?",
+                "answer": "Sí, contamos con un programa de fidelidad donde nuestros clientes frecuentes acumulan puntos por sus compras que pueden canjear por productos o descuentos. Además, realizamos promociones especiales para miembros del programa en fechas específicas."
             },
             {
-                "question": "¿Cuál es el tiempo de reembolso?",
-                "answer": "El tiempo de reembolso es de 15 días."
+                "question": "¿Ofrecen opciones para personas con intolerancia a la lactosa o restricciones dietéticas?",
+                "answer": "Actualmente estamos desarrollando una línea de productos bajos en lactosa para atender las necesidades de clientes con estas restricciones. Te invitamos a contactarnos directamente para obtener información actualizada sobre nuestras opciones disponibles y próximos lanzamientos."
             }
         ]
     },
