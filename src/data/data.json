@@ -9,7 +9,7 @@
         "socialNetworks": [
             {
                 "network": "Whatsapp",
-                "url": "https://wa.me/50684466964"
+                "url": "https://wa.me/50684126988"
             },
             {
                 "network": "Facebook",
@@ -23,13 +23,13 @@
     },
     "bannerSection": {
         "bannerImages": [
-            { "id": "banner1" },
-            { "id": "banner2" },
-            { "id": "banner3" },
-            { "id": "banner4" },
-            { "id": "banner5" }
+            { "id": "banner01" },
+            { "id": "banner02" },
+            { "id": "banner03" },
+            { "id": "banner04" },
+            { "id": "banner05" }
         ],
-        "bannerNotFoundImages": [{ "id": "notFoundBanner1" }],
+        "bannerNotFoundImages": [{ "id": "notFoundBanner01" }],
         "awards": [
             {
                 "title": "Reconocimiento a la calidad",

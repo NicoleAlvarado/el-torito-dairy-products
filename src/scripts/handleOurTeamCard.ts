@@ -5,7 +5,7 @@ import type { Images } from "@definitions/sharedTypes";
 // import staffImage3 from "@images/team/staff3.webp";
 // import staffImage4 from "@images/team/staff4.webp";
 // import staffImage5 from "@images/team/staff5.webp";
-import notImage from "@images/team/NoImage.jpeg";
+import notImage from "@images/team/noImage.webp";
 
 const images: Images = {
     // staff1: staffImage1,
